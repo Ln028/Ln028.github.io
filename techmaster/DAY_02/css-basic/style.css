@@ -1,0 +1,34 @@
+h2 {
+    font-size: 42px;
+    color: cornflowerblue;
+    background-color: cornsilk;
+}
+/* càng chi tiết hóa thì càng được ưu tiên */
+h3#heading.heading {
+    color: yellow;
+}
+h3#heading {
+    color: green;
+    /* color: blueviolet !important; */
+    /* thuộc tính important sẽ được ưu tiên hơn cả. Tuy nhiên không nên sử dụng thuộc tính này */
+}
+#heading {
+    color: blue;
+}
+.heading {
+    color: red;
+    font-size: 45px;
+    font-style: italic;
+}
+
+.heading.heading1 {
+    color: gray;
+}
+.heading2 {
+    color: black;
+}
+/* => thứ tự ưu tiên:id -> class -> tag */
+
+body h3#heading.heading {
+    color: orange;
+}

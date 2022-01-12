@@ -1,0 +1,41 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+/* Cần nhớ đây là 3 giá trị mặc định cho image */
+img {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+
+.card {
+    width: 305px;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 15%) ;
+    border-radius:7px;
+    overflow: hidden;
+    margin: auto;
+}
+
+h2 {
+    color: #464646;
+    font-size: 19px;
+}
+
+.card-content {
+    padding: 16px 24px;
+}
+
+.description, .rating {
+    color: #757575;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.rating i {
+    color: yellow;
+}
+
+.price {
+    color: #f65623;
+    font-size: 19px;
+}

@@ -1,0 +1,23 @@
+#apply {
+    text-transform: uppercase;
+}
+#center {
+    text-align: center;
+}
+.border {
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+
+}
+table {
+    border-top: 2px solid grey;
+    border-left: 2px solid grey;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    margin: auto;
+}
+td {
+    padding: 4px;
+}
