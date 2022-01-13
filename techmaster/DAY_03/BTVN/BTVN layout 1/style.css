@@ -65,6 +65,11 @@ a {
 i {
     padding-right: 8px;
 }
+hr {
+    width: 90%;
+    margin: auto;
+    border-top: 1px solid #c4c4c4e3;
+}
 button {
     color: #3c78e8;
     border: none;
