@@ -36,7 +36,7 @@ html {
     border-bottom-left-radius: 4px;
     min-height: 130px;
     margin-bottom: 16px;
-    line-height: 1;
+    line-height: 1.1;
 }
 h1 {
     font-weight: 300;
@@ -47,7 +47,7 @@ h2 {
     font-size: 16px;
 }
 .info {
-    padding: 4px 24px 0 24px;
+    padding: 0px 24px 0 24px;
 }
 a {
     text-decoration: none;
@@ -55,7 +55,7 @@ a {
     font-size: 1.3rem;
 }
 .teacher>p {
-    padding: 0 0 12px 24px;
+    padding: 0 0 10px 24px;
     font-size: 0.9rem;
     color: #464646;
     font-weight: 300
@@ -76,7 +76,10 @@ a {
     width: 86%;
     margin: auto;
     padding-bottom: 8px;
-
+}
+span {
+    color: #464646;
+    font-size: 0.9rem;
 }
 button {
     color: #3c78e8;
