@@ -11,7 +11,7 @@ html {
 }
 .card {
     margin: auto;
-    width: 407px;
+    width: 460px;
     line-height: 1.5;
     box-shadow: 0 4px 4px rgb(0 0 0 / 15%);
     border-radius: 4px;
@@ -19,13 +19,12 @@ html {
 .year {
     text-align: center;
     background-color: #ef5321;
+    border-top-left-radius: 4px;
+}  
+.year>p {
     font-weight: 300;
     padding: 3px;
     color: #fff;
-    border-top-left-radius: 4px;
-}
-.social {
-    border-radius: 4px;
 }
 .time {
     background-color: #fe6d3f;
@@ -34,22 +33,23 @@ html {
     padding: 28px;
     color: #fff;
     border-bottom-left-radius: 4px;
+    min-height: 130px;
 }
 .day {
     font-size: 2.5rem;
     padding-bottom: 0;
     line-height: 1;
 }
-.title {
-    padding: 16px 20px 0 20px;
+.month {
+    padding-bottom: 8px;
 }
 a {
     font-size: 1.3rem;
     text-decoration: none;
     color: #464646;
-
+    padding: 20px;
 }
-.teacher {
+.card>p {
     font-size: 0.9rem;
     color: #464646;
     font-weight: 300;
@@ -59,22 +59,21 @@ a {
     color: #464646;
     font-size: 0.9rem;
     font-weight: 300;
-    padding: 12px 0 4px 20px;
+    padding: 12px 20px 4px 20px;
     line-height: 2;
 }
-i {
-    padding-right: 8px;
+.info>p:nth-child(3) {
+    border-bottom: 1px solid #c4c4c4e3;
+    padding-bottom: 4px;
 }
-hr {
-    width: 90%;
-    margin: auto;
-    border-top: 1px solid #c4c4c4e3;
+span {
+    padding-right: 8px;
 }
 button {
     color: #3c78e8;
     border: none;
     background-color: #fff;
-    padding: 7px 0px 5px 20px;
+    padding-top: 7px;
     font-size: 16px;
     cursor: pointer;
 }
