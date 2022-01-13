@@ -40,7 +40,7 @@ html {
 }
 h1 {
     font-weight: 300;
-    font-size: 42px;
+    font-size: 40px;
 }
 h2 {
     font-weight: 300;
@@ -75,7 +75,7 @@ a {
     border-bottom: 1px solid #c4c4c4e3;
     width: 86%;
     margin: auto;
-    padding-bottom: 8px;
+    padding-bottom: 4px;
 }
 span {
     color: #464646;
