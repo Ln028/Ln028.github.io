@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Đây là 3 thuộc tính bắt buộc cần phải dùng, mặc định khi viết 1 trang web bất kì đều phải dùng 3 thuộc tính này*/
+}
+
+:root {
+    font-size: 16px;
+}
+
+.p2 {
+    background-color: aqua;
+    border: 1px solid black;
+    padding: 30px;
+    margin: 40px;
+    /* font-size: 2rem;  */
+}
+/* Từ nội dung đến viền (border) là padding: top, left, right, bottom
+Giá trị: 
+1. Nếu là 1 giá trị: áp dụng cho 4 chiều
+2. Nếu 2 giá trị: giá trị đầu tiên đại diện cho trên dưới, giá trị thứ 2 đại diện cho trái phải
+3. Nếu là 3 giá trị: giá trị đầu tiên đại diện cho top, giá trị thứ 2 là giá trị left right, giá trị thứ 3 là bottom
+4. Nếu là 4 giá trị: theo thứ tự chiều kim đồng hồ: top, right, bottom, left*/
+
+/* nếu không muốn viết gộp thì viết chi tiết: padding-top, padding-right, padding-bottom, padding-left */
+/* MARGIN CÓ CÁCH DÙNG TƯƠNG TỰ NHƯ PADDING. Margin là khoảng cách từ viền (border) đến các phần tử khác */
+
+.box {
+    width: 100%;
+    height: 200px;
+    background-color: coral;
+    padding: 20px;
+    border: 10px solid olivedrab;
+    box-sizing: border-box;
+    overflow: auto;
+    font-size: 30px;
+}
+
+.box p {
+    width: 600px;
+    background-color: paleturquoise;
+    font-size: 2em;
+}
+
+.box:hover p {
+    /* display: none; */
+    background-color: purple;
+}
+/* có thể hover trực tiếp vào thẻ p: 
+p:hover { back-ground-color: black;}
+     */
+
+a {
+    display: block
+}
+
+/* Đơn vị trong CSS
+1. rem: dựa vào giá trị của root 
+VD: 
+:root { font-size: 16px }
+nếu điều chỉ font-size cho thẻ p2 bằng 2 rem tức là khi đó font-size của thẻ p2 là 16px x 2 = 32px
+2. em: phụ thuộc vào giá trị của thẻ cha chứa nó
+3. %: phụ thuộc vào kích thước thẻ chứa nó
+ */
+
