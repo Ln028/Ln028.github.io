@@ -22,6 +22,7 @@ html {
     color: #fff;
     background-color: #ef5321;
     padding: 3px;
+    border-top-left-radius: 4px;
 }
 .year>p {
     text-align: center;
@@ -46,7 +47,7 @@ h2 {
     font-size: 16px;
 }
 .info {
-    padding: 20px 24px 0 24px;
+    padding: 4px 24px 0 24px;
 }
 a {
     text-decoration: none;
@@ -54,14 +55,14 @@ a {
     font-size: 1.3rem;
 }
 .teacher>p {
-    padding: 0 0 10px 24px;
+    padding: 0 0 12px 24px;
     font-size: 0.9rem;
     color: #464646;
     font-weight: 300
 }
 .day, .timelearn, .location>p {
     padding: 0 24px;
-    line-height: 2;
+    line-height: 1.8;
 }
 .day>p, .timelearn>p, .location>p {
     display: inline;
@@ -84,4 +85,5 @@ button {
     padding: 7px 0 10px 24px;
     font-size: 16px;
     cursor: pointer;
+    border-bottom-left-radius: 4px;
 }
