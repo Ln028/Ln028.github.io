@@ -60,9 +60,9 @@ a {
     color: #464646;
     font-weight: 300
 }
-.day, .timelearn, .location {
+.day, .timelearn, .location.p {
     padding: 0 24px;
-    line-height: 2;
+    line-height: 1.8;
 }
 .day>p, .timelearn>p, .location>p {
     display: inline;
