@@ -60,7 +60,7 @@ a {
     color: #464646;
     font-weight: 300
 }
-.day, .timelearn, .location.p {
+.day, .timelearn, .location>p {
     padding: 0 24px;
     line-height: 1.8;
 }
