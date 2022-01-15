@@ -29,6 +29,7 @@ h2 {
     color: #757575;
     font-size: 14px;
     font-weight: 100;
+    display: inline;
 }
 
 .rating i {

@@ -1,0 +1,52 @@
+.container {
+    background-color: sandybrown;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    /* nếu không set flex-direction thì direction mặc định là row*/
+    justify-content: center;
+    /*  justify-content để căn chỉnh vị trí các item theo chiều của trục main, các vị trí chi tiết như trong giáo trình */
+    align-items: center;
+    /* căn chỉnh vị trí các item theo trục cross, các vị trí chi tiết như trong giáo trình */
+    
+    align-content: center;
+}
+.item {
+    width: 100px;
+    height: 100px;
+    background-color: seagreen;
+    color: #fff;
+    font-size: 32px;
+    border: 2px solid chartreuse;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* text-align: center;
+    line-height: 200px; */
+    /* sử dụng line-heingt để set vị trí trung tâm, chỉ dùng khi có 1 phần tử */
+
+}
+
+.item4 {
+    order: 0;
+    /* set thứ tự các item ta dùng order */
+    flex-basis: 300px;
+    /* set kích thước item theo trục main */
+
+}
+.item2 {
+    order: 1;
+    flex-basis: 500px;
+    flex-shrink: 3;
+    /* flex-grow: 2; */
+    /* flex-grow dùng để set phần thừa của container vào các phần tử */
+}
+.item3 {
+    order: 2;
+    /* flex-grow: 1; */
+}
+.item1 {
+    order: 3;
+    flex-basis: 600px;
+    flex-shrink: 5;
+}
