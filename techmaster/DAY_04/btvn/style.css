@@ -40,6 +40,11 @@ a {
     text-decoration: none;
     color: #000;
 }
+
+.card>a {
+    margin: auto;
+}
+
 .card {
     display: flex;
     flex-wrap: wrap;
@@ -50,6 +55,7 @@ a {
     line-height: 1.5;
     background-color: #fff;
     cursor: pointer;
+    width: 100%;
 }
 
 .price-rating, .quatity-location {
@@ -64,7 +70,6 @@ a {
 
 h3 {
     margin: 15px;
-    flex-grow: 1;
 }
 
 .info {

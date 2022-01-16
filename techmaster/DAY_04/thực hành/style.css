@@ -19,17 +19,29 @@ body {
 }
 
 .card-item {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     flex-basis: 33.33%;
     padding: 20px;
 }
 
 .card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     box-shadow: 0 2px 4px rgb(0 0 0 / 15%) ;
     border-radius: 7px;
     overflow: hidden;
     margin: 30px;
     line-height: 1.5;
 }
+
+.description-rating {
+    display: flex;
+    justify-content: space-between;
+}
+
 .card-image img {
     height: 100%;
     width: 100%;
@@ -55,13 +67,10 @@ h2 {
     font-weight: 100;
     display: inline;
 }
-.rating {
-    margin-left: 90px;
-}
+
 .rating i {
     color: yellow;
     font-size: 16px;
-    margin-left: 4px;
 }
 
 .price {
