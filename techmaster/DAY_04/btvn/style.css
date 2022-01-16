@@ -31,6 +31,7 @@ html {
 
 .container-item {
     display: flex;
+    flex-wrap: wrap;
     flex: 0 0 33.33%;
     max-width: 33.33%;
 }
@@ -41,6 +42,7 @@ a {
 }
 .card {
     display: flex;
+    flex-wrap: wrap;
     box-shadow: 0 2px 4px rgb(0 0 0 / 15%) ;
     border-radius:7px;
     overflow: hidden;
@@ -52,6 +54,7 @@ a {
 
 .price-rating, .quatity-location {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
@@ -61,6 +64,7 @@ a {
 
 h3 {
     margin: 15px;
+    flex-grow: 1;
 }
 
 .info {
@@ -83,5 +87,5 @@ p {
     font-weight: 400;
 }
 i {
-    color: yellow
+    color: #e59819;
 }
