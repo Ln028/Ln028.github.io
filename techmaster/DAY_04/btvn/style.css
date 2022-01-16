@@ -30,6 +30,7 @@ html {
 }
 
 .container-item {
+    display: flex;
     flex: 0 0 33.33%;
     max-width: 33.33%;
 }
@@ -39,6 +40,7 @@ a {
     color: #000;
 }
 .card {
+    display: flex;
     box-shadow: 0 2px 4px rgb(0 0 0 / 15%) ;
     border-radius:7px;
     overflow: hidden;
