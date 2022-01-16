@@ -41,6 +41,7 @@ html {
     margin: 30px;
     line-height: 1.5;
     background-color: #fff;
+    cursor: pointer;
 }
 
 .price-rating, .quatity-location {

@@ -1,0 +1,41 @@
+html {
+    font-family: Roboto, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.detail {
+    background-color: #fff;
+    line-height: 2;
+}
+.text {
+    background-color: rgb(149, 217, 248);
+    margin: 20px;
+    border-radius: 5px;
+}
+
+p, ul, li {
+    margin: 0 20px;
+    font-size: 12px;
+}
+
+ul {
+    background-color: #fff;
+    box-shadow: 0 2px 2px 2px #fff;
+    border-radius: 4px;
+    margin: 10px 20px;
+}
+  
+h2 {
+  padding: 20px;
+  line-height: 1.5;
+}
+button {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
