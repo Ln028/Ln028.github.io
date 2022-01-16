@@ -35,7 +35,15 @@ h2 {
   padding: 20px;
   line-height: 1.5;
 }
-button {
-    margin-left: 20px;
-    margin-bottom: 20px;
+a {
+    font-size: 14px;
+    text-decoration: none;
+    color: #000;
+    padding: 0 0 20px 20px;
+    cursor: pointer;
+}
+
+.back:hover {
+    text-decoration: underline;
+    color: brown;
 }
