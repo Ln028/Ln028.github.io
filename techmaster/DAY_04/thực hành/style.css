@@ -79,6 +79,7 @@ h2 {
 .rating i {
     color: yellow;
     font-size: 16px;
+    margin: 0 4px;
 }
 
 .price {
@@ -86,9 +87,9 @@ h2 {
     font-size: 19px;
 }
 
-/* .container-footer {
-    padding: 20px;
-} */
+.container-footer {
+    margin-top: 15px;
+}
 
 .footer {
     background-color: #464646;
@@ -141,7 +142,7 @@ a {
     font-size: 32px;
     margin-right: 32px;
 }
-i {
+.footer i {
     font-size: 25px;
     margin: 10px 0;
 }
