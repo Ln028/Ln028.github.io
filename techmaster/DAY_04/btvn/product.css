@@ -18,26 +18,28 @@ body {
 
 .container {
     display: flex;
-    justify-content: space-between;
-    align-items: stretch;
+    flex-basis: 50%;
+    justify-content: space-evenly;
 }
+
+.image, .info {
+    display: flex;
+    margin: 30px; 20px;
+}
+
 img {
-    width: 90%;
+    width: 100%;
     border-radius: 4px;
-
 }
 
-p, ul, li {
+p, li {
     margin: 0 20px;
     font-size: 12px;
 }
 
 ul {
     background-color: #fff;
-    box-shadow: 0 2px 2px 2px #fff;
     border-radius: 4px;
-    margin: 0px 30px 30px 30px;
-    padding: 10px;
 }
   
 h2 {
