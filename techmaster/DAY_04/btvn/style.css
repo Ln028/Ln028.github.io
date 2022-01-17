@@ -98,3 +98,8 @@ p {
 i {
     color: #e59819;
 }
+
+/*  thầy chữa bài: 
+1. Nên set kích thước cho thẻ container để xem rên màn hình to k bị xấu
+2. K nên sd màu đen thuần túy, nêm sd màu gần đen thôi, vd màu #333
+3. Trang chi tiết sản phẩm nên set padding cho thẻ to chứa toàn bộ nội dung, k nên mất công set từng thẻ một */
