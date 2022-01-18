@@ -7,6 +7,10 @@ html {
     font-family: Roboto, sans-serif;
 }
 
+body {
+    background-color: #f4f7fa;
+}
+
 img {
     max-width: 100%;
     display: block;
@@ -132,7 +136,7 @@ span {
 }
 .body-content {
     display: flex;
-    margin: 40px;
+    margin: 40px 40px 10px 40px;
     background-color: #f4f7fa;
 }
 
@@ -193,12 +197,14 @@ span {
     margin: 0 20px;
     height: 100%;
     background-color: #fff;
+    z-index: 1
 }
 
 .search input {
     border: #fff;
-    font-size: 16px;
+    font-size: 14px;
     height: 100%;
+    width: 100%;
     outline: none;
 }
 .search i {
@@ -281,10 +287,11 @@ h2 {
 
 .container-footer {
     margin-top: 15px;
+    padding: 20px 40px;
+    background-color: #464646;
 }
 
 .footer {
-    background-color: #464646;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -298,7 +305,6 @@ h2 {
 
 .footer-info {
     flex-basis: 25%;
-    padding: 20px;
     text-align: start;
 }
 
