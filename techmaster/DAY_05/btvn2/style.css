@@ -16,11 +16,13 @@ body {
     flex-direction: column;
     text-align:left;
     width: 200px;
+    height: 344px;
     list-style-type: none;
     position: relative;
     background-color:#fff;
     box-shadow: 0 0 10px #333;
     line-height: 27px;
+    margin: 10px;
 }
 
 .tab-bar>li {
@@ -38,13 +40,14 @@ body {
     flex-direction: column;
     list-style-type: none;
     position: absolute;
-    /* display: none; */
+    display: none;
     background-color:#fff;
     box-shadow: 0 0 10px #333;
-    width: 100%;
+    width: 200px;
+    height: 344px;
     line-height: 27px;
-    height: 100%;
 }
+
 .sub-menu>li, .sub-menu-child>li {
     text-align: left;
     text-transform: none;
@@ -62,4 +65,15 @@ body {
 }
 .tab-bar>li:hover, .sub-menu>li:hover {
     background-color: #eceff1;
+}
+.tab-bar>li:hover>span, .sub-menu>li:hover>span {
+    display: block;
+}
+li {
+    display: flex;
+}
+span {
+    position: absolute;
+    right: 10px;
+    display: none;
 }
