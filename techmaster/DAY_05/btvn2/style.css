@@ -16,7 +16,7 @@ body {
     flex-direction: column;
     text-align:left;
     width: 200px;
-    height: 344px;
+    height: 324px;
     list-style-type: none;
     position: relative;
     background-color:#fff;
@@ -44,7 +44,7 @@ body {
     background-color:#fff;
     box-shadow: 0 0 10px #333;
     width: 200px;
-    height: 344px;
+    height: 324px;
     line-height: 27px;
 }
 
