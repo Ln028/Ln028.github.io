@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card {
+    width: 300px;
+    box-shadow: 4px 4px 10px #333;
+    overflow: hidden;
+}
+.image {
+    height: 200px;
+    overflow: hidden;
+}
+.image img {
+    transition: all 2s;
+}
+.card:hover img {
+    transform: scale(1.2);
+}
+.content {
+    transform: translateY(120px);
+    transition: all 2s;
+}
+.card:hover .content {
+    transform: translateY(0);
+}
+
+

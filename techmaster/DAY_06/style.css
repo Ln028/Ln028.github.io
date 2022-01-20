@@ -1,0 +1,30 @@
+.box {
+    width: 200px;
+    background-color: black;
+
+    /* transition: all 1s; */
+
+    /* ransition-property: width height;
+    transition-duration: 1s 2s; 
+    viết gọn như sau: */
+    /* transition: width 1s, height 2s; */
+
+    /* transition: all 1s ease-in; */
+}
+
+.box:hover {
+    /* background-color: blue; */
+    /* width: 400px;
+    height: 400px; */
+    /* transform: translateY(40px) rotate(45deg); */
+    box-shadow: 4px 4px 20px #000;
+
+}
+.box p {
+    color: #fff;
+    transform: translateY(200px);
+    transition: all 1s ease-out;
+}
+.box:hover p {
+    transform: translateY(0);
+}
