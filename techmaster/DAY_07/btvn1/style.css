@@ -1,0 +1,221 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html {
+    height: 100%;
+    margin: 0;
+  }
+  
+.nav {
+    background-image: url("./background.jpg");
+  
+    height: 100%;
+  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.flower { 
+    position: fixed;
+    top: -10%;
+    z-index: 2;
+    animation-name: flower-fall, flower-shake;
+    animation-duration: 10s, 3s;
+    animation-timing-function: linear, ease-in-out;
+    animation-iteration-count: infinite, infinite;
+    animation-play-state: running, running;
+    width: 24px;
+    height: 24px;
+    opacity: 0.6;
+}
+
+.flower1 {
+    left: 1%;
+}
+.flower2 {
+    left: 10%;
+    animation-delay: 1s, 1s;
+}
+ .flower3 {
+    left: 20%;
+    animation-delay: 6s, .5s
+}
+.flower4 {
+    left: 30%;
+    animation-delay: 4s, 2s
+}
+.flower5 {
+    left: 40%;
+    animation-delay: 2s, 2s
+}
+.flower6 {
+    left: 50%;
+    animation-delay: 8s, 3s
+}
+.flower7 {
+    left: 60%;
+    animation-delay: 6s, 2s
+}
+.flower8 {
+    left: 70%;
+    animation-delay: 2.5s, 1s
+}
+.flower9 {
+    left: 80%;
+    animation-delay: 1s, 0s
+}
+.flower10 {
+    left: 25%;
+    animation-delay: 2s, 0s
+}
+.flower11 {
+    left: 65%;
+    animation-delay: 4s, 2.5s
+}
+.flower12 {
+    left: 55%;
+    animation-delay: 3s, 1.5s
+}
+
+
+@keyframes flower-fall {
+    0% {
+      top: -10%
+    }
+    100% {
+      top: 100%
+    }
+}
+@keyframes flower-shake {
+    0%, 100% {
+      transform: translateX(0)
+    }
+    50% {
+      transform: translateX(80px)
+    }
+}
+
+
+.content {
+    z-index: 2;
+    position: absolute;
+    top: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+    width: 100%;
+    font-size: 2.5rem;
+    color: tomato;
+    text-shadow: 0 2px 4px #fff;
+    line-height: 1.5;
+}
+
+h1 {
+    width: 100%;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+    text-shadow: 4px 4px 10px #4c4c4c;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+h1 span {
+    color: rgb(248, 233, 25);
+    position: relative;
+    display: inline-block;
+    animation: year 1.2s ease-in-out infinite;
+    animation-delay: calc(.1s * var(--i));
+    letter-spacing: 20px;
+}
+
+@keyframes year {
+    0% {
+        transform: translateY(0)
+    }
+    20% {
+        transform: translateY(-20px)
+    }
+    40%, 100% {
+        transform: translateY(0)
+    }
+}
+
+h2 {
+    animation: h2 1s infinite 
+}
+
+@keyframes h2 {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50%{
+        transform: scale(1.2);
+    }
+}
+
+.peach1 {
+    width: 30%;
+    height: auto;
+    position: absolute;
+    right: 0;
+    transform: scaleX(-1);
+    filter: FlipH;
+
+}
+.peach2 {
+    width: 30%;
+    height: auto;
+    position: absolute;
+    left: 0;
+   
+}
+
+.text {
+    position: fixed;
+    bottom: 0;
+    height: 350px;
+    width: 100%;
+    line-height: 1.5;
+
+    display: flex;
+    font-size: 2.5rem;
+    box-shadow: 4px 0 10px #6d6d6a; 
+
+}
+
+.chung-cake {
+    flex-basis: 30%;
+}
+
+.text-wish {
+    padding: 30px;
+}
+
+.text p {
+    width: 100%;
+    text-align: left;
+    
+    color: tomato;
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem;
+
+}
+
+.text p:nth-child(2) {
+    padding-right: 10%;
+}
+
+.text img {
+    width: auto;
+    height: 100%;
+}

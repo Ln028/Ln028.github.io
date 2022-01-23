@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #AED581;
+
+}
+
+.card {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background-color: #ff6347;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 15%);
+    overflow: hidden;
+}
+
+.card img {
+
+}
+
+.flower {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: -20px;
+    opacity: .6;
+
+    z-index: 3;
+}
+
+.flower1, .flower4, .flower8 {
+    animation: flower1 3s infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes flower1 {
+    0% 
+    {
+        transform: translateY(0)
+    }
+    50% {
+        transform: translateY(200) translateX(50px);
+        width: 20px;
+        height: 20px;
+    }
+    
+    100% {
+        transform: translateY(400px) translateX(100px)
+    }
+}
+
+.flower2, .flower7 {
+    width: 10px;
+    height: 10px;
+    animation: flower2 4s infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes flower2 {
+    0% 
+    {
+        transform: translateY(0)
+    }
+    50% {
+        transform: translateY(200) translateX(50px);
+    }
+    
+    100% {
+        transform: translateY(400px) translateX(-100px)
+    }
+}
+
+.flower3, .flower6 {
+    width: 20px;
+    height: 20px;
+    animation: flower3 6s infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes flower3 {
+    0% 
+    {
+        transform: translateY(0)
+    }
+    33% {
+        transform: translateY(133px) translateX(150px);
+    }
+    66% {
+        transform: translateY(200) translateX(50px);
+    }
+    
+    100% {
+        transform: translateY(400px) translateX(50px)
+    }
+}
+
+.flower5, .flower9 {
+    width: 16px;
+    height: 16px;
+    animation: flower5 8s infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes flower5 {
+    0% 
+    {
+        transform: translateY(0)
+    }
+    33% {
+        transform: translateY(133px) translateX(-150px);
+    }
+    66% {
+        transform: translateY(266) translateX(-50px);
+    }
+    
+    100% {
+        transform: translateY(400px) translateX(50px)
+    }
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    border-radius: 4px;
+    z-index: 1;
+
+}
+.image img {
+    width: 300px;
+    
+}
+
+h1 {
+    width: 100%;
+    font-family: 'Neonderthaw', cursive;
+    font-weight: 400;
+    text-shadow: 4px 4px 10px rgb(243, 11, 11);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    z-index: 2;
+    top: 70px;
+    color: #fff;
+    font-size: 4.5rem;
+}
+
+h1 span {
+    color: rgb(248, 233, 25);
+    position: relative;
+    display: inline-block;
+    animation: year 1.2s ease-in-out infinite;
+    animation-delay: calc(.1s * var(--i));
+}
+
+@keyframes year {
+    0% {
+        transform: translateY(0)
+    }
+    20% {
+        transform: translateY(-20px)
+    }
+    40%, 100% {
+        transform: translateY(0)
+    }
+}
+
+.card h2 {
+    position: absolute;
+    top: 10px;
+    z-index: 2;
+
+    width: 100%;
+    font-family: 'Dongle', sans-serif;
+    text-transform: uppercase;
+    font-size: 3rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 4px rgb(248, 66, 66);
+}
+
+.card .wish {
+    position: absolute;
+    top: 420px;
+    z-index: 2;
+
+    height: 90px;
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    padding: 15px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    color: #fff;
+    font-weight: 600;
+    background-color: #FFCCBC;
+
+    transition: all 1.5s;
+    animation: wish 4s infinite;
+}
+
+@keyframes wish {
+    0%, 20%, 40%, 60%, 80%, 100% {
+        transform: scale(1);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: scale(1.2);
+    }
+}
+
+.card:hover .wish {
+    position: absolute;
+    top: 290px;
+    background-color: #FF8A80;
+}
+
+.card .sign {
+    position: absolute;
+    bottom: 0;
+
+    z-index: 2;
+
+    text-align: center;
+    width: 100%;
+    font-family: 'Dongle', sans-serif;
+    color: #fff;
+    background-color: #FF8A80;
+}
+
+
+

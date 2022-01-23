@@ -1,0 +1,31 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: tomato;
+}
+
+.text {
+    position: relative;
+    /* -webkit-box-reflect: below -12px linear-gradient; */
+}
+.text span {
+    position: relative;
+    display: inline-block;
+    font-size: 2rem;
+    text-transform: uppercase;
+    animation: animation 1s ease-in-out infinite;
+    animation-delay: calc(.1s * var(--i));
+}
+@keyframes animation {
+    0% {
+        transform: translateY(0px);
+    }
+    20% {
+        transform: translateY(-20px);
+    }
+    40%, 100% {
+        transform: translateY(0px);
+    }
+}

@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box {
+    background-color: tomato;
+    width: 200px;
+    height: 200px;
+
+    animation-name: animation;
+    animation-duration: 3s;
+
+    /* Đây là 2 thuộc tính bắt buộc phả dùng */
+
+    animation-iteration-count: 5;
+    /* Đây là thuộc tính để set thực hiện animation mấy lần */
+
+    animation-iteration-count: infinite;
+    /* Đây là thuộc tính để set thực hiện animation mãi mãi */
+
+    animation-delay: 2s;
+
+    animation-direction: reverse;
+
+    /* Viết tắt lại như sau:
+    animation: animation 3s 2s infinite reverse
+    theo thứ tự: tên => duration => delay => interation-count => direction */
+
+}
+
+@keyframes animation {
+    0% {
+        transform: translateX(0);
+    }
+
+    33% {
+        transform: translateX(200px);
+        background-color: cornflowerblue;
+    }
+    66% {
+        transform: translateX(400px);
+        background-color:crimson;
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
