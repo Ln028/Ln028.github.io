@@ -14,6 +14,8 @@ html {
     height: 60px;
     background-color: #FFAB91;
     color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 15%);
+
 }
 
 .header ul {
@@ -30,6 +32,11 @@ html {
     font-weight: 500;
 }
 
+.header li:nth-child(2) {
+    font-weight: 800;
+    border-bottom: 2px solid #333;
+}
+
 .header a {
     text-decoration: none;
     color: #333;
@@ -42,7 +49,6 @@ html {
     align-content: space-between;
     height: 100%;
     margin: auto;
-    background-color: rgb(250, 245, 237);
 }
 
 img {
@@ -67,7 +73,6 @@ img {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 20px;
-    background-color: rgb(250, 245, 237);
 }
 
 .photo > div {
@@ -91,7 +96,7 @@ h2 {
     position: absolute;
     bottom: 0;
     z-index: 2;
-    background-color: #FFCCBC;
+    background-color: #FFAB91;
     padding: 10px;
     width: 100%;
     height: 50px;
@@ -110,6 +115,5 @@ h2 {
     transform: translateY(0);
 }
 .photo > div:hover img {
-    opacity: 0.5;
     transform: scale(1.2);
 }
