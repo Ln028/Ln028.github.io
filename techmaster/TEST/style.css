@@ -132,7 +132,7 @@ img {
     background-color: rgb(250, 245, 237);
     
 }
-.content h3, h2, i {
+.content h3, .content h2, .content i {
     margin: 10px 20px;
     line-height: 1.5;
     color: #333
@@ -144,6 +144,7 @@ img {
 
 .content img {
     border-radius: 8px;
+    margin-top: 20px;
 }
 
 .hobby {
@@ -166,11 +167,8 @@ img {
     flex-wrap: wrap;
 }
 .hobby-active p {
-    width: auto;
-}
-
-.hobby-active i {
-    margin-top: 30px;
+    width: 40%;
+    margin-top: 20px;
 }
 
 .hobby .avatar {
@@ -180,11 +178,12 @@ img {
     margin-top: 25px;
 }
 
-.hobby p {
-    margin: 10px;
-}
 .hobby span {
     margin-right: 6px;
+}
+
+.hobby i {
+    margin-top: 30px;
 }
 
 .footer {
