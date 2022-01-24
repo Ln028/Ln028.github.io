@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Roboto, sans-serif;
+}
+
+.header {
+    width: 100%;
+    height: 60px;
+    background-color: #FFAB91;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 15%);
+
+}
+
+.header ul {
+    width: 100%;
+    height: 60px;
+
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.header li {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.header li:nth-child(4) {
+    font-weight: 800;
+    border-bottom: 2px solid #333;
+}
+
+.header a {
+    text-decoration: none;
+    color: #333;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-evenly;
+
+    width: 100%;
+    height: 90%;
+    line-height: 2;
+}
+.contact-info, .message {
+    padding: 30px;
+    position: relative;
+    flex-basis: 40%;
+    background-color: rgb(250, 245, 237);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 15%);
+    border-radius: 4px;
+    margin: 20px;
+}
+
+.contact-info:hover, .message:hover {
+    background-color: #FFAB91;
+}
+
+.contact-info>div, .message>div {
+  margin-bottom: 20px;
+}
+
+.contact-info ul {
+    list-style-type: none;
+}
+
+.contact-info span {
+    display: inline-block;
+    width: 20px;
+}
+
+.contact img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.message {
+    height: auto;
+}
+
+.message table, .message input, .message textarea {
+    width: 100%;
+    padding: 4px;
+}
+
+table td {
+   padding-bottom: 10px;
+}
+input, textarea {
+    border-radius: 4px;
+    border: 1px solid #333;
+}
+
+input {
+    height: 30px;
+}
+textarea {
+    height: 100px;
+}
+
+.button {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+button {
+    border: 1px solid #333;
+    width: 60px;
+    height: 30px;
+    font-family: Roboto, sans-serif;
+    font-size: 1rem;
+    border-radius: 4px;
+
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+}
+
+button:hover {
+    background-color: #d8d7d7;
+    font-weight: 600;
+}
+
+.footer {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    background-color: #FFAB91;
+    color: #333;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #333;
+}
+
+.footer i {
+    margin-right: 5px;
+}
