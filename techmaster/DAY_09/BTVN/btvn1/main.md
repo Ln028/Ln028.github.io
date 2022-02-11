@@ -10,9 +10,11 @@ JavaScript (JS) là một ngôn ngữ lập trình thông dịch. Đây là 1 tr
 ## Viết chương trình JS
 Tất cả các đoạn mã JavaScript đều được đặt trong cặp thẻ đóng mở `<script></script>`. Ví dụ:
 
-    <script>
-     console.log("Hello world");
-    </script>
+```html
+<script>
+console.log("Hello world");
+</script>
+```
 
 **Lưu ý: Mã javascript nên đặt ở phần cuối cùng của body**
 
@@ -29,9 +31,9 @@ Có 3 cách đặt thẻ script thường được sử dụng như dưới đâ
 
 Ví dụ: 
     
-    <script src="./main.js"></script>
-
-
+```html
+<script src="./main.js"></script>
+```
 ## Biến trong JS
 ### Biến là gì?
 Biến là một định danh dùng để lưu trữ dữ liệu, thông qua biến chúng ta có thể thực hiện các thao tác với dữ liệu.
