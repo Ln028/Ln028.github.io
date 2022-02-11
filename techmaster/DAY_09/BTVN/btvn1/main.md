@@ -46,23 +46,26 @@ Chúng ta sử dụng 2 cách sau để khai báo biến:
 
 Cách 1: Khai báo biến và không gán luôn giá trị cho biến:
 
-    <let age;
+    let age;
     age = 28;
     console.log(age)
     //Kết quả là: 28>
 
 *Chú ý: Khi 1 biến được khai báo nhưng chưa được gán giá trị thì nó sẽ nhận kiểu dữ liệu là undefined. Ví dụ:*
 
+    ```javascript
     let age;
     console.log(age)
-    //Kết quả là: undefined    
+    //Kết quả là: undefined   
+    ``` 
 
 Cách 2: Khai báo biến và gán luôn giá trị cho biến:
 
     ```javascript
-    <let email = "nguyenlan50aof@gmail.com"
-    console.log(email)>```
+    let email = "nguyenlan50aof@gmail.com"
+    console.log(email)
     //Kết quả là: nguyenlan50aof@gmail.com
+    ```
 
 ### Quy tắc đặt biến
 1. Tên biến chỉ chứa các ký tự sau: chữ, số, ký tự "$", dấu "_".
