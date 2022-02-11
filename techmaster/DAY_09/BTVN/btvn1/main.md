@@ -64,8 +64,9 @@ Cách 2: Khai báo biến và gán luôn giá trị cho biến:
     ```javascript
     let email = "nguyenlan50aof@gmail.com"
     console.log(email)
-    //Kết quả là: nguyenlan50aof@gmail.com
     ```
+    //Kết quả là: nguyenlan50aof@gmail.com
+    
 
 ### Quy tắc đặt biến
 1. Tên biến chỉ chứa các ký tự sau: chữ, số, ký tự "$", dấu "_".
