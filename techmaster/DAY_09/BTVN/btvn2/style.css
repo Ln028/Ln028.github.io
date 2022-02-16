@@ -80,7 +80,7 @@ body>div {
     max-height: 64px;
 }
 
-.text {
+.container-text .text {
     margin: 30px;
 }
 .text h3 {
@@ -99,12 +99,12 @@ body>div {
 }
 .text p {
     margin: 24px auto 0 0;
-    /* font-family: 'Open Sans', sans-serif; */
 }
 
 .text>p>a {
-    text-decoration: underline;
     color: #391440;
+    border-bottom: 1px solid #391440;
+    text-decoration: none;
 
 }
 
@@ -121,9 +121,9 @@ body>div {
 
 .container-image a {
     z-index: 1;
-    /* font-family: 'Open Sans', sans-serif; */
     color: #999999;
     text-transform: uppercase;
+    text-decoration: none;
     font-weight: 700;
     position: absolute;
     top: 30px;
@@ -469,6 +469,11 @@ body>div {
     color: #f1c50e;
 }
 
+.container6-content1 i {
+    font-size: 48px;
+    margin-top: 30px;
+}
+
 .container6-content2 {
     flex-basis: 66.66666666%;
     max-width: 66.66666666%;
@@ -480,15 +485,14 @@ body>div {
     padding-left: 19px;
 }
 
-
-
-.container6-content2 input {
+.container6-content2 .text, .container6-content2 .email, textarea {
     display: block;
     border-color: #ffffff;
     width: 100%;
     padding: 15px 12px;
     background-color: transparent;
     border-style: solid;
+    border-width: 2px;
 }
 
 ::placeholder {
@@ -496,4 +500,65 @@ body>div {
     font-size: 1rem;
 }
 
+.container6-content2>div:nth-child(4) {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    margin-bottom: 32px;
+
+}
+.container6-content2>div:nth-child(4) label {
+    margin-left: 5px;
+}
+.container6-content2>div:nth-child(4) label a {
+    color: #e5bfed;
+    text-decoration: none;
+}
+
+.container6-content2>a {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 12px 30px 12px 30px;
+    margin-left: 19px;
+
+    color: #111111;
+    background-color: #f1c50e;
+    border-radius: 30px;
+}
+
+.footer {
+    padding: 0 117px;
+    color: #ffffff;
+    background-color: #333333;
+}
+
+.footer-footer1 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 28px;
+}
+.footer-footer1 p {
+    width: 417px;
+    min-height: 120px;
+    padding-top: 49px;
+    text-align: center;
+    font-size: 0.875rem;
+    line-height: 1.6;
+}
+
+.footer-footer2 {
+    display: flex;
+    justify-content: center;
+    padding: 36px 16px;
+    font-size: 0.8rem;
+}
+
+.footer-footer2 a {
+    color: #e5bfed;
+    text-align: center;
+}
+.footer-footer2 a:nth-child(1), .footer-footer2>p {
+    margin-right: 4px;
+}
 
