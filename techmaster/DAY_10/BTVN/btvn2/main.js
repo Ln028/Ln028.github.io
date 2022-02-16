@@ -81,3 +81,32 @@ namNhuan(2002)
 
 // Sử dụng return
 
+function chiSoBMI(weight, height) {
+    let BMI = weight / (height**2)
+    
+    if(BMI < 18.5){
+        console.log("Thiếu cân, thiếu năng lượng trường diễn")
+    } else if(BMI >= 18.5 && BMI <= 24.99) {
+        console.log("Bình thường")
+    } else if(BMI >= 25 && BMI <= 29.99) {
+        console.log("Thừa cân")
+    } else {
+        console.log("Béo phì")
+    }
+    
+    return BMI 
+}
+console.log(chiSoBMI(47, 1.56))
+
+// Bài 6:
+
+// Viết function truyền vào giá trị độ C. Tính giá trị độ F tương ứng
+
+// Sử dụng return
+
+
+function tinhDoF(a) {
+    let doF = a * 1.8 + 32
+    return doF 
+}
+console.log(tinhDoF(37))
