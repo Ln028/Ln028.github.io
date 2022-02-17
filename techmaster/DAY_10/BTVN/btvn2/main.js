@@ -47,7 +47,7 @@ giaiPT1(20, 5)
 // In ra kết quả
 
 function giaiPT2(a, b, c) {
-    delta = b * b - 4 * a * c
+    let delta = b * b - 4 * a * c
     if(delta < 0) {
         console.log("Phương trình vô nghiệm")
     } else if(delta === 0) {
