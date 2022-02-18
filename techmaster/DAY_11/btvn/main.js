@@ -2,48 +2,48 @@
 
 // Ví dụ : repeatString(“a”) => Kết quả trả về là “aaaaaaaaaa”
 
-function string() {
+function string(string) {
     let name = "";
         for (let i = 1; i < 11; i++) {
-            name = name + "ha"
+            name = name + string
         }
     return name
 }
-console.log(string());
+console.log(string("ha"));
 
 //Bài 2. Viết function truyền vào 1 chuỗi bất kỳ, hãy viết hàm có tác dụng sao chép đó chuỗi lên 10 lần, ngăn cách nhau bởi dấu gạch ngang.
 
 //Ví dụ: repeatString(“a”) => Kết quả trả về là “a-a-a-a-a-a-a-a-a-a”
 
-function text() {
-    let content = "";
+function text(user) {
+    let content = user;
     for (let i = 1; i < 11; i++) {
         if(i == 1) {
-            content = "ha"
+            content = user
         } else {
-            content = content + "-" + "ha"
+            content = content + "-" + user
         }
     }
     return content
 }
-console.log(text());
+console.log(text("ha"));
 
 //Bài 3. Viết function truyền vào 1 chuỗi bất kỳ và 1 số nguyên dương n > 1, hãy viết hàm có tác dụng sao chép đó chuỗi lên n lần, ngăn cách nhau bởi dấu gạch ngang.
 
 //Ví dụ: repeatString(‘a’, 5) => Kết quả trả về là ‘a-a-a-a-a’
 
-function repeat(n) {
-    let string = "hi"
+function repeat(m, n) {
+    let string = n
     for (let i = 1; i <= n; i++) {
         if(i ==1) {
-            string = "hi"
+            string = m
         } else {
-            string = "hi" + "-" + string
+            string = m + "-" + string
         }
     }
     return string
 }
-console.log(repeat(9));
+console.log(repeat("hi", 9));
 
 //Bài 4. Tính tổng các số chia hết cho 5 từ 0 -> 100
 
@@ -148,7 +148,7 @@ console.log(cacSnt(11));
 
 function tongSnt(number) {
     let flag = 0
-    for (let i = 0; i <= number / 2; i++) {
+    for (let i = 0; i <= number; i++) {
         if(number % i == 0) {
         flag = flag + i;
         }
