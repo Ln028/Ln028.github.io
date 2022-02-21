@@ -20,7 +20,7 @@ console.log(truncateString("It is very cold today"));
 //Bài 3. Viết function truyền vào 1 chuỗi, kiểm tra xem chuỗi đó có phải chuỗi đối xứng hay không (chuỗi đối xứng là chuỗi đọc xuôi hay ngược đều như nhau, không tính khoảng trắng, không phân biệt hoa thường), kết quả trả về true hoặc false.
 
 function symmetricalString(input) {
-    let string = input.toLowerCase().replace(" ", "")
+    let string = input.toLowerCase().replace(/" "/g, "")
     return string == string.split("").reverse().join("");
 }
 console.log(symmetricalString("Race car"));
@@ -35,7 +35,7 @@ function soNguyen(number) {
             newNumber[0] = newNumber[1]
             newNumber[1] = 0
         }
-        return newNumber.join(``)
+        return Number(newNumber.join(``))
 }
 console.log(soNguyen(1240986));
 
