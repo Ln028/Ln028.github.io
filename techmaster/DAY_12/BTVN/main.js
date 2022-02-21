@@ -31,15 +31,11 @@ console.log(symmetricalString("Race car"));
 function soNguyen(number) {
     let numberChange = number.toString()
     let newNumber = numberChange.split(``).sort()
-    for (let i = 0; i < newNumber.length; i++) {
         if (newNumber[0] == 0) {
             newNumber[0] = newNumber[1]
             newNumber[1] = 0
         }
-
         return newNumber.join(``)
-
-    }
 }
 console.log(soNguyen(1240986));
 
