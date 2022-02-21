@@ -56,7 +56,7 @@ function giaiPT2(a, b, c) {
         console.log(`Phương trình có nghiêm sau: x1 = ${(-b + Math.sqrt(delta)) / (2 * a)}; x2 = ${(-b - Math.sqrt(delta)) / (2 * a)}`)
     }
 }
-giaiPT2(5, 2, -30)
+giaiPT2(0, 2, -30)
 
 // Bài 4:
 

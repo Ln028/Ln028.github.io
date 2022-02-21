@@ -33,7 +33,7 @@ console.log(text("ha"));
 //Ví dụ: repeatString(‘a’, 5) => Kết quả trả về là ‘a-a-a-a-a’
 
 function repeat(m, n) {
-    let string = n
+    let string = ""
     for (let i = 1; i <= n; i++) {
         if(i ==1) {
             string = m
