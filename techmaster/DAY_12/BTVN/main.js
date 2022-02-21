@@ -1,9 +1,9 @@
 //Bài 1. Viết 1 function kiểm tra 1 chuỗi có nằm trong chuỗi còn lại hay không. Nếu có trả về true, nếu không trả về false. Đầu vào có 2 tham số : Tham số 1 là chuỗi ban đầu, tham số 2 là chuỗi cần kiểm tra
 
-function string(text1, text2) {
+function stringExists(text1, text2) {
     return text1.includes(text2)
 }
-console.log(string("To day is the rainy day", "tomorrow"));
+console.log(stringExists("To day is the rainy day", "tomorrow"));
 
 
 //Bài 2. Viết function truyền vào 1 chuỗi, hãy rút ngắn chuỗi bằng cách cắt ra 8 ký tự đầu của 1 chuỗi và thêm dấu ba chấm ở cuối chuỗi. Nếu chuỗi có độ dài <= 8 ký tự thì giữ nguyên
