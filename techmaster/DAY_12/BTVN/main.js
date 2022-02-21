@@ -9,13 +9,10 @@ console.log(string("To day is the rainy day", "tomorrow"));
 //Bài 2. Viết function truyền vào 1 chuỗi, hãy rút ngắn chuỗi bằng cách cắt ra 8 ký tự đầu của 1 chuỗi và thêm dấu ba chấm ở cuối chuỗi. Nếu chuỗi có độ dài <= 8 ký tự thì giữ nguyên
 
 function truncateString(string) {
-    let cutString = string.slice(0, 8)
-        if (string.length < 8) {
-            return string
-        } else {
-            cutString += "..."
-        }
-    return cutString
+    if (string.length < 8) {
+        return string
+    }
+    return string.slice(0, 8) + "..."
 }
 console.log(truncateString("It is very cold today"));
 
