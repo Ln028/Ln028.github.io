@@ -31,13 +31,17 @@ console.log(symmetricalString("Race car"));
 function soNguyen(number) {
     let numberChange = number.toString()
     let newNumber = numberChange.split(``).sort()
-        if (newNumber[0] == 0) {
-            newNumber[0] = newNumber[1]
-            newNumber[1] = 0
+        for (let i = 0; i < newNumber.length; i++) {
+            if(newNumber[i] != 0) {
+                newNumber[0] = newNumber[i]
+                newNumber[i] = 0
+                break
+
+            }
         }
         return Number(newNumber.join(``))
 }
-console.log(soNguyen(1240986));
+console.log(soNguyen(120040986));
 
 
 //Bài 5: Viết function truyền vào 1 chuỗi bất kỳ gồm nhiều từ. Hãy chuyển chuỗi đó thành dạng snake_case và viết thường
