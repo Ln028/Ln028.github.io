@@ -21,15 +21,11 @@ console.log(minArr([18, 3, 8, 39, 55, 45, 3, 2]));
 function array(arr) {
     let newArray = []
     for (let i = 0; i < arr.length; i++) {
-        if (arr[i] % 2 == 0) {
-            newArray[i] = 0
-        } else {
-            newArray[i] = 1
-        }
+        newArray.push(arr[i] % 2)
     }
     return newArray
 }
-console.log(array([4, 2, 5, 6, 2, 7]));
+console.log(array([4, 2, 5.5, 6, 2, 7]));
 
 //Bài 4: Cho 1 chuỗi, hãy viết hàm có tác dụng sao chép đó chuỗi lên 10 lần
 function string(str) {
@@ -41,8 +37,10 @@ console.log(string("a"));
 //Bài 5: Cho 1 chuỗi, hãy viết hàm có tác dụng sao chép đó chuỗi lên 10 lần, ngăn cách nhau bởi dấu gạch ngang.
 
 function strings(str) {
-    let newString = str.repeat(10).split(``).join("-")
-    return newString.toString()
+    return str.repeat(10).split('').join("-").toString()
 }
 console.log(strings("a"));
+
+
+
 

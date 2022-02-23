@@ -498,3 +498,51 @@ arr.includes(1) // true
 let arr = [1, 2, 3, 4, 5, 6, 7, 8]
 arr.includes(10) // false
 ```
+
+### 11. Arrray.sort()
+
+Phương thức sort() trong JavaScript cho phép sắp xếp các phần tử của một mảng. Phương thức sort() thay đổi vị trí của các phần tử trong mảng ban đầu và trả về chính mảng đó.
+
+Theo mặc định, phương thức sort() sắp xếp các phần tử của mảng theo thứ tự tăng dần.
+
+> Lưu ý: Phương thức sort() chuyển các phần tử thành chuỗi và so sánh các chuỗi để xác định thứ tự.
+
+Ví dụ:
+```javascript
+// Tạo một mảng ví dụ
+let mangViDu = [10, 0, 1, 2, 3, 30, 20];
+
+// In ra kết quả
+console.log(mangViDu.sort()); //[0, 1, 10, 2, 20, 3, 30]
+```
+Trong ví dụ này, phương thức sort() đặt 10 trước 2 bởi vì sort() chuyển các phần tử thành chuỗi và so sánh.
+
+Và vì chuỗi "10" đứng trước "2" khi thực hiện so sánh chuỗi. Thế nên chúng ta mới có kết quả như trên.
+
+Để khắc phục điều này, bạn cần truyền một hàm so sánh cho phương thức sort(). Phương thức sort() sẽ căn cứ vào kết quả trả về của hàm so sánh (âm, dương) để xác định thứ tự của các phần tử.
+
+Cú pháp của phương thức sort(): `array.sort( compareFunction )`
+Trong đó: compareFunction(hàm so sánh) là một hàm so sánh hai phần tử của mảng. Nếu bị bỏ qua, phương thức sort() sẽ sắp xếp các phần tử với thứ tự sắp xếp dựa trên các giá trị thứ tự Unicode của các phần tử như đã đề cập trước đó.
+
+Hàm so sánh của phương thức sort() chấp nhận hai đối số (a, b).
+
+Phương thức sort() sẽ sắp xếp các phần tử dựa trên giá trị trả về của hàm so sánh với các quy tắc sau:
+
+Nếu a > b, phương thức sort() sẽ sắp xếp a đứng trước b.
+
+Nếu a < b, phương thức sort() sắp xếp b đứng trước a.
+
+Nếu a = b, phương thức sort() coi a bằng b và giữ nguyên vị trí của chúng
+
+Sau đây minh họa cú pháp của hàm so sánh:
+
+Ví dụ:
+```javascript
+let mangViDu = [10, 0, 1, 2, 3, 30, 20];
+
+// Sắp xếp với hàm so sánh và sort()
+let newArr = mangViDu.sort((a, b) => a-b);//
+
+// In ra kết quả sau khi sắp xếp
+console.log(newArr); //[0, 1, 2, 3, 10, 20, 30]
+```
