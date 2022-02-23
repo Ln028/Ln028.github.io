@@ -475,7 +475,7 @@ Ví dụ:
 let subArray = arr.slice(0, 2); // [1, 3]
 ```
 
-### 9, Array.filter()
+### 9. Array.filter()
 
 Method này nhận vào tham số là một testMethod và sẽ trả về mảng chứa các giá trị thỏa mãn testMethod.
 
