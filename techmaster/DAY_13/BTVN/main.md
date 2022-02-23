@@ -534,8 +534,6 @@ Nếu a < b, phương thức sort() sắp xếp b đứng trước a.
 
 Nếu a = b, phương thức sort() coi a bằng b và giữ nguyên vị trí của chúng
 
-Sau đây minh họa cú pháp của hàm so sánh:
-
 Ví dụ:
 ```javascript
 let mangViDu = [10, 0, 1, 2, 3, 30, 20];
@@ -545,4 +543,36 @@ let newArr = mangViDu.sort((a, b) => a-b);//
 
 // In ra kết quả sau khi sắp xếp
 console.log(newArr); //[0, 1, 2, 3, 10, 20, 30]
+```
+
+### 12. Array.toString() và Array.join()
+
+**Array.toString()**
+Hàm Array.toString() là hàm dùng để chuyển đổi một mảng sang một chuỗi cách nhau bởi dấu phẩy.
+
+Cú pháp: `array.,toString()`
+
+Ví dụ:
+```javascript
+let words = ["Học", "Lập", 'Trình'];
+console.log(words.toString()) //"Học,Lập,Trình"
+```
+
+**Array.join()**
+
+Ngoài hàm toString() ra thì chúng ta cũng có thể sử dụng hàm join để chuyển đổi mảng thành chuỗi. Điểm khác biệt là hàm toString không thể tùy chọn ký tư ngăn cách, còn hàm join thì được.
+
+Hàm join() sẽ nối các phần tử của mảng thành một chuỗi, các phần tử được ngăn cách nhau bởi kí tự do người dùng quy định. Nếu không truyền ký tự ngăn cách vào thì giá trị mặc định là dấu phẩy ",".
+
+Cú pháp: `array.join(separator)`
+
+Trong đó: separator là kí tự sẽ ngăn cách các phần tử với nhau, mặc định mang giá trị là dấu ",".
+
+Ví dụ: 
+```javascript
+let a = ['Wind', 'Water', 'Fire'];
+a.join();      // 'Wind,Water,Fire'
+a.join(', ');  // 'Wind, Water, Fire'
+a.join(' + '); // 'Wind + Water + Fire'
+a.join(' ');    // 'Wind Water Fire'
 ```

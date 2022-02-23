@@ -1,17 +1,13 @@
 //Bài 1: Tìm số lớn nhất trong mảng
 function maxArr(arr) {
-    let maxValue = arr.sort(function (a, b) {
-        return a - b
-    })
-    return maxValue[maxValue.length - 1]
+    let maxValue = arr.sort((a, b) => b - a)
+    return maxValue[0]
 }
 console.log(maxArr([18, 3, 8, 39, 55, 45, 3, 2]));
 
 //Bài 2: Tìm số nhỏ nhất trong mảng
 function minArr(arr) {
-    let minValue = arr.sort(function (a, b) {
-        return a - b
-    })
+    let minValue = arr.sort((a, b) => a - b)
     return minValue[0]
 }
 console.log(minArr([18, 3, 8, 39, 55, 45, 3, 2]));
