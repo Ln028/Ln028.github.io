@@ -12,6 +12,8 @@ console.log(sortStudents(['Nam', 'Hoa', 'Tuấn']));
 //shuffle([1,2,3,4,5]) => [2,3,4,1,5]
 //shuffle([1,2,3,4,5]) => [4,2,3,5,1]
 
+//thuật toán Fisher–Yates shuffle
+
 function array(arr) {
     for (let i = arr.length-1; i > 0; i--) {
         let j = Math.floor(Math.random() * (i+1))
@@ -29,7 +31,9 @@ console.log(array([1,2,3,4,5]));
 //symmetricDifference([1, 2, 3], [1, 2, 4]) => [3,4]
 
 function arrayDif(arr1, arr2) {
-   return (arr1.filter(value => !arr2.includes(value)).concat(arr2.filter(value => !arr1.includes(value))))
+   let newArr1 = arr1.filter(value => !arr2.includes(value))
+   let newArr2 = arr2.filter(value => !arr1.includes(value))
+   return newArr1.concat(newArr2)
 }
 console.log(arrayDif([1, 2, 3], [1, 2, 4, 5, 6]));
 
@@ -39,6 +43,9 @@ console.log(arrayDif([1, 2, 3], [1, 2, 4, 5, 6]));
 //union([1, 2, 3, 2, 3], [1, 2, 3, 1, 2]) => [1,2,3]
 
 function unicon(arr1, arr2) {
-    return arr1.filter(value => arr2.includes(value)).concat(arr1.filter(value => !arr2.includes(value))).concat(arr2.filter(value => !arr1.includes(value)))
+    let unionArr = arr1.filter(value => arr2.includes(value))
+    let unionArr1 = arr1.filter(value => !arr2.includes(value))
+    let unionArr2 = arr2.filter(value => !arr1.includes(value))
+    return unionArr.concat(unionArr1).concat(unionArr2)
  }
  console.log(unicon([1, 2, 3], [1, 2, 3, 5, 6]));
