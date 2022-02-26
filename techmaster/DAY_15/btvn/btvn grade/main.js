@@ -1,15 +1,15 @@
 const grades = [
-    {name: 'John', grade: 8, sex: 'M'},
-    {name: 'Sarah', grade: 12, sex: 'F'},
-    {name: 'Bob', grade: 16, sex: 'M'},
-    {name: 'Johnny', grade: 2, sex: 'M'},
-    {name: 'Ethan', grade: 4, sex: 'M'},
-    {name: 'Paula', grade: 18, sex: 'F'},
-    {name: 'Donald', grade: 5, sex: 'M'},
-    {name: 'Jennifer', grade: 13, sex: 'F'},
-    {name: 'Courtney', grade: 15, sex: 'F'},
-    {name: 'Jane', grade: 9, sex: 'F'}
-   ]
+    { name: 'John', grade: 8, sex: 'M' },
+    { name: 'Sarah', grade: 12, sex: 'F' },
+    { name: 'Bob', grade: 16, sex: 'M' },
+    { name: 'Johnny', grade: 2, sex: 'M' },
+    { name: 'Ethan', grade: 4, sex: 'M' },
+    { name: 'Paula', grade: 18, sex: 'F' },
+    { name: 'Donald', grade: 5, sex: 'M' },
+    { name: 'Jennifer', grade: 13, sex: 'F' },
+    { name: 'Courtney', grade: 15, sex: 'F' },
+    { name: 'Jane', grade: 9, sex: 'F' }
+]
 
 //Viết function tính thứ hạng trung bình của cả lớp
 const showRating = rating => {
@@ -37,21 +37,13 @@ console.log(showRating(grades));
 const showMale = male => {
     let rateMale = 0;
     let count1 = 0
-    // for (let i = 0; i < male.length; i++) {
-    //     const ele = male[i];
-    //     if(ele.sex == "M") {
-    //         rateMale += ele.grade;
-    //         count += 1;
-    //     }
-    // }
-    // return rateMale / count
-    
-    male.forEach(student => {
-        if(student.sex == "M") {
-            rateMale += student.grade;
+    for (let i = 0; i < male.length; i++) {
+        const ele = male[i];
+        if (ele.sex == "M") {
+            rateMale += ele.grade;
             count1 += 1;
         }
-    })
+    }
     return rateMale / count1
 }
 console.log(showMale(grades));
@@ -61,9 +53,9 @@ console.log(showMale(grades));
 const showFemale = female => {
     let rateFemale = 0;
     let count2 = 0
-    
+
     female.forEach(student => {
-        if(student.sex == "F") {
+        if (student.sex == "F") {
             rateFemale += student.grade;
             count2 += 1;
         }
@@ -75,8 +67,8 @@ console.log(showFemale(grades));
 //Viết function tìm học viên Nam có thứ hạng cao nhất trong lớp
 
 const firstMale = first1 => {
-let maleTop = first1.filter(student => student.sex == "M").sort((a, b) => b.grade - a.grade)
-return maleTop[0]
+    let maleTop = first1.filter(student => student.sex == "M").sort((a, b) => b.grade - a.grade)
+    return maleTop[0]
 }
 console.log(firstMale(grades));
 
@@ -84,8 +76,8 @@ console.log(firstMale(grades));
 const firstFemale = first2 => {
     let femaleTop = first2.filter(student => student.sex == "F").sort((a, b) => b.grade - a.grade)
     return femaleTop[0]
-    }
-    console.log(firstFemale(grades));
+}
+console.log(firstFemale(grades));
 
 //Viết function tìm học viên Nam có thứ hạng thấp nhất trong lớp
 const lastMale = last1 => {
@@ -98,8 +90,8 @@ console.log(lastMale(grades));
 const lastFemale = last2 => {
     let showFemale = last2.filter(student => student.sex == "F").sort((a, b) => a.grade - b.grade)
     return showFemale[0]
-    }
-    console.log(lastFemale(grades));
+}
+console.log(lastFemale(grades));
 
 //Viết function thứ hạng cao nhất của cả lớp
 const topNo1 = student1 => {

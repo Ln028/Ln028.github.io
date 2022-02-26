@@ -86,15 +86,15 @@ console.log(products);
 
 // 7. Xóa tất cả sản phẩm của thương hiệu "Samsung" trong giỏ hàng
 const deleteProduct = show => {
-        return show.filter(product => (product.brand).toLowerCase() != "samsung")
+    return show.filter(product => (product.brand).toLowerCase() != "samsung")
 }
- console.log(deleteProduct(products));
+console.log(deleteProduct(products));
 
 
 // 8. Sắp xếp giỏ hàng theo price tăng dần
 
 const sortPriceProduct = arrange => {
-        return arrange.sort((a, b) => a.price - b.price)
+    return arrange.sort((a, b) => a.price - b.price)
 }
 console.log(sortPriceProduct(products));
 
