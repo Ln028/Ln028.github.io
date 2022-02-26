@@ -220,7 +220,7 @@ body>div {
 
 .container4 {
     margin: 0 150px;
-    min-height: 1025px
+    /* min-height: 1025px */
 }
 .container4 .content {
     display: flex;
@@ -379,4 +379,99 @@ body>div {
     margin-top: 20px;
     height: 332px;
     object-fit:cover;
+}
+
+.container5 {
+    min-height: 615px;
+    width: 100%;
+    background-color: #feca02;
+    padding: 0 150px;
+    display: flex;
+    flex-direction: column;
+}
+.container5 .title {
+    width: 570px;
+    min-height: 133px;
+    height: auto;
+    margin: 65px auto 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container5 .title h4 {
+    margin: 9px 0 0;
+    line-height: 1.2;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 300;
+    text-align: center;
+    color: #ffffff;
+}
+
+.container5 .title h2 {
+    margin: 12px 0 9px;
+    font-weight: 700;
+    line-height: 1.2;
+    font-size: 2.25rem;
+    text-align: center;
+    color: #ffffff;
+}
+
+.container5 .card {
+    margin: 5px -15px 45px -15px;
+    display: flex;
+
+}
+.container5 .card>div {
+    flex: 0 0 25%;
+    max-width: 25%;
+    background-color: #ffffff;
+    min-height: 347px;
+    border: 15px solid #feca02;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container5 .card span {
+    height: 64px;
+    width: 64px;
+    position: relative;
+    margin: 30px auto 0;
+    display: block;
+    line-height: 0;
+    border-width: 0px;
+    border-radius: 50%;
+}
+
+.container5 .card h5 {
+    text-transform: uppercase;
+    font-weight: 500;
+    width: 203px;
+    line-height: 1.2;
+    font-size: 1.25rem;
+    margin: 31px auto 0;
+    text-align: center;
+}
+.container5 .card>div:nth-child(1) h5 {
+    color: #fe7ec9;
+}
+.container5 .card>div:nth-child(2) h5 {
+    color: #488df4 ;
+}
+.container5 .card>div:nth-child(3) h5 {
+color: #38c4c1;
+}
+.container5 .card>div:nth-child(4) h5 {
+    color: #feca02;
+}
+
+.container5 .card p {
+    font-style: italic;
+    font-size: 0.99rem;
+    width: 203px;
+    margin: 31px auto 30px;
+    font-weight: 400;
+    line-height: 1.7;
+    text-align: center;
 }

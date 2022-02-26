@@ -31,7 +31,7 @@ console.log(sumOdd([1,2,3,4,5]));
 let isOdd = function(arr) {
     let res = [];
     for (let i = 0; i < arr.length; i++) {
-        if(arr % 2 == 1) {
+        if(arr[i] % 2 == 1) {
             res.push(arr[i])
         }
         
@@ -84,7 +84,7 @@ numbers.forEach(ele => {
 
 
 //Vòng lặp forOf:
-let numbers = [1, 2, 3, 4, 5, 6]
+// let numbers = [1, 2, 3, 4, 5, 6]
 
 // In ra các giá trị của mảng
 for (const value of numbers) {
