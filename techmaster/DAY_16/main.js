@@ -24,7 +24,6 @@ function stringHasMaxLength(arr) {
        if(arr[i].length < arr[0].length) {
            getString = [arr[i]]
        }      
-       return getString
 
     }
     return getString
