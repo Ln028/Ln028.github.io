@@ -33,7 +33,7 @@ function stringHasMaxLength(arr) {
             resultMax.push(item);
         }
     })
-    return result_01;
+    return resultMax;
 }
 console.log(stringHasMaxLength(['Hieu', 'Lan', 'Hong', 'Ngan', 'Loan']));
 
@@ -60,12 +60,24 @@ console.log(similarity([1, 2, 3], [1, 2, 3, 5, 6]));
 //Tham số 2: Là 1 số x <= 1000
 //Kết quả trả về là 1 chuỗi biểu thị thời gian sau x giây kể từ thời điểm t.
 
-function time(str, numb) {
-    
+//Cách làm:
+//B1: tách chuỗi thời gian t thành mảng các phần tử giờ, phút, giây. Sau đó chuyển kiểu dữ liệu của các phần tử từ chuỗi sang số.
+//B2: quy đổi thời gian từ giờ phút giây của t sang giây
+//B3: Tính tổng tPlusX = thời gian t cộng thêm x giây
+//B4: Quy đổi tPlusX từ giây sang giờ phút giây
+//B5: Trả về kết quả là chuỗi giá trị giờ phút giây
 
-
-    
+function time(t,x) {
+    let arr = t.split(":").map(item => Number(item))
+    let tToSeconds = arr[2] + arr[1]*60 + arr[0] * 3600;
+    let tPlusX = tToSeconds + x;
+    let newHours = Math.floor(tPlusX/3600);
+    let newMinutes = Math.floor((tPlusX % 3600) / 60);
+    let newSeconds = (tPlusX % 3600) % 60;
+    let newTime = `${newHours}:${newMinutes}:${newSeconds}`
+    return newTime
 }
+console.log(time('6:50:20', 9));
 
 //Bài 6 (2 điểm). Cho mảng users như sau:
 
@@ -107,16 +119,17 @@ console.log(element2(users));
 
 //Cách làm:
 //B1: Gán resuft là 1 object rỗng
-//B2: chạy vòng lặp for qua mảng, nếu phần tử hiện tại của mảng chưa nằm trong object thì đưa phần tử đó vào trong object và gán giá trị của phần tử đó bằng 0, sau mỗi lần lặp thì giá trị của phần tử đó được cộng thêm 1.
-//B3: thoát vòng lặp for và trả về giá trị của object
+//B2: Lặp qua từng phần tử trong mảng, nếu phần tử hiện tại của mảng đã nằm trong object thì giá trị của phần tử đó được cộng thêm 1 và tiếp tục vòng lặp. Nếu phần tử hiện tại không nằm trong mảng, thì đưa phần tử đó vào trong mảng và khởi tạo giá trị của phần tử đó = 1.
+//B3: thoát vòng lặp for và trả về giá trị của object.
 
 function array(arr) {
     let result = {};
     for (let i = 0; i < arr.length; i++) {
-        if(!result[arr[i]]) {
-            result[arr[i]] = 0;
+        if(result[arr[i]]) {
+            result[arr[i]] = result[arr[i]] + 1;
+            continue
         } 
-        result[arr[i]] = result[arr[i]] + 1;
+        result[arr[i]] = 1;
     }
     return result
 }
