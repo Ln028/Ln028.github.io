@@ -48,7 +48,7 @@ console.log(randomElement(['Hieu', 1, 'Hong', 20, 'Loan']));
 
 //Bài 4 (1 điểm). Viết function truyền vào 2 mảng số bất kỳ. Lấy ra một mảng chứa các phần tử xuất hiện trong cả hai mảng đó
 
-//Cách làm: Dùng method filter để lọc ra những phần tử trong mảng arr1 với điều kiện phần tử đó cũng nằm trong mảng arr2 (dùng method includes)
+//Cách làm: Lọc ra những phần tử trong mảng arr1 (dùng method filter) với điều kiện phần tử đó cũng nằm trong mảng arr2 (dùng method includes)
 
 function similarity(arr1, arr2) {
     return union1 = arr1.filter(value => arr2.includes(value))
@@ -61,7 +61,7 @@ console.log(similarity([1, 2, 3], [1, 2, 3, 5, 6]));
 //Kết quả trả về là 1 chuỗi biểu thị thời gian sau x giây kể từ thời điểm t.
 
 //Cách làm:
-//B1: tách chuỗi thời gian t thành mảng các phần tử giờ, phút, giây. Sau đó chuyển kiểu dữ liệu của các phần tử từ chuỗi sang số.
+//B1: tách chuỗi thời gian t thành mảng các phần tử giờ, phút, giây (dùng method split). Sau đó chuyển kiểu dữ liệu của các phần tử từ chuỗi sang số (dùng method map)
 //B2: quy đổi thời gian từ giờ phút giây của t sang giây
 //B3: Tính tổng tPlusX = thời gian t cộng thêm x giây
 //B4: Quy đổi tPlusX từ giây sang giờ phút giây
