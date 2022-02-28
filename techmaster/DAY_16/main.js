@@ -21,7 +21,7 @@ console.log(max2([1,5,6,8,1,8,7,9,9]));
 function stringHasMaxLength(arr) {
     let getString = [arr[0]];
     for (let i = 0; i < arr.length; i++) {
-       if(arr[i].length < arr[0].length) {
+       if(arr[i].length > arr[0].length) {
            getString = [arr[i]]
        }      
 
