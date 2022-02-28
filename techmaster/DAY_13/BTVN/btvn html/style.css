@@ -750,18 +750,20 @@ color: #38c4c1;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 25px auto 0;
+    
 }
 .container10 > div:nth-child(1) span {
     background-color: #fe7ec9;
-    margin: 25px auto 0;
+    
 }
 .container10 > div:nth-child(2) span {
     background-color: #feca02;
-    margin: 25px auto 0 139px;
+   
 }
 .container10 > div:nth-child(3) span {
     background-color: #38C4AB;
-    margin: 25px auto 0 118px;
+ 
 }
 .container10 > div span svg {
     width: 41px;
