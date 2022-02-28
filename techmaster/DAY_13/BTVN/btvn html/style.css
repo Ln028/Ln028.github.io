@@ -730,7 +730,7 @@ color: #38c4c1;
     display: flex;
     justify-content: space-between;
 }
-.container10 > div:nth-child(1), .container10 > div:nth-child(2) {
+.container10 > div {
     flex: 0 0 33.333333%;
     max-width: 33.333333%;
     display: flex;
@@ -738,10 +738,10 @@ color: #38c4c1;
     justify-content: center;
     border: 15px solid transparent;
 }
-.container10 > div:nth-child(3) {
+/* .container10 > div:nth-child(3) {
     padding-left: 30px;
     width: 360px;
-}
+} */
 .container10 > div span {
     height: 65px;
     width: 65px;
