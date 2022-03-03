@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: Roboto, sans-serif;
+}
+
+body {
+    height: 2000px;
+}
+.page {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    position: relative;
+    height: 100%;
+}
+
+.menu {
+    width: 320px;
+    height: 100%;
+    padding: 30px 0 0 40px;
+    box-shadow: 0 0 5px #aaaaaa;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+}
+
+.tab-bar {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+
+    text-align: left;
+    width: 280px;
+    height: 100%;
+    line-height: 2.5rem;
+    
+}
+
+.tab-bar > li, .sub-menu > li, .sub-menu-child > li {
+    cursor: pointer;
+    font-size: 1rem;
+    color: #757575;
+    list-style-type: none;
+    
+}
+.sub-menu, .sub-menu-child {
+    display: flex;
+    flex-direction: column;
+    display: none;
+    line-height: 1.5rem;
+}
+.tab-bar>li:hover .sub-menu, .sub-menu>li:hover .sub-menu-child {
+    display: block;
+    padding-left: 20px;
+}
+ 
+.tab-bar>li:hover, .sub-menu>li:hover, .sub-menu-child>li:hover {
+    color: #000;
+    background-color: #eceff1;
+}
+.tab-bar>li:hover .sub-menu, .sub-menu>li:hover .sub-menu-child {
+    background-color: #ffffff;
+}
+
+.content {
+    width: 728px;
+    padding: 30px 40px 0 40px;
+    display: flex;
+    flex-direction: column;
+    line-height: 2rem;
+
+    position: absolute;
+    left: 320px;
+}
+.content h1, .content h2 {
+    margin: 10px 0 10px;
+
+}
+
+.text {
+    width: 320px;
+   padding: 30px 0 0 40px;
+    line-height: 2.5rem;
+
+    position: fixed;
+    left: 1048px;
+}

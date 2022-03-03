@@ -3,7 +3,7 @@ const para = document.createElement("p")
 para.innerText = "Đây là thẻ p"
 para.setAttribute("id", "text")
 
-document.body.insertAdjacentElement("beforebegin", para)
+document.body.prepend(para)
 
 //Đặt màu văn bản thành #777
 para.style.color = "#777"
@@ -13,23 +13,39 @@ para.style.fontSize = "2rem"
 para.innerHTML = "Tôi có thể làm <em> bất cứ điều gì </em> tôi muốn"
 
 //Câu 2. Sử dụng vòng lặp để đặt màu chữ cho tất cả thẻ li thành màu blue (tạo thẻ ul-li bằng html)
-const ul1 = document.querySelectorAll("ul:nth-child(1) li")
+{/* <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+</ul> */}
+
+const ul1 = document.querySelectorAll("ul:first-of-type li")
 console.log(ul1);
 for (let i = 0; i < ul1.length; i++) {
     ul1[i].style.color = "blue"
 }
 
 //Câu 3. Cho mã HTML có nội dung như sau (tạo thẻ ul-li bằng html):
+{/* <ul id="list">
+   <li>Item 1</li>
+   <li>Item 2</li>
+   <li>Item 3</li>
+   <li>Item 4</li>
+   <li>Item 5</li>
+   <li>Item 6</li>
+   <li>Item 7</li>
+</ul> */}
+
 //Sử dụng javascript để thực hiện những công việc sau:
 //1. Thêm 3 thẻ <li> có nội dung Item 8, Item 9, Item 10 vào cuối danh sách
 const ul2 = document.getElementById("list")
 
 const li8 = document.createElement("li")
-li8.innerText = "Item8"
+li8.innerText = "Item 8"
 const li9 = document.createElement("li")
-li9.innerText = "Item9"
+li9.innerText = "Item 9"
 const li10 = document.createElement("li")
-li10.innerText = "Item10"
+li10.innerText = "Item 10"
 
 ul2.appendChild(li8)
 ul2.appendChild(li9)
