@@ -15,7 +15,7 @@ document.body.appendChild(input)
 //Trường hợp không có nội dung trong ô input mà bấm add thì cảnh báo (sử dụng alert)
 const liPlus = () => {
     const li = document.createElement("li")
-    if(!input.value) {
+    if (!input.value) {
         alert("Vui lòng điền thông tin")
         return
     }
@@ -32,6 +32,9 @@ document.body.appendChild(remove)
 
 const removeLi = () => {
     const lastLi = document.querySelector("ul li:last-child")
+    if(!lastLi) {
+        return
+    }
     ul.removeChild(lastLi)
 }
 
@@ -43,15 +46,18 @@ hide.innerText = "Hide"
 document.body.prepend(hide)
 
 // Khi bấm vào Hide thì ul sẽ ẩn. Đồng thời label của nút Hide => Show
-const hideBtn = () => {
-    ul.style.display = "none"
-    hide.innerText = "Show"
-}
-hide.addEventListener("click", hideBtn)
-
 // Và ngược lại, khi bấm vào Show thì ul sẽ hiện. Đồng thời label của nút Show => Hide
-// const showBtn = () => {
-//         ul.style.display = "display"
-//         hide.innerText = "Hide"
-// }
-// hide.addEventListener("click", showBtn)
+
+const toggleBtn = () => {
+
+    if (hide.innerText == "Hide") {
+        hide.innerText = "Show"
+        ul.style.display = "none"
+        return
+    }
+    hide.innerText = "Hide"
+    ul.style.display = "block"
+
+}
+hide.addEventListener("click", toggleBtn)
+
