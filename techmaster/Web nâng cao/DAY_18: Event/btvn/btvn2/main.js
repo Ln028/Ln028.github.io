@@ -8,8 +8,8 @@ add.innerText = "Add"
 const input = document.createElement("input")
 input.type = "text"
 
-document.body.appendChild(add)
-document.body.appendChild(input)
+ul.insertAdjacentElement("afterend", add)
+add.insertAdjacentElement("afterend", input)
 
 // Mỗi khi bấm nút vào nút add thêm 1 thẻ li có nội dung là nội dung trong ô input vào cuối danh sách ul.
 //Trường hợp không có nội dung trong ô input mà bấm add thì cảnh báo (sử dụng alert)
@@ -28,7 +28,7 @@ add.addEventListener("click", liPlus)
 // Thêm 1 nút remove (tạo bằng Javascript). Chức năng để xóa thẻ li cuối cùng của danh sách ul
 const remove = document.createElement("button")
 remove.innerText = "Remove"
-document.body.appendChild(remove)
+input.insertAdjacentElement("afterend", remove)
 
 const removeLi = () => {
     const lastLi = document.querySelector("ul li:last-child")
