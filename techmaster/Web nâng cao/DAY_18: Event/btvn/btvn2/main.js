@@ -48,16 +48,28 @@ document.body.prepend(hide)
 // Khi bấm vào Hide thì ul sẽ ẩn. Đồng thời label của nút Hide => Show
 // Và ngược lại, khi bấm vào Show thì ul sẽ hiện. Đồng thời label của nút Show => Hide
 
-const toggleBtn = () => {
+// const toggleBtn = () => {
 
-    if (hide.innerText == "Hide") {
+//     if (hide.innerText == "Hide") {
+//         hide.innerText = "Show"
+//         ul.style.display = "none"
+//         return
+//     }
+//     hide.innerText = "Hide"
+//     ul.style.display = "block"
+// }
+// hide.addEventListener("click", toggleBtn)
+
+//Lưu ý: hạn chế sử dụng inline style như trên để làm. Nên set style cho class để thêm hoặc bớt class đó vào thẻ theo ý muốn.
+
+//Casch neen dungf:
+
+hide.addEventListener("click", function() {
+    ul.classList.toggle("hide");
+    
+    if(ul.classList.contains("hide")) {
         hide.innerText = "Show"
-        ul.style.display = "none"
-        return
+    } else {
+        hide.innerText = "Hide"
     }
-    hide.innerText = "Hide"
-    ul.style.display = "block"
-
-}
-hide.addEventListener("click", toggleBtn)
-
+})
