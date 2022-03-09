@@ -24,12 +24,6 @@ trNew.innerHTML = `<td>6</td>
 const tbody = document.querySelector("tbody")
 tbody.appendChild(trNew)
 
-// const td1 = document.createElement("td")
-// const td2 = document.createElement("td")
-// const td3 = document.createElement("td")
-// td3.innerText = 
-// const td4 = document.createElement("td")
-
 const td = document.querySelector("tr:nth-child(4) td:last-child")
 td.innerText = "@dixonl"
 
@@ -41,22 +35,29 @@ trFist.insertAdjacentElement("afterend", trRosaNew)
 
 tbody.removeChild(trRosa)
 
-const sort = document.querySelectorAll("tr")
-const tdnew = document.querySelectorAll("tr td:first-child")
-console.log(tdnew);
 
-for (let i = 0; i < tdnew.length; i++) {
-   tdnew[i].innerText = i+1
-   if(i%2 != 0) {
-       tdnew[i].parentNode.style.backgroundColor = "#f2f2f2"
-   }
+const thFirst = document.querySelector("tr th:nth-child(2)")
+const thLast = document.querySelector("tr th:nth-child(3)")
+const thHandle = document.querySelector("tr th:nth-child(4)")
+
+thHandle.insertAdjacentElement("afterend", thLast)
+thLast.insertAdjacentElement("afterend", thFirst)
+
+
+const tdFirst = document.querySelectorAll("tr td:nth-child(2)")
+const tdLast = document.querySelectorAll("tr td:nth-child(3)")
+const tdHandle = document.querySelectorAll("tr td:nth-child(4)")
+for (let i = 0; i < tdHandle.length; i++) {
+    const element = tdHandle[i];
+    element.insertAdjacentElement("afterend", tdLast[i])
+    tdLast[i].insertAdjacentElement("afterend", tdFirst[i])
+
 }
 
-
-const th = document.querySelectorAll("tr th")
-for (let i = 0; i < th.length; i++) {
-    const element = th[1];
-    th[1] = th[3]
-    th[3] = element
-    console.log(th);  
+const tdNew = document.querySelectorAll("tr td:first-child")
+for (let i = 0; i < tdNew.length; i++) {
+   tdNew[i].innerText = i+1
+   if(i%2 != 0) {
+       tdNew[i].parentNode.style.backgroundColor = "#f2f2f2"
+   }
 }
