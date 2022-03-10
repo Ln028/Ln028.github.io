@@ -37,12 +37,59 @@ btn.addEventListener("click", function () {
     const point = document.querySelector(".points")
     point.innerText = box.children.length
 
-
-
 })
 
 
+//============Chữa bài=============
 
+// let colors = ['#3498db', '#9b59b6', '#e74c3c', '#2c3e50', '#d35400'];
+// let colorsCopy = [...colors];
 
+// const boxesEl = document.querySelector(".boxes");
+// const pointsEl = document.querySelector(".points");
+// const btn = document.querySelector("#btn");
 
+// // Render box
+// function renderBox(arr) {
+//     // Clear hết dữ liệu trước khi render
+//     boxesEl.innerHTML = "";
 
+//     // Sử dụng vòng lặp để render
+//     let html = ""
+//     for (let i = 0; i < arr.length; i++) {
+//         html += `
+//             <div 
+//                 class="box" 
+//                 style="background-color:${arr[i]}"
+//                 onclick="deleteBox(${i})"
+//             ></div>
+//         `
+//     }
+//     boxesEl.innerHTML = html;
+
+//     // Cập nhật số lượng
+//     updateTotalBox(arr)
+// }
+
+// // Cập nhật số lượng
+// function updateTotalBox(arr) {
+//     pointsEl.innerText = arr.length;
+// }
+
+// // Xóa box
+// function deleteBox(index) {
+//     for (let i = 0; i < colors.length; i++) {
+//         if(i == index) {
+//             colors.splice(i, 1)
+//         }
+//     }
+//     renderBox(colors)
+// }
+
+// // Thêm box
+// btn.addEventListener("click", function() {
+//     colors = [...colors, ...colorsCopy];
+//     renderBox(colors)
+// })
+
+// renderBox(colors)

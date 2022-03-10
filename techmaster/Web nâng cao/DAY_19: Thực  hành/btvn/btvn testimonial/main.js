@@ -70,5 +70,71 @@ function applyStyles(image) {
 }
 
 
+//===========Chua bai=============
+
+
+//let testimonials = [
+//     {
+//         name : "Marilyn Monroe",
+//         quote : "I’m selfish, impatient and a little insecure. I make mistakes, I am out of control and at times hard to handle. But if you can’t handle me at my worst, then you sure as hell don’t deserve me at my best",
+//         color : "#0E185F"
+//     },
+//     {
+//         name : "Dr. Seuss",
+//         quote : "Don’t cry because it’s over, smile because it happened",
+//         color : "#2FA4FF"
+//     },
+//     {
+//         name : "Mae West",
+//         quote : "You only live once, but if you do it right, once is enough.",
+//         color : "#FFD32D"
+//     },
+//     {
+//         name : "William W. Purkey",
+//         quote : "You’ve gotta dance like there’s nobody watching, love like you’ll never be hurt, sing like there’s nobody listening, and live like it’s heaven on earth",
+//         color : "#FF8AAE"
+//     },
+//     {
+//         name : "Robert Frost",
+//         quote : "In three words I can sum up everything I’ve learned about life: it goes on.",
+//         color : "#6A5495"
+//     }
+// ]
+
+// // Truy cập
+// const testimonialsContainerEl = document.querySelector(".testimonials-container");
+// const quoteEl = document.querySelector(".text");
+// const authorNameEl = document.querySelector(".name");
+
+// const authorsEl = document.querySelectorAll(".author");
+
+// // render testimonial
+// function renderTestimonial(index) {
+//     // Lấy ra thông tin object tương ứng
+//     let testimonial = testimonials[index];
+
+//     // Cập nhật thông tin
+//     authorNameEl.innerText = testimonial.name;
+//     quoteEl.innerText = testimonial.quote;
+//     testimonialsContainerEl.style.backgroundColor = testimonial.color;
+// }
+
+// // Lắng nghe sự kiện
+// Array.from(authorsEl).forEach((author, index) => {
+//     author.addEventListener("click", function() {
+//         // Trước khi thêm thì xóa toàn bộ class "selected"
+//         Array.from(authorsEl).map(ele => ele.classList.remove("selected"))
+
+//         // Thêm class "selected" vào author đang được ấn
+//         author.classList.add("selected")
+
+//         // Render dữ liệu của author được chọn
+//         renderTestimonial(index)
+//     })
+// })
+
+// renderTestimonial(0)
+
+
 
 
