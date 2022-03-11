@@ -17,23 +17,24 @@ function randomId() {
     return Math.floor(Math.random() * 1000000)
 }
 
-let todos = [
-    {
-        id: randomId(),
-        title: "Đi đá bóng",
-        status: false,
-    },
-    {
-        id: randomId(),
-        title: "Làm BTVN",
-        status: true,
-    },
-    {
-        id: randomId(),
-        title: "Đi kiểm tra sức khoẻ",
-        status: true,
-    }
-]
+let todos
+//  = [
+//     {
+//         id: randomId(),
+//         title: "Đi đá bóng",
+//         status: false,
+//     },
+//     {
+//         id: randomId(),
+//         title: "Làm BTVN",
+//         status: true,
+//     },
+//     {
+//         id: randomId(),
+//         title: "Đi kiểm tra sức khoẻ",
+//         status: true,
+//     }
+// ]
 
 //Truy cap:
 const todoList = document.querySelector(".todo-list")
@@ -44,40 +45,41 @@ const optionUnactive = document.getElementById("unactive")
 const inputEl = document.getElementById("todo-input")
 const btnAdd = document.getElementById("btn-add")
 
-function renderTodo(arr) {
-    todoList.innerText = "";
-    if (arr.length == 0) {
-        todoList.innerHTML = "Khong co cong viec trong danh sach"
-        return
-    }
+// function renderTodo(arr) {
+//     //Xoa het du lieu truoc khi render
+//     todoList.innerText = "";
+//     if (arr.length == 0) {
+//         todoList.innerHTML = "Khong co cong viec trong danh sach"
+//         return
+//     }
 
-    let html = "";
-    for (let i = 0; i < arr.length; i++) {
-        const t = arr[i];
-        html += `
-            <div class="todo-item ${t.status ? "active-todo" : ""}">
-                <div class="todo-item-title" id="${t.id}">
-                    <input 
-                        type="checkbox" 
-                        ${t.status ? "checked" : ""}
-                        onclick="toggleStatus(${t.id})"
-                    />
-                    <p>${t.title}</p>
-                    <input class="hidden" type="text"/>
-                </div>
-                <div class="option">
-                    <button class="btn btn-update" onclick="editTodo(${t.id})">
-                        <img src="./img/pencil.svg" alt="icon" />
-                    </button>
-                    <button class="btn btn-delete" onclick="deleteTodo(${t.id})">
-                        <img src="./img/remove.svg" alt="icon" />
-                    </button>
-                </div>
-            </div>
-        `
-    }
-    todoList.innerHTML = html
-}
+//     let html = "";
+//     for (let i = 0; i < arr.length; i++) {
+//         const t = arr[i];
+//         html += `
+//             <div class="todo-item ${t.status ? "active-todo" : ""}">
+//                 <div class="todo-item-title" id="${t.id}">
+//                     <input 
+//                         type="checkbox" 
+//                         ${t.status ? "checked" : ""}
+//                         onclick="toggleStatus(${t.id})"
+//                     />
+//                     <p>${t.title}</p>
+//                     <input class="hidden" type="text"/>
+//                 </div>
+//                 <div class="option">
+//                     <button class="btn btn-update" onclick="editTodo(${t.id})">
+//                         <img src="./img/pencil.svg" alt="icon" />
+//                     </button>
+//                     <button class="btn btn-delete" onclick="deleteTodo(${t.id})">
+//                         <img src="./img/remove.svg" alt="icon" />
+//                     </button>
+//                 </div>
+//             </div>
+//         `
+//     }
+//     todoList.innerHTML = html
+// }
 
 //1.Xoa cv
 function deleteTodo(id) {
@@ -91,7 +93,8 @@ function deleteTodo(id) {
 // }
 
 todos = todos.filter(todo => todo.id != id)
-renderTodo(todos)
+setDataToLocalStorage(todos)
+
 }
 
 //2.Thay đổi trạng thái cv
@@ -108,7 +111,7 @@ function toggleStatus(id) {
         }
         
     }
-    renderTodo(todos)
+    setDataToLocalStorage(todos)
 
 }
 
@@ -144,9 +147,9 @@ btnAdd.addEventListener("click", function() {
         status: false
 
     }
-    todos.push(newTodo)
-
-    renderTodo(todos)
+    todos.push(newTodo);
+    //luu du lieu vao localStorage
+    setDataToLocalStorage(todos)
 })
 renderTodo(todos)
 
@@ -170,7 +173,25 @@ function editTodo(id) {
             renderTodo(todos)
         }
     })
-
-    
 }
+setDataToLocalStorage(todos)
+
+//Lay du lieu tu localStorage
+function getDataFromLocalStorage() {
+    let localStorageValue = localStorage.getItem("todos")
+    if(localStorageValue) {
+       todos = JSON.parse(localStorageValue)
+    } else {
+        todos = [];
+    }
+    renderTodo(todos)
+}
+
+//Luu du lieu:
+function setDataToLocalStorage(arr) {
+    localStorage.setItem("todos", JSON.stringify(arr));
+    renderTodo(todos)
+}
+
+window.onload = getDataFromLocalStorage
 
