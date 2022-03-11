@@ -189,7 +189,7 @@ function updateTotalMoney(arr) {
     total.innerText = convertMoney(totalMoney + VAT - discountMoney)
 }
 
-document.getElementById("promo-code").addEventListener("keyup", function (event) {
+document.getElementById("promo-code").addEventListener("keyup", function () {
     updateTotalMoney(products)
 })
 
