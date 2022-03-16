@@ -29,9 +29,12 @@ btn.addEventListener("click", async function () {
         let subBreedAll = res.data.message
         let content = document.getElementById("content")
         content.innerText = ""
-        
+    
         let subBreed = document.createElement("ul")
         content.insertAdjacentElement("beforeend", subBreed)
+
+        const image = document.querySelector(".image img")
+        image.src = ""
     
         subBreed.innerText = "Sub Breeds List"
                 
@@ -48,6 +51,7 @@ btn.addEventListener("click", async function () {
             const subBreedEle = document.createElement("a")
             subBreedEle.innerText = `${ele}`
             subBreedEle.href = "#"
+           
             subBreedEle.addEventListener("click", function() {
                 randomDogImage(value, ele)
             })
@@ -69,7 +73,7 @@ let randomDogImage = async function(breed, subBreed) {
 
         let imgRandom = res.data.message
         image.src = imgRandom[Math.floor(Math.random() * imgRandom.length)];
-        console.log(res);
+        
     } catch(err) {
         console.log(err);
     }
