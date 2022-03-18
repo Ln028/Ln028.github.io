@@ -32,6 +32,7 @@ input.addEventListener("keydown", function(event) {
             alert("Ket qua khong duoc de trong")
         } else {
             alert("Ket qua chua dung")
+            input.value = ""
         }
     }   
 })
@@ -42,9 +43,11 @@ let counter = setInterval(timer, 1000);
 function timer() {
   count = count - 1;
   times.innerHTML = count + "s";
-  if (count < 0) {
-     alert(`Diem cua ban la ${score.innerText}`)
-     clearInterval(counter);
+  if (count <= 0) {
+    input.disabled = true
+    alert(`Diem cua ban la ${score.innerText}`)
+    clearInterval(counter);
+    
   }
   
 }
