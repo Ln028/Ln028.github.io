@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #111111;
+
+}
+img {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+.container {
+    width: 90%;
+    margin: auto;
+}
+.container > h1 {
+    text-align: center;   
+    margin-top: 32px; 
+}
+.container >p {
+    font-style: italic;
+    margin: 16px 0;
+}
+.card-item {
+    margin-bottom: 32px;
+}
+.card-content {
+    padding: 16px;
+    box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.1);
+}
+.card-content h3 {
+    font-size: 20px;
+}
+.card-content p {
+    margin: 10px 0;
+
+}
+.card-content button {
+    display: inline-block;
+    padding: 10px 30px;
+    background-color: #80b8f0;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+@media (min-width: 576px) {
+    .container > h1 {
+        color: brown;
+        font-size: 36px;
+    }
+    .card {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        /* co the dat la "grid-template-columns: repeat(2, 1fr)" */
+        grid-gap: 20px;
+    }
+    .card-item {
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .container > h1 {
+        color: tomato;
+        font-size: 42px;
+    }
+    .card {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 30px;
+    }
+    .container >p {
+        margin: 20px 0;
+    }
+}
+
+
+
+/* 
+Một số break point được áp dụng trong các framework css (bootstap)
+< 576 : Màn hình điện thoại
+576 < x < 768 : Màn hình điện thoại cỡ lớn, quay ngang, tablet cỡ nhỏ
+768 < x < 992 : tablet cỡ vừa
+992 < x < 1200 : màn hình desktop cỡ nhỏ
+> 1200 : màn hình destop cỡ lớn */
