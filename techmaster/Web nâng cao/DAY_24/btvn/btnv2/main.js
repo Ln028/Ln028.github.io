@@ -20,8 +20,7 @@ $(".btn").click(function() {
             return
         } 
         $.each(subBreedAll, function(index, element) {
-            $("ul").append("<li><a></a></li>")
-            $("a").text(`${element}`)
+            $("ul").append(`<li><a>${element}</a></li>`)
             $("a").attr("href", "#")
 
             $("a").click(function() {
