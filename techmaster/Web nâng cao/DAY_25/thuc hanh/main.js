@@ -32,7 +32,7 @@ $(window).resize(function() {
             "left": "-250px",
             "color": "#111111"
         })
-
+        $("ul li:first-child").css("display", "none")
         $("#overlay").css("display", "none")      
     } 
    
