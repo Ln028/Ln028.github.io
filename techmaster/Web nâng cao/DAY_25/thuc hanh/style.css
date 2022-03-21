@@ -74,6 +74,7 @@ ul li:first-child {
     text-align: end;
     margin-bottom: 10px;
     font-size: 2rem;
+    display: none;
 }
 li {
     padding: 10px 20px;

@@ -5,6 +5,7 @@ $(".menu-icon").click(function() {
         "text-align": "center",
         "font-size": "1.2rem"
     })
+    $("ul li:first-child").css("display", "block")
     $("#overlay").css("display", "block")
 })
 
@@ -13,7 +14,7 @@ $("#overlay").click(function() {
         "left": "-250px",
         "color": "#111111"
     })
-    $("ul li:first-child").css("display", "none")
+    
     $("#overlay").css("display", "none")
 })
 
@@ -31,9 +32,8 @@ $(window).resize(function() {
             "left": "-250px",
             "color": "#111111"
         })
-        $("ul li:first-child").css("display", "none")
-        $("#overlay").css("display", "none")
-       
+
+        $("#overlay").css("display", "none")      
     } 
    
 })
