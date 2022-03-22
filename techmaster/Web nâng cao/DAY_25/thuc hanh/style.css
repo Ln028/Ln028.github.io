@@ -78,6 +78,7 @@ ul li:first-child {
 }
 li {
     padding: 10px 20px;
+    cursor: pointer;
 }
 
 .container {
