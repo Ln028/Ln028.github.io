@@ -12,43 +12,6 @@ body {
 
 }
 
-.header {
-    background: #f2f2f2;
-    height: 70px;
-    padding: 0 10px;
-
-    position: sticky;
-    top: 0;
-    z-index: 1;
-    width: 100%;
-
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.header .icon-mode {
-    margin-right: 80px;
-}
-
-.header a {
-    cursor: pointer;
-    text-decoration: none;
-}
-
-.header img {
-    padding: 4px;
-}
-
-.icon-mode a:nth-child(1) img {
-    background-color: #c9e4f9;
-}
-
-.header img:hover {
-    background-color: #e2f0fc;
-}
-
-
 .menu {
     height: 80px;
     display: flex;
