@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    color: #111111;
+    line-height: 1.5;
+}
+img {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+svg {
+    color: #999999;
+}
+p {
+    font-family: "Open Sans", sans-serif;
+}
+
+@media (min-width: 1200px) {
+    section {
+        width: 1140px;
+        margin: auto;
+    }
+}
+@media (max-width: 991px) {
+    section {
+        width: 720px;;
+        margin: auto;
+    }
+}
+@media (max-width: 767px) {
+    section {
+        width: 540px;
+        margin: auto;
+    }
+   
+}
+@media (max-width: 576px) {
+    section {
+        width: 340px;
+        margin: auto;
+    }
+}

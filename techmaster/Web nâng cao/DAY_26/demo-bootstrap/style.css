@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    color: #111111;
+    line-height: 1.5;
+}
+img {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+a {
+    text-decoration: none;
+}
+
+.navbar-dark .navbar-toggler {
+    border-color: transparent;
+}
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.page-item.active .page-link {
+    background-color: #198753;
+    border-color: #198753;
+}
+.page-link {
+    color: #198753;
+}
+.page-link:hover {
+    color: #198753;
+}
+
+footer h4, footer a {
+    color: rgba(255,255,255,.55);
+}
+footer a:hover {
+    text-decoration: underline;
+    color: rgba(255,255,255,.55);
+}
