@@ -20,6 +20,26 @@ p {
     font-family: "Open Sans", sans-serif;
 }
 
+input {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.125rem;
+    border: 0px solid #f2f2f2 !important;
+    border-radius: 0% !important;
+    height: 46px !important;
+}
+input:focus, textarea:focus {
+    border: 2px solid #005fcc !important;
+    box-shadow: none !important;
+    border-radius: 4px !important;
+}
+textarea {
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.125rem;
+    border: 0px solid #f2f2f2 !important;
+    border-radius: 0% !important;
+    height: 122px !important;
+}
+
 @media (min-width: 1200px) {
     section {
         width: 1140px;
