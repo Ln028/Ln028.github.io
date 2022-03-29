@@ -65,20 +65,20 @@ body {
     cursor: pointer;
     font-size: 1.5rem;
 }
-ul {
+ul.list {
     list-style-type: none;
     display: flex;
 
 }
-ul li:first-child {
-    text-align: end;
-    margin-bottom: 10px;
-    font-size: 2rem;
-    display: none;
-}
 li {
     padding: 10px 20px;
     cursor: pointer;
+}
+.menu-sidebar {
+    display: none;
+}
+.menu-sidebar li:nth-child(1) {
+    text-align: end;
 }
 
 .container {
@@ -189,17 +189,15 @@ h5 {
     .container-text {
         margin: 60px 50px;
     }
-    ul li:first-child {
-        display: none;
-    }
+
 }
 @media (max-width: 991px) {
     .menu-icon {
         display: inline-block;
     }
-    ul {
-        position: sticky;
-        top: 80px;
+    .menu-sidebar {
+        position: fixed;
+        top: 0;
         left: -250px;
         height: 100vh;
         width: 250px;
@@ -210,7 +208,6 @@ h5 {
 
         transition: all 0.3s;
         z-index: 1001;
-    
     }
     .container-text {
         margin: 60px 50px;
@@ -234,16 +231,18 @@ h5 {
     .content h1 {
         line-height: 1.1;
     }
-    .menu-list ul.show {
-        display: flex;
+    ul.list {
+        display: none;
+    
     }
+    
 }
 @media (max-width: 767px) {
     .menu-icon {
         display: inline-block;
     }
-    ul {
-        position: absolute;
+    .menu-sidebar {
+        position: fixed;
         top: 0;
         left: -250px;
         height: 100vh;
@@ -255,7 +254,6 @@ h5 {
 
         transition: all 0.3s;
         z-index: 1001;
-    
     }
     .sub-card {
         flex-direction: column;
@@ -265,8 +263,9 @@ h5 {
     .image {
         min-height: 259px;
     }
-    .menu-list ul.show {
-        display: flex;
+    ul.list {
+        display: none;
+    
     }
 }
 
@@ -277,8 +276,8 @@ h5 {
     .menu-icon {
         display: inline-block;
     }
-    ul {
-        position: absolute;
+    .menu-sidebar {
+        position: fixed;
         top: 0;
         left: -250px;
         height: 100vh;
@@ -291,11 +290,14 @@ h5 {
         transition: all 0.3s;
         z-index: 1001;
     }
-
+    ul.list {
+        display: none;
+    
+    }
 }
 
 #overlay {
-    position: sticky;
+    position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
