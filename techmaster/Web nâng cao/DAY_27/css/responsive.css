@@ -132,7 +132,7 @@
 @media (max-width: 768px) {
     #plans .plans-content {
         width: auto;
-        margin: 60px auto;
+        margin: 60px auto 30px;
     }
     .plans-content > p {
         margin: 17px auto;
@@ -176,6 +176,9 @@
 }
 /* footer */
 @media (max-width: 768px) {
+    #footer {
+        margin: 60px auto;
+    }
     .footer-content {
         width: auto;
     }

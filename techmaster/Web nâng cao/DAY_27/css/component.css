@@ -259,14 +259,16 @@ h1 {
     border: none;
 }
 /* footer */
-
+#footer {
+    margin: 86px auto 93px;
+}
 .footer-content {
     width: 616px;
     text-align: center;
     margin: auto;
 }
 .footer-content h2 {
-    margin: 86px auto 29px;
+    margin-bottom: 29px;
     font-weight: 700;
     font-size: 24px;
     line-height: 29px;
@@ -286,9 +288,6 @@ h1 {
 }
 .footer-content .row:nth-child(3) span i {
     font-size: 18px;
-}
-.footer-content > div:last-child {
-    margin-bottom: 93px;
 }
 .footer-content > div:last-child p {
     font-weight: 400;
