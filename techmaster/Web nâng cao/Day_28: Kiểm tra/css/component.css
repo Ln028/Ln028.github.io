@@ -214,8 +214,7 @@ header .container > p {
 #evaluate .next {
     position: absolute;
     right: 31px;
-    transform: translateY(-500%);
-
+    top: 199px;
     width: 52px;
     height: 52px;
     border-radius: 100px;
@@ -230,8 +229,9 @@ header .container > p {
 
 #evaluate .back {
     position: absolute;
+    top: 199px;
     left: 31px;
-    transform: translateY(-500%) rotate(180deg);
+    transform: rotate(180deg);
     
 
     width: 52px;

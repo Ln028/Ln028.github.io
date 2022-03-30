@@ -224,27 +224,34 @@
         padding: 0 40px;
     }
     #evaluate .back, #evaluate .next {
+        top: 204px;
         width: 42px;
         height: 42px;
     }
     #evaluate .next {
         right: 25px;
-        transform: translateY(-600%);
     }
     #evaluate .back {
         left: 25px;
-        transform: translateY(-600%) rotate(180deg);
     }
 }
 @media (max-width: 768px) {
     #evaluate h2 {
         font-size: 30px;
         line-height: 42px;
-        padding: 61px 0 30px
+        padding: 61px 0 60px;
     }
     #evaluate p {
         font-size: 18px;
         line-height: 30px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #evaluate .next {
+        right: 15px;
+    }
+    #evaluate .back {
+        left: 15px;
     }
 }
 
@@ -254,17 +261,10 @@
         line-height: 26px;
         padding: 0 50px;
     }
-    #evaluate .next {
-        right: 15px;
+    #evaluate .next, #evaluate .back {
         width: 32px;
         height: 32px;
-        transform: translateY(-700%);
-    }
-    #evaluate .back {
-        left: 15px;
-        width: 32px;
-        height: 32px;
-        transform: translateY(-700%) rotate(180deg);
+        top: 209px;
     }
 }
 /* learning */
