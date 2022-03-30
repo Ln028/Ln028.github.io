@@ -6,8 +6,8 @@ header {
 }
 .header-image {
     position: absolute;
-    top: 158px;
-    height: 766px;
+    top: 190px;
+    height: 746px;
     right: 0;
     z-index: 1;
 }
@@ -73,7 +73,7 @@ header .container > p {
     opacity: 0.82;
     margin-left:4px;
     margin-bottom: 32px;
-    width: 950px;
+    width: 970px;
 }
 .header-btn button {
     width: 205px;
@@ -175,7 +175,7 @@ header .container > p {
 /* evaluate */
 #evaluate {
     position: relative;
-    height: fit-content;
+    height: 450px;
 }
 .evaluate-content {
     height: 450px;
@@ -263,5 +263,56 @@ header .container > p {
 }
 /* learning */
 #learning {
-    background-color: linear-gradient(161.6deg, #FE5030 8.2%, #D72D77 88.92%);;
+    background: linear-gradient(161.6deg, #FE5030 8.2%, #D72D77 88.92%);;
+}
+#learning p {
+    width: 791px;
+    margin: 77px 10px 82px 108px;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 52px;
+    letter-spacing: 0.324812px;
+    color: #FFFFFF;
+    text-shadow: 0px 0px 10px rgba(94, 94, 94, 0.148862);
+
+}
+#learning button {
+    width: 250px;
+    height: 80px;
+    margin: 93px 108px 90px auto;
+    background: #FFFE00;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.14);
+    border-radius: 6px;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 33px;
+    text-align: center;
+    letter-spacing: 0.649624px;
+    color: #050505;
+
+}
+/* footer */
+.footer {
+    margin-top: 79px;
+    margin-bottom: 76px;
+    margin-left: 37px;
+    /* padding: 79px auto 76px 37px; */
+    /* height: 197px; */
+}
+.footer > span {
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 42px;
+    letter-spacing: 0.826794px; 
+    margin-right: 71px;
+}
+.footer p {
+    margin-bottom: 0;
+}
+.footer p span {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 27px;
+    padding: 79px 32px 76px 37px;
+    letter-spacing: 0.53151px;
 }
