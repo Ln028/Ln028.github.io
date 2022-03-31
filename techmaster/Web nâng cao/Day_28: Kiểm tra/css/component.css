@@ -132,7 +132,7 @@ header .container > p {
     color: #000000;
     text-shadow: 0px 0px 10px rgba(94, 94, 94, 0.148862);
 }
-#explore-topics .container > p, #explore-mentors .container > p {
+#explore-topics > p, #explore-mentors > p {
     font-weight: 500;
     font-size: 18px;
     line-height: 33px;
@@ -143,9 +143,10 @@ header .container > p {
     margin-bottom: 42px;
     
 }
-.row {
+#explore-topics, .cards {
     position: relative;
 }
+
 #explore-topics .image p, #explore-mentors .image p {
     transform: translateY(-63px);
     height: 50px;
@@ -158,8 +159,8 @@ header .container > p {
 }
 .btn-next {
     position: absolute;
-    top: 100px;
-    right: -12px;
+    top: 122px;
+    right: 40px;
     z-index: 1;
     width: 52px;
     height: 52px;
@@ -171,6 +172,7 @@ header .container > p {
     justify-content: center;
     align-items: center;
 }
+
 
 /* evaluate */
 #evaluate {
