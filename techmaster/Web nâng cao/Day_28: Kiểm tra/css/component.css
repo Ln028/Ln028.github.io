@@ -15,26 +15,31 @@ header {
     padding: 21px 25px 0 36px;
     color: #FFFFFF;
 }
-.header-key p span {
+.header-key p a {
     font-weight: 500;
     font-size: 18px;
     line-height: 27px;
     margin-right: 32px;
     letter-spacing: 0.53151px;
+    color: #FFFFFF;
 }
-.header-key > span {
+.header-key > a {
     font-weight: 800;
     font-size: 28px;
     line-height: 42px;
     letter-spacing: 0.826794px; 
     margin-right: 71px;
+    color: #FFFFFF;
+}
+.header-key p a:hover, .header-key > a:hover {
+    color: #ffffff;
 }
 .header-key > p {
    width: fit-content;
 }
 
-.header-account span {
-    background-color: none;
+.header-account button:first-child {
+    background: none;
     color: #ffffff;
     font-weight: 500;
     font-size: 18px;
@@ -42,7 +47,7 @@ header {
     letter-spacing: 0.53px;
     margin-right: 36px;
 }
-.header-account button {
+.header-account button:last-child {
     width: 130px;
     height: 55px;
     background:#FFFE00;
@@ -299,20 +304,25 @@ header .container > p {
     /* padding: 79px auto 76px 37px; */
     /* height: 197px; */
 }
-.footer > span {
+.footer > a {
     font-weight: 800;
     font-size: 28px;
     line-height: 42px;
     letter-spacing: 0.826794px; 
     margin-right: 71px;
+    color: #000000;
 }
 .footer p {
     margin-bottom: 0;
 }
-.footer p span {
+.footer p a {
     font-weight: 500;
     font-size: 18px;
     line-height: 27px;
     padding: 79px 32px 76px 37px;
     letter-spacing: 0.53151px;
+    color: #000000;
+}
+.footer > a:hover, .footer p a:hover {
+    color: #000000;
 }
