@@ -189,8 +189,8 @@
 }
 
 /* explore-topics & explore-mentors  */
-
 @media (max-width: 1200px) {
+   
     #explore-topics .image p, #explore-mentors .image p {
         font-size: 22px;
     }
@@ -307,6 +307,9 @@
     .footer > span {
         margin-bottom: 60px;
     }
+    .footer p span {
+        padding-left: 0;
+    }
 }
 @media (max-width: 768px) {
     .footer {
@@ -328,5 +331,6 @@
         margin-bottom: 20px;
         padding: 0;
         letter-spacing: normal;
+        text-align: center;
     }
 } 
