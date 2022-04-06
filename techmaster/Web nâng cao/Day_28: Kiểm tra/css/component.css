@@ -314,6 +314,7 @@ header .container > p {
 }
 .footer p {
     margin-bottom: 0;
+    line-height: 42px;
 }
 .footer p a {
     font-weight: 500;
