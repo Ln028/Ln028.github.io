@@ -28,7 +28,7 @@ Website dưới đây chừa lề quá rộng và các phần liền mạch nhau
 ## 4. Thiết kế hỗn loạn và lộn xộn, không có bố cục
 
 Website dưới đây có quá nhiều nội dung, hình ảnh, màu sắc, liên kết được đặt sát nhau, sắp xếp lộn xộn không có bố cục, khiến người xem nhìn rất hoa mắt.
-![Ví dụ về website thiết kế lộn xộn](https://www.ali.com.vn/hoanghung/UploadFile/images/thiet-ke-web-xau-1.png)
+![Ví dụ về website thiết kế lộn xộn](https://seongon.com/wp-content/uploads/2019/03/wed-thiet-ke-xau-2.png)
 
 ## 5. Không tuân thủ quy tắc Typography
 Tuy chữ đóng vai trò quan trọng trong việc truyền tải thông tin và tạo tinh thần chung cho các dự án từ CV đến danh thiếp và các website nhưng nó cũng thường bị chúng ta gạt sang một bên, thay vào đó, ta tìm kiếm những bức ảnh đẹp hay thiết kế đồ họa bắt mắt.
