@@ -27,6 +27,8 @@ Website dưới đây chừa lề quá rộng và các phần liền mạch nhau
 
 ## 4. Thiết kế hỗn loạn và lộn xộn, không có bố cục
 
+Ai cũng muốn thiết kế của mình là nổi bật nhất, luôn được nhiều người chú ý nhất mỗi khi trình bày. Tuy nhiên vì vậy mà nhiều lúc sẽ có nhiều nhà thiết kế đi quá đà so với dự định. Sáng tạo là việc tốt, nhưng đôi khi sáng tạo cũng phải nhường chỗ cho thực tế rằng người dùng sẽ thích những thứ có cân bằng hơn là bị lệch sang hẳn một phía. Cái người dùng cần nhất khi truy cập một website không phải là sự sáng tạo của một nhà thiết kế. Thứ họ cần thông tin cần thiết để trả lời cho câu hỏi họ đang tìm kiếm.
+
 Website dưới đây có quá nhiều nội dung, hình ảnh, màu sắc, liên kết được đặt sát nhau, sắp xếp lộn xộn không có bố cục, khiến người xem nhìn rất hoa mắt.
 ![Ví dụ về website thiết kế lộn xộn](https://seongon.com/wp-content/uploads/2019/03/wed-thiet-ke-xau-2.png)
 
