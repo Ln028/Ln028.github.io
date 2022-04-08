@@ -35,6 +35,6 @@ Website dưới đây có quá nhiều nội dung, hình ảnh, màu sắc, liê
 ## 5. Không tuân thủ quy tắc Typography
 Tuy chữ đóng vai trò quan trọng trong việc truyền tải thông tin và tạo tinh thần chung cho các dự án từ CV đến danh thiếp và các website nhưng nó cũng thường bị chúng ta gạt sang một bên, thay vào đó, ta tìm kiếm những bức ảnh đẹp hay thiết kế đồ họa bắt mắt.
 
-Website dưới đây có khá nhiều vấn đề như cỡ chữ nhỏ, spam văn bản và cấu trúc không hợp lý. Điều này khiến người dùng khó tìm kiếm nội dung và hiểu rõ về thông điệp của doanh nghiệp. Bên cạnh đó, thiết kế không ấn tượng và không phù hợp giao diện di động cũng giảm bớt tính hiệu quả của website
+Website dưới đây có khá nhiều vấn đề như cỡ chữ nhỏ, spam văn bản và cấu trúc không hợp lý. Điều này khiến người dùng khó tìm kiếm nội dung và hiểu rõ về thông điệp của doanh nghiệp. 
 
 ![Ví dụ về website không tuân thủ quy tắc Typography](https://seongon.com/wp-content/uploads/2019/03/wed-thiet-ke-xau-11.png)
