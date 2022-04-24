@@ -41,7 +41,7 @@ function soNguyen(number) {
         }
         return Number(newNumber.join(``))
 }
-console.log(soNguyen(120040986));
+console.log(soNguyen(14986));
 
 
 //Bài 5: Viết function truyền vào 1 chuỗi bất kỳ gồm nhiều từ. Hãy chuyển chuỗi đó thành dạng snake_case và viết thường

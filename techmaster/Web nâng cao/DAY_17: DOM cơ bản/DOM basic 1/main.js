@@ -4,8 +4,7 @@ const heading = document.getElementById("heading");
 console.log(heading);
 
 //2.TagName - trả về nhiều phần tử
-const paraTagname = document.
-getElementsByTagName("p")
+const paraTagname = document.getElementsByTagName("p")
 console.log(paraTagname);
 console.log(paraTagname[0]);
 console.log(paraTagname.length);

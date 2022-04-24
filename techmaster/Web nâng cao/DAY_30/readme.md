@@ -14,7 +14,7 @@ Não người có xu hướng liên hệ tới những hình ảnh quen thuộc 
 
 Giúp bố cục hài hoà và thường muốn nhấn mạnh rất kỹ với người dùng về sự quan trọng của vật thể đứng giữa khung hình mà mình muốn hướng đến.
 
-## 5. Luật promixy
+## 5. Luật gânf nhau proximixy
 
 nhóm những yto gần nhau lại thành 1 nhóm và hiểu rằng chúng có mối liên hệ với nhau.
 

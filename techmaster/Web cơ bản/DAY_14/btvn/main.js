@@ -48,4 +48,4 @@ function unicon(arr1, arr2) {
     let union3 = arr2.filter(value => !arr1.includes(value))
     return union1.concat(union2).concat(union3)
 }
-console.log(unicon([1, 2, 3], [1, 2, 3, 5, 6]));
+console.log(unicon([1, 2, 3], [1, 2, 3, 5, 5, 6]));
