@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+
+
+</head>
+
+<body>
+    <nav
+        class="flex flex-col md:flex-row md:items-center bg-[url('./image/bg-header.jpg')] w-full h-[90px] md:h-[150px] shadow-lg">
+        <img class="w-[48px] h-[48px] md:w-[140px] md:h-[140px] rounded-full md:mx-5 xl:ml-[100px] my-[2px] mx-auto"
+            src="./image/Sonder2.png" alt="logo">
+        <div class="flex flex-row items-start md:items-center justify-between mx-2 2xl:mx-8 grow">
+            <div class="lg:mt-[57px] grow flex flex-col mr-[30px]">
+                <div class="flex items-start">
+                    <button type="button" aria-label="Navigation" id="toggleSidebarMobile" aria-expanded="false"
+                        aria-controls="sidebar" class="focus:outline-none md:hidden mr-5 text-white ">
+                        <i id="toggleSidebarMobileHamburger" class="fa-solid fa-bars text-white text-xl"></i>
+                        <i id="toggleSidebarMobileClose" class="fa-solid fa-xmark text-white text-xl hidden"></i>
+                    </button>
+                    <div
+                        class="grow text-center rounded justify-between bg-white flex items-center h-[30px] md:h-10 ">
+                        <i class="fa-solid fa-magnifying-glass text-gray-400 mx-3 text-xs md:text-xl"></i>
+                        <input class="h-[28px] lg:h-10 grow border-0 focus:ring-0 pl-0 text-xs md:text-sm" type="text"
+                            placeholder="Nhập từ khóa sách cần tìm kiếm">
+                        <button
+                            class="rounded-r w-[110px] bg-emerald-800 text-white h-full py-2 hidden lg:block">Tìm
+                            kiếm<button>
+                    </div>
+                </div>
+                <div class="lg:flex flex-row mt-[23px] justify-center hidden">
+                    <button
+                        class="outline-0 outline-emerald-800 h-[30px] px-[18px] bg-emerald-800 text-white text-sm hidden md:block whitespace-nowrap">Giới
+                        thiệu</button>
+                    <button
+                        class="outline-0 outline-emerald-800 h-[30px] px-3 bg-emerald-800 text-white text-sm hidden md:block mx-4 xl:mx-8 whitespace-nowrap">Chương
+                        trình khuyến mại</button>
+                    <button
+                        class="outline-0 outline-emerald-800 h-[30px] px-[18px] bg-emerald-800 text-white text-sm hidden md:block whitespace-nowrap">Chính
+                        sách bảo mật</button>
+                </div>
+            </div>
+            <div class="flex flex-row mr-[30px] items-center justify-center">
+                <span>
+                    <i
+                        class="fa-solid fa-cart-shopping text-white lg:ml-8 xl:ml-[78px] text-2xl md:text-3xl xl:text-4xl"></i>
+                </span>
+                <span class="ml-5">
+                    <i class="lg:hidden fa-regular fa-circle-user text-white text-2xl md:text-3xl lg:text-4xl"></i>
+                </span>
+                <button
+                    class="rounded md:mx-4 xl:mx-9 h-10 px-4 bg-emerald-800 hover:bg-white text-white hover:text-emerald-800 hidden lg:block whitespace-nowrap">Đăng
+                    ký</button>
+                <button
+                    class="rounded h-10 px-4 bg-emerald-800 hover:bg-white text-white hover:text-emerald-800 hidden lg:block whitespace-nowrap">Đăng
+                    nhập</button>
+            </div>
+        </div>
+    </nav>
+
+    <div>
+        <div class="h-9 md:h-[74px] pl-[9px] md:pl-10 bg-[#f9f8f4] flex items-center">
+            <a class="text-[10px] md:text-base font-semibold whitespace-now" href="#">Trang chủ</a>
+            <i class="fa-solid fa-angle-right text-[10px] md:text-base mx-1"></i>
+            <a class="text-[10px] md:text-base font-semibold" href="#">Danh mục sách giáo khoa cấp Tiểu học</a>
+            <i class="fa-solid fa-angle-right text-[10px] md:text-base mx-1"></i>
+            <a class="text-[10px] md:text-base font-semibold" href="#">Sách Giáo Khoa Bộ Lớp 1 - Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021) </a>
+        </div>
+    </div>
+
+</body>
+
+</html>
