@@ -1544,6 +1544,10 @@ select {
   bottom: 0px;
 }
 
+.top-\[\] {
+  top: ;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -4339,6 +4343,10 @@ select {
 }
 
 @media (min-width: 768px) {
+  .md\:static {
+    position: static;
+  }
+
   .md\:relative {
     position: relative;
   }
@@ -4353,6 +4361,14 @@ select {
 
   .md\:left-\[250px\] {
     left: 250px;
+  }
+
+  .md\:top-\[90px\] {
+    top: 90px;
+  }
+
+  .md\:top-0 {
+    top: 0px;
   }
 
   .md\:mx-5 {
@@ -4457,6 +4473,10 @@ select {
 
   .md\:h-\[calc\(100vh-150px\)\] {
     height: calc(100vh - 150px);
+  }
+
+  .md\:h-screen {
+    height: 100vh;
   }
 
   .md\:max-h-\[232px\] {
