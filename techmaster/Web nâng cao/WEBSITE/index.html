@@ -5,19 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Trang chủ - Sonder Textbook Store</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 
-    <!-- <link rel="stylesheet" href="./css/output.css"> -->
+    <link rel="stylesheet" href="./css/output.css">
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
 
 </head>
 
 <body>
+    <div id="backdrop-full" class="bg-gray-900 opacity-50 fixed inset-0 z-50 h-full hidden"></div>
     <nav
         class="z-40 sticky top-0 md:static flex flex-col md:flex-row md:items-center bg-[url('./image/bg-header.jpg')] w-full h-[90px] md:h-[150px] shadow-lg">
         <img class="w-[48px] h-[48px] md:w-[140px] md:h-[140px] rounded-full md:mx-5 xl:ml-[100px] my-[2px] mx-auto"
@@ -26,17 +27,15 @@
             <div class="lg:mt-[57px] grow flex flex-col mr-[30px]">
                 <div class="flex items-start">
                     <button type="button" aria-label="Navigation" id="toggleSidebarMobile" aria-expanded="false"
-                        aria-controls="sidebar" class="focus:outline-none md:hidden mr-5 text-white ">
+                        aria-controls="sidebar" class="focus:outline-none md:hidden mr-5 text-white w-5 h-5">
                         <i id="toggleSidebarMobileHamburger" class="fa-solid fa-bars text-white text-xl"></i>
                         <i id="toggleSidebarMobileClose" class="fa-solid fa-xmark text-white text-xl hidden"></i>
                     </button>
-                    <div
-                        class="grow text-center rounded justify-between bg-white flex items-center h-[30px] md:h-10 ">
+                    <div class="grow text-center rounded justify-between bg-white flex items-center h-[30px] md:h-10 ">
                         <i class="fa-solid fa-magnifying-glass text-gray-400 mx-3 text-xs md:text-xl"></i>
                         <input class="h-[28px] lg:h-10 grow border-0 focus:ring-0 pl-0 text-xs md:text-sm" type="text"
                             placeholder="Nhập từ khóa sách cần tìm kiếm">
-                        <button
-                            class="rounded-r w-[110px] bg-emerald-800 text-white h-full py-2 hidden lg:block">Tìm
+                        <button class="rounded-r w-[110px] bg-emerald-800 text-white h-full py-2 hidden lg:block">Tìm
                             kiếm<button>
                     </div>
                 </div>
@@ -60,38 +59,40 @@
                 <span class="ml-5">
                     <i class="lg:hidden fa-regular fa-circle-user text-white text-2xl md:text-3xl lg:text-4xl"></i>
                 </span>
-                <button
+                <button id="btn-signin"
                     class="rounded md:mx-4 xl:mx-9 h-10 px-4 bg-emerald-800 hover:bg-white text-white hover:text-emerald-800 hidden lg:block whitespace-nowrap">Đăng
                     ký</button>
-                <button
+                <button id="btn-signup"
                     class="rounded h-10 px-4 bg-emerald-800 hover:bg-white text-white hover:text-emerald-800 hidden lg:block whitespace-nowrap">Đăng
                     nhập</button>
             </div>
         </div>
     </nav>
-    <div id="signin" class="hidden h-fit max-w-[250px] md:max-w-lg mx-auto p-8 space-y-5">
-        <div class="text-right">
+    <div id="signin"
+        class="hidden fixed left-[50%] translate-x-[-50%] z-50 items-center h-fit w-[80%] md:w-[40%] mx-auto p-8 space-y-5 bg-white">
+        <div id="signin-close" class="text-right cursor-pointer">
             <i class="fa-solid fa-xmark"></i>
         </div>
         <div class="text-left m-4 space-y-4">
             <div>
                 <p class="">Tên tài khoản</p>
-            <input class="w-full" type="text">
+                <input class="w-full" type="text">
             </div>
             <div>
                 <p>Mật khẩu</p>
-            <input class="w-full" type="password">
+                <input class="w-full" type="password">
             </div>
             <div class="text-center">
                 <button class="h-10 px-4 bg-emerald-800 text-white">Đăng nhập</button>
                 <p class="inline text-emerald-800">Quên mật khẩu?</p>
             </div>
-            <p class="text-center">Chưa có tài khoản? <a class="text-emerald-800" href="#">Đăng ký</a></p>
+            <p class="text-center">Chưa có tài khoản? <a id="dang-ky" class="text-emerald-800" href="#">Đăng ký</a></p>
         </div>
 
     </div>
-    <div id="signup" class="hidden h-fit max-w-[250px] md:max-w-lg mx-auto p-8 space-y-5">
-        <div class="text-right">
+    <div id="signup"
+        class="hidden fixed left-[50%] translate-x-[-50%] z-50 items-center h-fit w-[80%] md:w-[40%] mx-auto p-8 space-y-5 bg-white">
+        <div id="signup-close" class="text-right cursor-pointer">
             <i class="fa-solid fa-xmark"></i>
         </div>
         <div class="text-left m-4 space-y-4">
@@ -110,13 +111,14 @@
             <div class="text-center">
                 <button class="h-10 px-4 bg-emerald-800 text-white">Đăng ký</button>
             </div>
-            <p class="text-center">Đã có tài khoản? <a class="text-emerald-800" href="#">Đăng nhập</a></p>
+            <p class="text-center">Đã có tài khoản? <a id="dang-nhap" class="text-emerald-800" href="#">Đăng nhập</a>
+            </p>
         </div>
 
     </div>
 
 
-    <div class="flex  flex-row">
+    <div class="flex flex-row">
         <div id="sidebar"
             class="z-30 hidden md:block w-[80%] sm:w-[50%] md:w-[250px] h-[calc(100vh-90px)] md:h-screen bg-emerald-800 text-white leading-4 sticky top-[90px] md:top-0 overflow-hidden">
             <ul class="text-left h-full space-y-6 overflow-y-auto cursor-pointer ml-3 lg:ml-6 py-6">
@@ -188,422 +190,481 @@
                         <i class="fa-solid fa-angle-right text-xs md:text-xl lg:text-2xl text-white ml-1"></i>
                     </div>
                 </div> -->
-                <div class="overflow-hidden h-[32px] md:h-[50px] lg:h-[70px] w-[280px] md:w-[440px] lg:w-[540px] m-auto bg-emerald-800 flex justify-between items-center rounded">
-                    <div class="h-[15px] md:h-[30px] lg:h-[45px] w-[15px] md:w-[30px] lg:w-[45px] rounded-full translate-x-[-50%] z-10 bg-white"></div>
+                <div
+                    class="overflow-hidden h-[32px] md:h-[50px] lg:h-[70px] w-[280px] md:w-[440px] lg:w-[540px] m-auto bg-emerald-800 flex justify-between items-center rounded">
+                    <div
+                        class="h-[15px] md:h-[30px] lg:h-[45px] w-[15px] md:w-[30px] lg:w-[45px] rounded-full translate-x-[-50%] z-10 bg-white">
+                    </div>
                     <div class="flex flex-row justify-center items-center">
                         <h2 class="w-fit font-bold text-xs md:text-xl lg:text-2xl text-white cursor-pointer"><a
                                 href="./detail.html">Danh mục sách giáo khoa cấp Tiểu học</a></h2>
                         <i class="fa-solid fa-angle-right text-xs md:text-xl lg:text-2xl text-white ml-1"></i>
                     </div>
-                    <div class="h-[15px] md:h-[30px] lg:h-[45px] w-[15px] md:w-[30px] lg:w-[45px] rounded-full translate-x-[50%] z-10 bg-white"></div>
+                    <div
+                        class="h-[15px] md:h-[30px] lg:h-[45px] w-[15px] md:w-[30px] lg:w-[45px] rounded-full translate-x-[50%] z-10 bg-white">
+                    </div>
                 </div>
-                    
-                <div class="grid grid-cols-2 sm:grid-cols-3 gap-[15px] lg:grid-cols-4 lg:gap-[25px] mx-auto mt-4 md:mt-6">
-                    <a class="group max-h-[289px] md:max-h-[370px] max-w-[195px] md:max-w-[250px] bg-[#f9f8f4] rounded-lg shadow-[0_0_5px_0_rgba(0,0,0,0.2)] mx-auto"
-                        href="./product.html">
+
+                <div
+                    class="grid grid-cols-2 sm:grid-cols-3 gap-[15px] lg:grid-cols-4 lg:gap-[25px] mx-auto mt-4 md:mt-6">
+                    <div
+                        class="group max-h-[289px] md:max-h-[370px] max-w-[195px] md:max-w-[250px] bg-[#f9f8f4] rounded-lg shadow-[0_0_5px_0_rgba(0,0,0,0.2)] mx-auto">
                         <div
                             class="max-h-[195px] max-w-[195px] md:max-h-[250px] md:max-w-[250px] relative overflow-hidden">
-                            <div
-                                class="cart-plus z-50 w-10 h-10 rounded-full bg-[#015601] hidden items-center justify-center absolute bottom-2 right-2 ease-in-out duration-300 group-hover:flex">
-                                <i class="fa-solid fa-cart-plus text-white text-xl"></i>
-                            </div>
+                            <a href="./cart.html">
+                                <div
+                                    class="cart-plus z-50 w-10 h-10 rounded-full bg-[#015601] hidden items-center justify-center absolute bottom-2 right-2 ease-in-out duration-300 group-hover:flex">
+                                    <i class="fa-solid fa-cart-plus text-white text-xl"></i>
+                                </div>
+                            </a>
                             <img class="rounded-t-lg ease-in-out duration-300 group-hover:scale-125"
                                 src="./image/SGK lớp 1.jpeg" alt="sgk1">
 
                         </div>
-                        <div class="mx-[9px]">
-                            <h5
-                                class="max-w-[174px] md:max-w-[232px] mt-2 font-semibold text-[9px] md:text-sm line-clamp-2">
-                                Sách Giáo Khoa Bộ Lớp 1 - Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)
-                            </h5>
-                            <p class="my-2 text-sm font-extrabold italic text-red-500">đ199.000</p>
-                            <div class="flex flex-row items-center justify-between mb-4">
-                                <i class="fa-regular fa-heart text-[9px] md:text-sm"></i>
-                                <div class="flex flex-row ">
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
+                        <a href="./product.html">
+                            <div class="mx-[9px]">
+                                <h5
+                                    class="max-w-[174px] md:max-w-[232px] md:mt-2 font-semibold text-xs md:text-sm line-clamp-2">
+                                    Sách Giáo Khoa Bộ Lớp 1 - Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)
+                                </h5>
+                                <p class="my-2 text-sm font-extrabold italic text-red-500">đ199.000</p>
+                                <div class="flex flex-row items-center justify-between mb-4">
+                                    <i class="fa-regular fa-heart text-xs md:text-sm"></i>
+                                    <div class="flex flex-row">
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                    </div>
+                                    <p class="text-[9px] md:text-sm font-semibold">Đã bán 158</p>
                                 </div>
-                                <p class="text-[9px] md:text-sm font-semibold">Đã bán 158</p>
                             </div>
-                        </div>
-                    </a>
-                    <a class="group max-h-[289px] md:max-h-[370px] max-w-[195px] md:max-w-[250px] bg-[#f9f8f4] rounded-lg shadow-[0_0_5px_0_rgba(0,0,0,0.2)] mx-auto"
-                        href="#">
+                        </a>
+                    </div>
+                    <div
+                        class="group max-h-[289px] md:max-h-[370px] max-w-[195px] md:max-w-[250px] bg-[#f9f8f4] rounded-lg shadow-[0_0_5px_0_rgba(0,0,0,0.2)] mx-auto">
                         <div
                             class="max-h-[195px] max-w-[195px] md:max-h-[250px] md:max-w-[250px] relative overflow-hidden">
-                            <div
-                                class="cart-plus z-50 w-10 h-10 rounded-full bg-[#015601] hidden items-center justify-center absolute bottom-2 right-2 ease-in-out duration-300 group-hover:flex">
-                                <i class="fa-solid fa-cart-plus text-white text-xl"></i>
-                            </div>
+                            <a href="./cart.html">
+                                <div
+                                    class="cart-plus z-50 w-10 h-10 rounded-full bg-[#015601] hidden items-center justify-center absolute bottom-2 right-2 ease-in-out duration-300 group-hover:flex">
+                                    <i class="fa-solid fa-cart-plus text-white text-xl"></i>
+                                </div>
+                            </a>
                             <img class="rounded-t-lg ease-in-out duration-300 group-hover:scale-125"
                                 src="./image/SGK lớp 1.jpeg" alt="sgk1">
 
                         </div>
-                        <div class="mx-[9px]">
-                            <h5
-                                class="max-w-[174px] md:max-w-[232px] mt-2 font-semibold text-[9px] md:text-sm line-clamp-2">
-                                Sách Giáo Khoa Bộ Lớp 1 - Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)
-                            </h5>
-                            <p class="my-2 text-sm font-extrabold italic text-red-500">đ199.000</p>
-                            <div class="flex flex-row items-center justify-between mb-4">
-                                <i class="fa-regular fa-heart text-[9px] md:text-sm"></i>
-                                <div class="flex flex-row">
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
+                        <a href="./product.html">
+                            <div class="mx-[9px]">
+                                <h5
+                                    class="max-w-[174px] md:max-w-[232px] md:mt-2 font-semibold text-xs md:text-sm line-clamp-2">
+                                    Sách Giáo Khoa Bộ Lớp 1 - Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)
+                                </h5>
+                                <p class="my-2 text-sm font-extrabold italic text-red-500">đ199.000</p>
+                                <div class="flex flex-row items-center justify-between mb-4">
+                                    <i class="fa-regular fa-heart text-xs md:text-sm"></i>
+                                    <div class="flex flex-row">
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                    </div>
+                                    <p class="text-[9px] md:text-sm font-semibold">Đã bán 158</p>
                                 </div>
-                                <p class="text-[9px] md:text-sm font-semibold">Đã bán 158</p>
                             </div>
-                        </div>
-                    </a>
-                    <a class="group max-h-[289px] md:max-h-[370px] max-w-[195px] md:max-w-[250px] bg-[#f9f8f4] rounded-lg shadow-[0_0_5px_0_rgba(0,0,0,0.2)] mx-auto"
-                        href="#">
+                        </a>
+                    </div>
+                    <div
+                        class="group max-h-[289px] md:max-h-[370px] max-w-[195px] md:max-w-[250px] bg-[#f9f8f4] rounded-lg shadow-[0_0_5px_0_rgba(0,0,0,0.2)] mx-auto">
                         <div
                             class="max-h-[195px] max-w-[195px] md:max-h-[250px] md:max-w-[250px] relative overflow-hidden">
-                            <div
-                                class="cart-plus z-50 w-10 h-10 rounded-full bg-[#015601] hidden items-center justify-center absolute bottom-2 right-2 ease-in-out duration-300 group-hover:flex">
-                                <i class="fa-solid fa-cart-plus text-white text-xl"></i>
-                            </div>
+                            <a href="./cart.html">
+                                <div
+                                    class="cart-plus z-50 w-10 h-10 rounded-full bg-[#015601] hidden items-center justify-center absolute bottom-2 right-2 ease-in-out duration-300 group-hover:flex">
+                                    <i class="fa-solid fa-cart-plus text-white text-xl"></i>
+                                </div>
+                            </a>
                             <img class="rounded-t-lg ease-in-out duration-300 group-hover:scale-125"
                                 src="./image/SGK lớp 1.jpeg" alt="sgk1">
 
                         </div>
-                        <div class="mx-[9px]">
-                            <h5
-                                class="max-w-[174px] md:max-w-[232px] mt-2 font-semibold text-[9px] md:text-sm line-clamp-2">
-                                Sách Giáo Khoa Bộ Lớp 1 - Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)
-                            </h5>
-                            <p class="my-2 text-sm font-extrabold italic text-red-500">đ199.000</p>
-                            <div class="flex flex-row items-center justify-between mb-4">
-                                <i class="fa-regular fa-heart text-[9px] md:text-sm"></i>
-                                <div class="flex flex-row">
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
+                        <a href="./product.html">
+                            <div class="mx-[9px]">
+                                <h5
+                                    class="max-w-[174px] md:max-w-[232px] md:mt-2 font-semibold text-xs md:text-sm line-clamp-2">
+                                    Sách Giáo Khoa Bộ Lớp 1 - Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)
+                                </h5>
+                                <p class="my-2 text-sm font-extrabold italic text-red-500">đ199.000</p>
+                                <div class="flex flex-row items-center justify-between mb-4">
+                                    <i class="fa-regular fa-heart text-xs md:text-sm"></i>
+                                    <div class="flex flex-row">
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                    </div>
+                                    <p class="text-[9px] md:text-sm font-semibold">Đã bán 158</p>
                                 </div>
-                                <p class="text-[9px] md:text-sm font-semibold">Đã bán 158</p>
                             </div>
-                        </div>
-                    </a>
-                    <a class=" group max-h-[289px] md:max-h-[370px] max-w-[195px] md:max-w-[250px] bg-[#f9f8f4] rounded-lg shadow-[0_0_5px_0_rgba(0,0,0,0.2)] mx-auto"
-                        href="#">
+                        </a>
+                    </div>
+                    <div
+                        class="group max-h-[289px] md:max-h-[370px] max-w-[195px] md:max-w-[250px] bg-[#f9f8f4] rounded-lg shadow-[0_0_5px_0_rgba(0,0,0,0.2)] mx-auto">
                         <div
                             class="max-h-[195px] max-w-[195px] md:max-h-[250px] md:max-w-[250px] relative overflow-hidden">
-                            <div
-                                class="cart-plus z-50 w-10 h-10 rounded-full bg-[#015601] hidden items-center justify-center absolute bottom-2 right-2 ease-in-out duration-300 group-hover:flex">
-                                <i class="fa-solid fa-cart-plus text-white text-xl"></i>
-                            </div>
+                            <a href="./cart.html">
+                                <div
+                                    class="cart-plus z-50 w-10 h-10 rounded-full bg-[#015601] hidden items-center justify-center absolute bottom-2 right-2 ease-in-out duration-300 group-hover:flex">
+                                    <i class="fa-solid fa-cart-plus text-white text-xl"></i>
+                                </div>
+                            </a>
                             <img class="rounded-t-lg ease-in-out duration-300 group-hover:scale-125"
                                 src="./image/SGK lớp 1.jpeg" alt="sgk1">
 
                         </div>
-                        <div class="mx-[9px]">
-                            <h5
-                                class="max-w-[174px] md:max-w-[232px] mt-2 font-semibold text-[9px] md:text-sm line-clamp-2">
-                                Sách Giáo Khoa Bộ Lớp 1 - Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)
-                            </h5>
-                            <p class="my-2 text-sm font-extrabold italic text-red-500">đ199.000</p>
-                            <div class="flex flex-row items-center justify-between mb-4">
-                                <i class="fa-regular fa-heart text-[9px] md:text-sm"></i>
-                                <div class="flex flex-row">
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
+                        <a href="./product.html">
+                            <div class="mx-[9px]">
+                                <h5
+                                    class="max-w-[174px] md:max-w-[232px] md:mt-2 font-semibold text-xs md:text-sm line-clamp-2">
+                                    Sách Giáo Khoa Bộ Lớp 1 - Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)
+                                </h5>
+                                <p class="my-2 text-sm font-extrabold italic text-red-500">đ199.000</p>
+                                <div class="flex flex-row items-center justify-between mb-4">
+                                    <i class="fa-regular fa-heart text-xs md:text-sm"></i>
+                                    <div class="flex flex-row">
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                    </div>
+                                    <p class="text-[9px] md:text-sm font-semibold">Đã bán 158</p>
                                 </div>
-                                <p class="text-[9px] md:text-sm font-semibold">Đã bán 158</p>
                             </div>
-                        </div>
-                    </a>
-
+                        </a>
+                    </div>
                 </div>
 
             </div>
             <div class="flex flex-col mt-5 md:mt-[30px] mx-3 xl:mx-[50px]">
-                <div class="overflow-hidden h-[32px] md:h-[50px] lg:h-[70px] w-[280px] md:w-[440px] lg:w-[540px] m-auto bg-emerald-800 flex justify-between items-center rounded">
-                    <div class="h-[15px] md:h-[30px] lg:h-[45px] w-[15px] md:w-[30px] lg:w-[45px] rounded-full translate-x-[-50%] z-10 bg-white"></div>
+                <div
+                    class="overflow-hidden h-[32px] md:h-[50px] lg:h-[70px] w-[280px] md:w-[440px] lg:w-[540px] m-auto bg-emerald-800 flex justify-between items-center rounded">
+                    <div
+                        class="h-[15px] md:h-[30px] lg:h-[45px] w-[15px] md:w-[30px] lg:w-[45px] rounded-full translate-x-[-50%] z-10 bg-white">
+                    </div>
                     <div class="flex flex-row justify-center items-center">
                         <h2 class="w-fit font-bold text-xs md:text-xl lg:text-2xl text-white cursor-pointer"><a
                                 href="./detail.html">Danh mục sách giáo khoa cấp THCS</a></h2>
                         <i class="fa-solid fa-angle-right text-xs md:text-xl lg:text-2xl text-white ml-1"></i>
                     </div>
-                    <div class="h-[15px] md:h-[30px] lg:h-[45px] w-[15px] md:w-[30px] lg:w-[45px] rounded-full translate-x-[50%] z-10 bg-white"></div>
+                    <div
+                        class="h-[15px] md:h-[30px] lg:h-[45px] w-[15px] md:w-[30px] lg:w-[45px] rounded-full translate-x-[50%] z-10 bg-white">
+                    </div>
                 </div>
-                    
-                <div class="grid grid-cols-2 sm:grid-cols-3 gap-[15px] lg:grid-cols-4 lg:gap-[25px] mx-auto mt-4 md:mt-6">
-                    <a class="group max-h-[289px] md:max-h-[370px] max-w-[195px] md:max-w-[250px] bg-[#f9f8f4] rounded-lg shadow-[0_0_5px_0_rgba(0,0,0,0.2)] mx-auto"
-                        href="./product.html">
+
+                <div
+                    class="grid grid-cols-2 sm:grid-cols-3 gap-[15px] lg:grid-cols-4 lg:gap-[25px] mx-auto mt-4 md:mt-6">
+                    <div
+                        class="group max-h-[289px] md:max-h-[370px] max-w-[195px] md:max-w-[250px] bg-[#f9f8f4] rounded-lg shadow-[0_0_5px_0_rgba(0,0,0,0.2)] mx-auto">
                         <div
                             class="max-h-[195px] max-w-[195px] md:max-h-[250px] md:max-w-[250px] relative overflow-hidden">
-                            <div
-                                class="cart-plus z-50 w-10 h-10 rounded-full bg-[#015601] hidden items-center justify-center absolute bottom-2 right-2 ease-in-out duration-300 group-hover:flex">
-                                <i class="fa-solid fa-cart-plus text-white text-xl"></i>
-                            </div>
+                            <a href="./cart.html">
+                                <div
+                                    class="cart-plus z-50 w-10 h-10 rounded-full bg-[#015601] hidden items-center justify-center absolute bottom-2 right-2 ease-in-out duration-300 group-hover:flex">
+                                    <i class="fa-solid fa-cart-plus text-white text-xl"></i>
+                                </div>
+                            </a>
                             <img class="rounded-t-lg ease-in-out duration-300 group-hover:scale-125"
                                 src="./image/SGK lớp 1.jpeg" alt="sgk1">
 
                         </div>
-                        <div class="mx-[9px]">
-                            <h5
-                                class="max-w-[174px] md:max-w-[232px] mt-2 font-semibold text-[9px] md:text-sm line-clamp-2">
-                                Sách Giáo Khoa Bộ Lớp 1 - Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)
-                            </h5>
-                            <p class="my-2 text-sm font-extrabold italic text-red-500">đ199.000</p>
-                            <div class="flex flex-row items-center justify-between mb-4">
-                                <i class="fa-regular fa-heart text-[9px] md:text-sm"></i>
-                                <div class="flex flex-row ">
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
+                        <a href="./product.html">
+                            <div class="mx-[9px]">
+                                <h5
+                                    class="max-w-[174px] md:max-w-[232px] md:mt-2 font-semibold text-xs md:text-sm line-clamp-2">
+                                    Sách Giáo Khoa Bộ Lớp 1 - Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)
+                                </h5>
+                                <p class="my-2 text-sm font-extrabold italic text-red-500">đ199.000</p>
+                                <div class="flex flex-row items-center justify-between mb-4">
+                                    <i class="fa-regular fa-heart text-xs md:text-sm"></i>
+                                    <div class="flex flex-row">
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                    </div>
+                                    <p class="text-[9px] md:text-sm font-semibold">Đã bán 158</p>
                                 </div>
-                                <p class="text-[9px] md:text-sm font-semibold">Đã bán 158</p>
                             </div>
-                        </div>
-                    </a>
-                    <a class="group max-h-[289px] md:max-h-[370px] max-w-[195px] md:max-w-[250px] bg-[#f9f8f4] rounded-lg shadow-[0_0_5px_0_rgba(0,0,0,0.2)] mx-auto"
-                        href="#">
+                        </a>
+                    </div>
+                    <div
+                        class="group max-h-[289px] md:max-h-[370px] max-w-[195px] md:max-w-[250px] bg-[#f9f8f4] rounded-lg shadow-[0_0_5px_0_rgba(0,0,0,0.2)] mx-auto">
                         <div
                             class="max-h-[195px] max-w-[195px] md:max-h-[250px] md:max-w-[250px] relative overflow-hidden">
-                            <div
-                                class="cart-plus z-50 w-10 h-10 rounded-full bg-[#015601] hidden items-center justify-center absolute bottom-2 right-2 ease-in-out duration-300 group-hover:flex">
-                                <i class="fa-solid fa-cart-plus text-white text-xl"></i>
-                            </div>
+                            <a href="./cart.html">
+                                <div
+                                    class="cart-plus z-50 w-10 h-10 rounded-full bg-[#015601] hidden items-center justify-center absolute bottom-2 right-2 ease-in-out duration-300 group-hover:flex">
+                                    <i class="fa-solid fa-cart-plus text-white text-xl"></i>
+                                </div>
+                            </a>
                             <img class="rounded-t-lg ease-in-out duration-300 group-hover:scale-125"
                                 src="./image/SGK lớp 1.jpeg" alt="sgk1">
 
                         </div>
-                        <div class="mx-[9px]">
-                            <h5
-                                class="max-w-[174px] md:max-w-[232px] mt-2 font-semibold text-[9px] md:text-sm line-clamp-2">
-                                Sách Giáo Khoa Bộ Lớp 1 - Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)
-                            </h5>
-                            <p class="my-2 text-sm font-extrabold italic text-red-500">đ199.000</p>
-                            <div class="flex flex-row items-center justify-between mb-4">
-                                <i class="fa-regular fa-heart text-[9px] md:text-sm"></i>
-                                <div class="flex flex-row">
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
+                        <a href="./product.html">
+                            <div class="mx-[9px]">
+                                <h5
+                                    class="max-w-[174px] md:max-w-[232px] md:mt-2 font-semibold text-xs md:text-sm line-clamp-2">
+                                    Sách Giáo Khoa Bộ Lớp 1 - Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)
+                                </h5>
+                                <p class="my-2 text-sm font-extrabold italic text-red-500">đ199.000</p>
+                                <div class="flex flex-row items-center justify-between mb-4">
+                                    <i class="fa-regular fa-heart text-xs md:text-sm"></i>
+                                    <div class="flex flex-row">
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                    </div>
+                                    <p class="text-[9px] md:text-sm font-semibold">Đã bán 158</p>
                                 </div>
-                                <p class="text-[9px] md:text-sm font-semibold">Đã bán 158</p>
                             </div>
-                        </div>
-                    </a>
-                    <a class="group max-h-[289px] md:max-h-[370px] max-w-[195px] md:max-w-[250px] bg-[#f9f8f4] rounded-lg shadow-[0_0_5px_0_rgba(0,0,0,0.2)] mx-auto"
-                        href="#">
+                        </a>
+                    </div>
+                    <div
+                        class="group max-h-[289px] md:max-h-[370px] max-w-[195px] md:max-w-[250px] bg-[#f9f8f4] rounded-lg shadow-[0_0_5px_0_rgba(0,0,0,0.2)] mx-auto">
                         <div
                             class="max-h-[195px] max-w-[195px] md:max-h-[250px] md:max-w-[250px] relative overflow-hidden">
-                            <div
-                                class="cart-plus z-50 w-10 h-10 rounded-full bg-[#015601] hidden items-center justify-center absolute bottom-2 right-2 ease-in-out duration-300 group-hover:flex">
-                                <i class="fa-solid fa-cart-plus text-white text-xl"></i>
-                            </div>
+                            <a href="./cart.html">
+                                <div
+                                    class="cart-plus z-50 w-10 h-10 rounded-full bg-[#015601] hidden items-center justify-center absolute bottom-2 right-2 ease-in-out duration-300 group-hover:flex">
+                                    <i class="fa-solid fa-cart-plus text-white text-xl"></i>
+                                </div>
+                            </a>
                             <img class="rounded-t-lg ease-in-out duration-300 group-hover:scale-125"
                                 src="./image/SGK lớp 1.jpeg" alt="sgk1">
 
                         </div>
-                        <div class="mx-[9px]">
-                            <h5
-                                class="max-w-[174px] md:max-w-[232px] mt-2 font-semibold text-[9px] md:text-sm line-clamp-2">
-                                Sách Giáo Khoa Bộ Lớp 1 - Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)
-                            </h5>
-                            <p class="my-2 text-sm font-extrabold italic text-red-500">đ199.000</p>
-                            <div class="flex flex-row items-center justify-between mb-4">
-                                <i class="fa-regular fa-heart text-[9px] md:text-sm"></i>
-                                <div class="flex flex-row">
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
+                        <a href="./product.html">
+                            <div class="mx-[9px]">
+                                <h5
+                                    class="max-w-[174px] md:max-w-[232px] md:mt-2 font-semibold text-xs md:text-sm line-clamp-2">
+                                    Sách Giáo Khoa Bộ Lớp 1 - Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)
+                                </h5>
+                                <p class="my-2 text-sm font-extrabold italic text-red-500">đ199.000</p>
+                                <div class="flex flex-row items-center justify-between mb-4">
+                                    <i class="fa-regular fa-heart text-xs md:text-sm"></i>
+                                    <div class="flex flex-row">
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                    </div>
+                                    <p class="text-[9px] md:text-sm font-semibold">Đã bán 158</p>
                                 </div>
-                                <p class="text-[9px] md:text-sm font-semibold">Đã bán 158</p>
                             </div>
-                        </div>
-                    </a>
-                    <a class="group max-h-[289px] md:max-h-[370px] max-w-[195px] md:max-w-[250px] bg-[#f9f8f4] rounded-lg shadow-[0_0_5px_0_rgba(0,0,0,0.2)] mx-auto"
-                        href="#">
+                        </a>
+                    </div>
+                    <div
+                        class="group max-h-[289px] md:max-h-[370px] max-w-[195px] md:max-w-[250px] bg-[#f9f8f4] rounded-lg shadow-[0_0_5px_0_rgba(0,0,0,0.2)] mx-auto">
                         <div
                             class="max-h-[195px] max-w-[195px] md:max-h-[250px] md:max-w-[250px] relative overflow-hidden">
-                            <div
-                                class="cart-plus z-50 w-10 h-10 rounded-full bg-[#015601] hidden items-center justify-center absolute bottom-2 right-2 ease-in-out duration-300 group-hover:flex">
-                                <i class="fa-solid fa-cart-plus text-white text-xl"></i>
-                            </div>
+                            <a href="./cart.html">
+                                <div
+                                    class="cart-plus z-50 w-10 h-10 rounded-full bg-[#015601] hidden items-center justify-center absolute bottom-2 right-2 ease-in-out duration-300 group-hover:flex">
+                                    <i class="fa-solid fa-cart-plus text-white text-xl"></i>
+                                </div>
+                            </a>
                             <img class="rounded-t-lg ease-in-out duration-300 group-hover:scale-125"
                                 src="./image/SGK lớp 1.jpeg" alt="sgk1">
 
                         </div>
-                        <div class="mx-[9px]">
-                            <h5
-                                class="max-w-[174px] md:max-w-[232px] mt-2 font-semibold text-[9px] md:text-sm line-clamp-2">
-                                Sách Giáo Khoa Bộ Lớp 1 - Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)
-                            </h5>
-                            <p class="my-2 text-sm font-extrabold italic text-red-500">đ199.000</p>
-                            <div class="flex flex-row items-center justify-between mb-4">
-                                <i class="fa-regular fa-heart text-[9px] md:text-sm"></i>
-                                <div class="flex flex-row">
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
+                        <a href="./product.html">
+                            <div class="mx-[9px]">
+                                <h5
+                                    class="max-w-[174px] md:max-w-[232px] md:mt-2 font-semibold text-xs md:text-sm line-clamp-2">
+                                    Sách Giáo Khoa Bộ Lớp 1 - Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)
+                                </h5>
+                                <p class="my-2 text-sm font-extrabold italic text-red-500">đ199.000</p>
+                                <div class="flex flex-row items-center justify-between mb-4">
+                                    <i class="fa-regular fa-heart text-xs md:text-sm"></i>
+                                    <div class="flex flex-row">
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                    </div>
+                                    <p class="text-[9px] md:text-sm font-semibold">Đã bán 158</p>
                                 </div>
-                                <p class="text-[9px] md:text-sm font-semibold">Đã bán 158</p>
                             </div>
-                        </div>
-                    </a>
-
+                        </a>
+                    </div>
                 </div>
 
             </div>
             <div class="flex flex-col mt-5 md:mt-[30px] mx-3 xl:mx-[50px]">
-                <div class="overflow-hidden h-[32px] md:h-[50px] lg:h-[70px] w-[280px] md:w-[440px] lg:w-[540px] m-auto bg-emerald-800 flex justify-between items-center rounded">
-                    <div class="h-[15px] md:h-[30px] lg:h-[45px] w-[15px] md:w-[30px] lg:w-[45px] rounded-full translate-x-[-50%] z-10 bg-white"></div>
+                <div
+                    class="overflow-hidden h-[32px] md:h-[50px] lg:h-[70px] w-[280px] md:w-[440px] lg:w-[540px] m-auto bg-emerald-800 flex justify-between items-center rounded">
+                    <div
+                        class="h-[15px] md:h-[30px] lg:h-[45px] w-[15px] md:w-[30px] lg:w-[45px] rounded-full translate-x-[-50%] z-10 bg-white">
+                    </div>
                     <div class="flex flex-row justify-center items-center">
                         <h2 class="w-fit font-bold text-xs md:text-xl lg:text-2xl text-white cursor-pointer"><a
                                 href="./detail.html">Danh mục sách giáo khoa cấp THPT</a></h2>
                         <i class="fa-solid fa-angle-right text-xs md:text-xl lg:text-2xl text-white ml-1"></i>
                     </div>
-                    <div class="h-[15px] md:h-[30px] lg:h-[45px] w-[15px] md:w-[30px] lg:w-[45px] rounded-full translate-x-[50%] z-10 bg-white"></div>
+                    <div
+                        class="h-[15px] md:h-[30px] lg:h-[45px] w-[15px] md:w-[30px] lg:w-[45px] rounded-full translate-x-[50%] z-10 bg-white">
+                    </div>
                 </div>
-                    
-                <div class="grid grid-cols-2 sm:grid-cols-3 gap-[15px] lg:grid-cols-4 lg:gap-[25px] mx-auto mt-4 md:mt-6">
-                    <a class="group max-h-[289px] md:max-h-[370px] max-w-[195px] md:max-w-[250px] bg-[#f9f8f4] rounded-lg shadow-[0_0_5px_0_rgba(0,0,0,0.2)] mx-auto"
-                        href="./product.html">
+
+                <div
+                    class="grid grid-cols-2 sm:grid-cols-3 gap-[15px] lg:grid-cols-4 lg:gap-[25px] mx-auto mt-4 md:mt-6">
+                    <div class="group max-h-[289px] md:max-h-[370px] max-w-[195px] md:max-w-[250px] bg-[#f9f8f4] rounded-lg shadow-[0_0_5px_0_rgba(0,0,0,0.2)] mx-auto">
                         <div
                             class="max-h-[195px] max-w-[195px] md:max-h-[250px] md:max-w-[250px] relative overflow-hidden">
-                            <div
+                            <a href="./cart.html">
+                                <div
                                 class="cart-plus z-50 w-10 h-10 rounded-full bg-[#015601] hidden items-center justify-center absolute bottom-2 right-2 ease-in-out duration-300 group-hover:flex">
                                 <i class="fa-solid fa-cart-plus text-white text-xl"></i>
                             </div>
+                            </a>
                             <img class="rounded-t-lg ease-in-out duration-300 group-hover:scale-125"
                                 src="./image/SGK lớp 1.jpeg" alt="sgk1">
 
                         </div>
-                        <div class="mx-[9px]">
-                            <h5
-                                class="max-w-[174px] md:max-w-[232px] mt-2 font-semibold text-[9px] md:text-sm line-clamp-2">
-                                Sách Giáo Khoa Bộ Lớp 1 - Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)
-                            </h5>
-                            <p class="my-2 text-sm font-extrabold italic text-red-500">đ199.000</p>
-                            <div class="flex flex-row items-center justify-between mb-4">
-                                <i class="fa-regular fa-heart text-[9px] md:text-sm"></i>
-                                <div class="flex flex-row ">
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
+                        <a href="./product.html">
+                            <div class="mx-[9px]">
+                                <h5
+                                    class="max-w-[174px] md:max-w-[232px] md:mt-2 font-semibold text-xs md:text-sm line-clamp-2">
+                                    Sách Giáo Khoa Bộ Lớp 1 - Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)
+                                </h5>
+                                <p class="my-2 text-sm font-extrabold italic text-red-500">đ199.000</p>
+                                <div class="flex flex-row items-center justify-between mb-4">
+                                    <i class="fa-regular fa-heart text-xs md:text-sm"></i>
+                                    <div class="flex flex-row">
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                    </div>
+                                    <p class="text-[9px] md:text-sm font-semibold">Đã bán 158</p>
                                 </div>
-                                <p class="text-[9px] md:text-sm font-semibold">Đã bán 158</p>
                             </div>
-                        </div>
-                    </a>
-                    <a class="group max-h-[289px] md:max-h-[370px] max-w-[195px] md:max-w-[250px] bg-[#f9f8f4] rounded-lg shadow-[0_0_5px_0_rgba(0,0,0,0.2)] mx-auto"
-                        href="#">
+                        </a>
+                    </div>
+                    <div class="group max-h-[289px] md:max-h-[370px] max-w-[195px] md:max-w-[250px] bg-[#f9f8f4] rounded-lg shadow-[0_0_5px_0_rgba(0,0,0,0.2)] mx-auto">
                         <div
                             class="max-h-[195px] max-w-[195px] md:max-h-[250px] md:max-w-[250px] relative overflow-hidden">
-                            <div
+                            <a href="./cart.html">
+                                <div
                                 class="cart-plus z-50 w-10 h-10 rounded-full bg-[#015601] hidden items-center justify-center absolute bottom-2 right-2 ease-in-out duration-300 group-hover:flex">
                                 <i class="fa-solid fa-cart-plus text-white text-xl"></i>
                             </div>
+                            </a>
                             <img class="rounded-t-lg ease-in-out duration-300 group-hover:scale-125"
                                 src="./image/SGK lớp 1.jpeg" alt="sgk1">
 
                         </div>
-                        <div class="mx-[9px]">
-                            <h5
-                                class="max-w-[174px] md:max-w-[232px] mt-2 font-semibold text-[9px] md:text-sm line-clamp-2">
-                                Sách Giáo Khoa Bộ Lớp 1 - Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)
-                            </h5>
-                            <p class="my-2 text-sm font-extrabold italic text-red-500">đ199.000</p>
-                            <div class="flex flex-row items-center justify-between mb-4">
-                                <i class="fa-regular fa-heart text-[9px] md:text-sm"></i>
-                                <div class="flex flex-row">
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
+                        <a href="./product.html">
+                            <div class="mx-[9px]">
+                                <h5
+                                    class="max-w-[174px] md:max-w-[232px] md:mt-2 font-semibold text-xs md:text-sm line-clamp-2">
+                                    Sách Giáo Khoa Bộ Lớp 1 - Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)
+                                </h5>
+                                <p class="my-2 text-sm font-extrabold italic text-red-500">đ199.000</p>
+                                <div class="flex flex-row items-center justify-between mb-4">
+                                    <i class="fa-regular fa-heart text-xs md:text-sm"></i>
+                                    <div class="flex flex-row">
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                    </div>
+                                    <p class="text-[9px] md:text-sm font-semibold">Đã bán 158</p>
                                 </div>
-                                <p class="text-[9px] md:text-sm font-semibold">Đã bán 158</p>
                             </div>
-                        </div>
-                    </a>
-                    <a class="group max-h-[289px] md:max-h-[370px] max-w-[195px] md:max-w-[250px] bg-[#f9f8f4] rounded-lg shadow-[0_0_5px_0_rgba(0,0,0,0.2)] mx-auto"
-                        href="#">
+                        </a>
+                    </div>
+                    <div class="group max-h-[289px] md:max-h-[370px] max-w-[195px] md:max-w-[250px] bg-[#f9f8f4] rounded-lg shadow-[0_0_5px_0_rgba(0,0,0,0.2)] mx-auto">
                         <div
                             class="max-h-[195px] max-w-[195px] md:max-h-[250px] md:max-w-[250px] relative overflow-hidden">
-                            <div
+                            <a href="./cart.html">
+                                <div
                                 class="cart-plus z-50 w-10 h-10 rounded-full bg-[#015601] hidden items-center justify-center absolute bottom-2 right-2 ease-in-out duration-300 group-hover:flex">
                                 <i class="fa-solid fa-cart-plus text-white text-xl"></i>
                             </div>
+                            </a>
                             <img class="rounded-t-lg ease-in-out duration-300 group-hover:scale-125"
                                 src="./image/SGK lớp 1.jpeg" alt="sgk1">
 
                         </div>
-                        <div class="mx-[9px]">
-                            <h5
-                                class="max-w-[174px] md:max-w-[232px] mt-2 font-semibold text-[9px] md:text-sm line-clamp-2">
-                                Sách Giáo Khoa Bộ Lớp 1 - Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)
-                            </h5>
-                            <p class="my-2 text-sm font-extrabold italic text-red-500">đ199.000</p>
-                            <div class="flex flex-row items-center justify-between mb-4">
-                                <i class="fa-regular fa-heart text-[9px] md:text-sm"></i>
-                                <div class="flex flex-row">
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
+                        <a href="./product.html">
+                            <div class="mx-[9px]">
+                                <h5
+                                    class="max-w-[174px] md:max-w-[232px] md:mt-2 font-semibold text-xs md:text-sm line-clamp-2">
+                                    Sách Giáo Khoa Bộ Lớp 1 - Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)
+                                </h5>
+                                <p class="my-2 text-sm font-extrabold italic text-red-500">đ199.000</p>
+                                <div class="flex flex-row items-center justify-between mb-4">
+                                    <i class="fa-regular fa-heart text-xs md:text-sm"></i>
+                                    <div class="flex flex-row">
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                    </div>
+                                    <p class="text-[9px] md:text-sm font-semibold">Đã bán 158</p>
                                 </div>
-                                <p class="text-[9px] md:text-sm font-semibold">Đã bán 158</p>
                             </div>
-                        </div>
-                    </a>
-                    <a class="group max-h-[289px] md:max-h-[370px] max-w-[195px] md:max-w-[250px] bg-[#f9f8f4] rounded-lg shadow-[0_0_5px_0_rgba(0,0,0,0.2)] mx-auto"
-                        href="#">
+                        </a>
+                    </div>
+                    <div class="group max-h-[289px] md:max-h-[370px] max-w-[195px] md:max-w-[250px] bg-[#f9f8f4] rounded-lg shadow-[0_0_5px_0_rgba(0,0,0,0.2)] mx-auto">
                         <div
                             class="max-h-[195px] max-w-[195px] md:max-h-[250px] md:max-w-[250px] relative overflow-hidden">
-                            <div
+                            <a href="./cart.html">
+                                <div
                                 class="cart-plus z-50 w-10 h-10 rounded-full bg-[#015601] hidden items-center justify-center absolute bottom-2 right-2 ease-in-out duration-300 group-hover:flex">
                                 <i class="fa-solid fa-cart-plus text-white text-xl"></i>
                             </div>
+                            </a>
                             <img class="rounded-t-lg ease-in-out duration-300 group-hover:scale-125"
                                 src="./image/SGK lớp 1.jpeg" alt="sgk1">
 
                         </div>
-                        <div class="mx-[9px]">
-                            <h5
-                                class="max-w-[174px] md:max-w-[232px] mt-2 font-semibold text-[9px] md:text-sm line-clamp-2">
-                                Sách Giáo Khoa Bộ Lớp 1 - Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)
-                            </h5>
-                            <p class="my-2 text-sm font-extrabold italic text-red-500">đ199.000</p>
-                            <div class="flex flex-row items-center justify-between mb-4">
-                                <i class="fa-regular fa-heart text-[9px] md:text-sm"></i>
-                                <div class="flex flex-row">
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
-                                    <i class="fa-solid fa-star text-[9px] md:text-sm text-yellow-400"></i>
+                        <a href="./product.html">
+                            <div class="mx-[9px]">
+                                <h5
+                                    class="max-w-[174px] md:max-w-[232px] md:mt-2 font-semibold text-xs md:text-sm line-clamp-2">
+                                    Sách Giáo Khoa Bộ Lớp 1 - Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)
+                                </h5>
+                                <p class="my-2 text-sm font-extrabold italic text-red-500">đ199.000</p>
+                                <div class="flex flex-row items-center justify-between mb-4">
+                                    <i class="fa-regular fa-heart text-xs md:text-sm"></i>
+                                    <div class="flex flex-row">
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                        <i class="fa-solid fa-star text-xs md:text-sm text-yellow-400"></i>
+                                    </div>
+                                    <p class="text-[9px] md:text-sm font-semibold">Đã bán 158</p>
                                 </div>
-                                <p class="text-[9px] md:text-sm font-semibold">Đã bán 158</p>
                             </div>
-                        </div>
-                    </a>
-
+                        </a>
+                    </div>
                 </div>
 
             </div>
@@ -648,7 +709,8 @@
             </footer>
         </div>
     </div>
-    <script src="./js/index.js"></script>
+    <script src="./js/sidebar.js"></script>
+    <script src="./js/header.js"></script>
 </body>
 
 </html>

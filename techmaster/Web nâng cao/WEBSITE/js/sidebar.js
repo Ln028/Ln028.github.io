@@ -13,8 +13,6 @@ var click = function() {
     sidebar.classList.toggle("hidden");
     sidebarBackdrop.classList.toggle("hidden")
     content.classList.toggle("fixed")
-
-
 }
 btn.addEventListener("click", click)
 
