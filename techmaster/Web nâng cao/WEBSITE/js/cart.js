@@ -37,12 +37,41 @@ backdropFull.addEventListener("click", function() {
     signin.classList.add("hidden")
     signup.classList.add("hidden")
     deleteCart.classList.add("hidden")
+    voucher.classList.add("hidden")
 })
 
 var deleteTrash = document.querySelector(".trash")
 var deleteCart = document.querySelector(".delete-cart")
 
+
+
 deleteTrash.addEventListener("click", function() {
     deleteCart.classList.toggle("hidden")
+    backdropFull.classList.toggle("hidden")
+})
+
+// function trash(arr) {
+    //     for (let i = 0; i < arr.length; i++) {
+    //         const element = arr[i];
+    //         element.addEventListener("click", function() {
+    //             deleteCart.classList.toggle("hidden")
+    //             backdropFull.classList.toggle("hidden")
+    //         })
+            
+    //     }
+    //     return trash(deleteTrash)
+    // }
+    
+var voucher = document.getElementById("voucher")
+var code = document.getElementById("code")
+var voucherClose = document.getElementById("voucher-close")
+
+
+code.addEventListener("click", function() {
+    voucher.classList.toggle("hidden")
+    backdropFull.classList.toggle("hidden")
+})
+voucherClose.addEventListener("click", function() {
+    voucher.classList.toggle("hidden")
     backdropFull.classList.toggle("hidden")
 })

@@ -118,15 +118,68 @@
     </div>
 
     <div>
+        <div id="info" class="hidden w-[90%] md:w-[550px] bg-white z-50 left-[50%] translate-x-[-50%] space-y-5 fixed">
+            <div class="w-full uppercase bg-emerald-800 text-center text-white font-semibold p-3 relative">
+                <p class="m-auto inline">Thông tin nhận hàng</p>
+            </div>
+            <div class="space-y-5 p-5">
+                <div class="flex justify-between">
+                    <p class="whitespace-nowrap mr-2">Họ và tên người nhận</p> <input class="h-8 w-[60%] text-sm" type="text" placeholder="Nhập họ và tên người nhận">
+                </div>
+                <div class="flex justify-between">
+                    <p class="whitespace-nowrap mr-2">Tỉnh/Thành phố</p><select id="province" class="h-8 w-[60%] text-sm py-0"></select>
+                </div>
+                <div class="flex justify-between">
+                    <p class="whitespace-nowrap mr-2">Quận/Huyện</p><select id="district" class="h-8 w-[60%] text-sm py-0"></select>
+                </div>
+                <div class="flex justify-between">
+                    <p class="whitespace-nowrap mr-2">Phường/Xã</p><select id="commune" class="h-8 w-[60%] text-sm py-0"></select>
+                </div>
+                <div class="flex justify-between">
+                    <p class="whitespace-nowrap mr-2">Địa chỉ nhận hàng</p> <input class="h-8 w-[60%] text-sm" type="text" placeholder="Nhập địa chỉ nhận hàng">
+                </div>
+                <div class="flex justify-between">
+                    <p class="whitespace-nowrap mr-2">Số điện thoại</p> <input class="h-8 w-[60%] text-sm" type="text" placeholder="Nhập số điện thoại">
+                </div>
+                <div class="flex justify-center space-x-5">
+                    <button class="py-2 px-3 bg-emerald-800 text-white rounded">Hủy</button>
+                    <button class="py-2 px-3 bg-emerald-800 text-white rounded">Xác nhận</button>
+                </div>
+            </div>
+        </div>
+        <div id="pay" class="hidden w-[90%] md:w-[550px] bg-white z-50 left-[50%] translate-x-[-50%] space-y-5 fixed">
+            <div class="w-full uppercase bg-emerald-800 text-center text-white font-semibold p-3 relative">
+                <p class="m-auto inline">Quý Khách vui lòng chọn một trong các hình thức thanh toán dưới đây</p>
+            </div>
+            <div class="space-y-5 p-5">
+                <div class="container">
+                    <input type="radio" name="radio" id="1" checked>
+                    <span class="checkmark">Thanh toán bằng thẻ Tín dụng / Ghi nợ</span>
+                </div>
+                  <div class="container">
+                    <input type="radio" name="radio" id="2">
+                    <span class="checkmark">Thanh toán khi nhận hàng</span>
+                  </div>
+                  <div class="container">
+                    <input type="radio" name="radio" id="3">
+                    <span class="checkmark">Thanh toán khi nhận hàng</span>
+                  </div>
+                  <div class="text-center">
+                    <button class="px-3 py-2 bg-emerald-800 text-white rounded">Xác nhận</button>
+                  </div>
+            </div>
+            
+        </div>
         <div class="h-9 md:h-[74px] w-full pl-[9px] md:pl-10 bg-[#f9f8f4] flex items-center overflow-x-auto">
             <a class="text-[10px] md:text-base font-semibold whitespace-nowrap text-emerald-800 hover:underline-offset-4"
-                href="#">Trang chủ
+                href="./index.html">Trang chủ
                 <i class="fa-solid fa-angle-right text-[10px] md:text-base"></i>
             </a>
             <p class="ml-2 text-[10px] md:text-base font-semibold whitespace-nowrap">
                 Thanh toán
             </p>
         </div>
+        
         <div class="mx-4 md:mx-10 xl:mx-[75px]">
             <div class="space-y-4 border-b py-4 md:py-7">
                 <div>
@@ -141,7 +194,7 @@
                         </div>
                         <p>Số nhà 30, ngõ 30, đường Nguyễn Hoàng, phường Mỹ Đình, quận Nam Từ Liêm, TP Hà Nội</p>
                     </div>
-                    <a class="text-emerald-800 font-medium whitespace-nowrap" href="#">Thay đổi <i class="fa-solid fa-angle-right text-[10px] md:text-sm"></i></a>
+                    <p id="change-info" class="text-emerald-800 font-medium whitespace-nowrap cursor-pointer">Thay đổi <i class="fa-solid fa-angle-right text-[10px] md:text-sm"></i></p>
                 </div>
             </div>
             <div class="hidden md:grid grid-cols-2 font-semibold py-7 border-b">
@@ -220,8 +273,8 @@
                     </div>
                     <div class="flex items-center justify-between">
                         <span>Phương thức thanh toán </span>
-                        <a class="inline text-emerald-800" href="#">Thanh toán khi nhận hàng <i
-                                class="fa-solid fa-angle-right text-sm"></i></a>
+                        <p id="pay-choice" class="inline text-emerald-800 cursor-pointer">Thanh toán khi nhận hàng <i
+                                class="fa-solid fa-angle-right text-sm"></i></p>
                     </div>
                 </div>
                 <div class="font-semibold space-y-5 pb-5 border-b md:border-0">
@@ -298,7 +351,8 @@
 
         </div>
     </footer>
-    <script src="./js/main.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./js/payment.js"></script>
 </body>
 
 </html>
