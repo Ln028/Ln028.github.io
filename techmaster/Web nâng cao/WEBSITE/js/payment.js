@@ -38,6 +38,8 @@ backdropFull.addEventListener("click", function() {
     signup.classList.add("hidden")
     info.classList.add("hidden")
     pay.classList.add("hidden")
+    allVoucher.classList.add("hidden")
+    success.classList.add("hidden")
    
 })
 
@@ -54,6 +56,34 @@ var payChoice = document.getElementById("pay-choice")
 
 payChoice.addEventListener("click", function() {
     pay.classList.toggle("hidden")
+    backdropFull.classList.toggle("hidden")
+})
+
+var changeVoucher = document.getElementById("change-voucher")
+var myVoucher = document.getElementById("my-voucher")
+var applyVoucher = document.getElementById("apply-voucher")
+var allVoucher = document.getElementById("voucher")
+var voucherClose = document.getElementById("voucher-close")
+
+applyVoucher.addEventListener("click", function() {
+    myVoucher.classList.toggle("hidden")
+})
+changeVoucher.addEventListener("click", function() {
+    myVoucher.classList.toggle("hidden")
+    allVoucher.classList.toggle("hidden")
+    backdropFull.classList.toggle("hidden")
+})
+voucherClose.addEventListener("click", function() {
+    allVoucher.classList.toggle("hidden")
+    backdropFull.classList.toggle("hidden")
+})
+
+
+var order = document.getElementById("confirm")
+var success = document.getElementById("success")
+
+order.addEventListener("click", function() {
+    success.classList.toggle("hidden")
     backdropFull.classList.toggle("hidden")
 })
 
