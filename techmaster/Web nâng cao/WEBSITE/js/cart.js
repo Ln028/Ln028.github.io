@@ -45,11 +45,15 @@ backdropFull.addEventListener("click", function() {
     voucher.classList.add("hidden")
 })
 
+var deleteTrashmd = document.querySelector(".trash-md")
 var deleteTrash = document.querySelector(".trash")
 var deleteCart = document.querySelector(".delete-cart")
 
 
-
+deleteTrashmd.addEventListener("click", function() {
+    deleteCart.classList.toggle("hidden")
+    backdropFull.classList.toggle("hidden")
+})
 deleteTrash.addEventListener("click", function() {
     deleteCart.classList.toggle("hidden")
     backdropFull.classList.toggle("hidden")

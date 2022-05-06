@@ -60,4 +60,3 @@ policyClose.addEventListener("click", function() {
     policy.classList.toggle("hidden")
     backdropFull.classList.toggle("hidden")
 })
-

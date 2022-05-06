@@ -33,9 +33,9 @@
                         <i id="toggleSidebarMobileHamburger" class="fa-solid fa-bars text-white text-xl"></i>
                         <i id="toggleSidebarMobileClose" class="fa-solid fa-xmark text-white text-xl hidden"></i>
                     </button>
-                    <div class="grow text-center rounded justify-between bg-white flex items-center h-[30px] md:h-10 ">
+                    <div class="grow text-center rounded justify-between bg-white flex items-center">
                         <i class="fa-solid fa-magnifying-glass text-gray-400 mx-3 text-xs md:text-xl"></i>
-                        <input class="h-[28px] lg:h-10 grow border-0 focus:ring-0 pl-0 text-xs md:text-sm" type="text"
+                        <input class="py-2 grow rounded border-0 focus:ring-0 pl-0 text-xs md:text-sm" type="text"
                             placeholder="Nhập từ khóa sách cần tìm kiếm">
                         <button class="rounded-r w-[110px] bg-emerald-800 text-white h-full py-2 hidden lg:block font-semibold">Tìm
                             kiếm<button>
@@ -65,10 +65,10 @@
                         class="lg:hidden fa-regular fa-circle-user text-white text-2xl md:text-3xl lg:text-4xl cursor-pointer"></i>
                 </span>
                 <button id="btn-signin"
-                    class="rounded md:mx-4 xl:mx-9 h-10 px-4 bg-emerald-800 hover:bg-white text-white font-semibold hover:text-emerald-800 hidden lg:block whitespace-nowrap">Đăng
+                    class="rounded md:mx-4 xl:mx-9 py-2 px-4 bg-emerald-800 hover:bg-white text-white font-semibold hover:text-emerald-800 hidden lg:block whitespace-nowrap">Đăng
                     ký</button>
                 <button id="btn-signup"
-                    class="rounded h-10 px-4 bg-emerald-800 hover:bg-white text-white font-semibold hover:text-emerald-800 hidden lg:block whitespace-nowrap">Đăng
+                    class="rounded py-2 px-4 bg-emerald-800 hover:bg-white text-white font-semibold hover:text-emerald-800 hidden lg:block whitespace-nowrap">Đăng
                     nhập</button>
             </div>
         </div>
@@ -121,396 +121,453 @@
         </div>
 
     </div>
-    <div id="voucher" class="hidden w-[70%] h-[500px] left-[50%] translate-x-[-50%] space-y-5 fixed bg-white z-50 overflow-hidden rounded">
+    <div id="voucher" class="hidden w-[90%] sm:w-[70%] h-[500px] left-[50%] translate-x-[-50%] fixed bg-white z-50 overflow-hidden rounded">
         <div class="w-full uppercase bg-emerald-800 text-center text-white font-semibold p-3 relative">
             <p class="m-auto inline text-sm md:text-base">Mã khuyến mại của tôi</p>
             <i id="voucher-close" class="fa-solid fa-xmark absolute right-3 text-sm md:text-base cursor-pointer"></i>
         </div>
-        <div class="w-full grid md:grid-cols-2 gap-4 overflow-y-auto">
-            <div class="flex h-20 md:h-[123px] md:w-[350px] space-x-2 md:space-x-5 border border-emerald-800 rounded-r mx-auto">
+        <div class="grid lg:grid-cols-2 gap-4 overflow-y-auto pt-5">
+            <div class="flex h-20 md:h-[123px] w-[260px] md:w-[350px] space-x-2 md:space-x-5 border border-emerald-800 rounded-r mx-auto hover:scale-105">
                 <div class="relative w-20 md:w-[123px]">
-                    <div class=" absolute top-[5px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <div class=" absolute top-[20px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <div class=" absolute top-[35px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <div class=" absolute top-[50px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <div class=" absolute top-[65px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <div class=" absolute top-[80px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <div class=" absolute top-[95px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <div class=" absolute top-[110px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class=" absolute top-[5px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class=" absolute top-[20px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class=" absolute top-[35px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class=" absolute top-[50px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class=" absolute top-[65px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class="hidden md:block absolute top-[80px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class="hidden md:block absolute top-[95px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class="hidden md:block absolute top-[110px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
                     <img class="h-full" src="./image/Sonder2.png" alt="logo">    
                 </div>
-                <div class="grow pr-2 text-xs md:text-sm md:space-y-3 flex flex-col justify-center">
+                <div class="grow pr-2 text-xs md:text-sm space-y-1 md:space-y-3 flex flex-col justify-center">
                     <div class="flex justify-between items-center space-x-2">
                         <p class="text-base md:text-lg font-semibold text-red-500">Giảm 10%</p>
-                        <p class="text-emerald-800 cursor-pointer">Dùng ngay<i class="fa-solid fa-chevron-right text-xs"></i></p>
+                        <p class="text-emerald-800 cursor-pointer hover:underline whitespace-nowrap">Dùng ngay<i class="fa-solid fa-chevron-right text-xs"></i></p>
+                    </div>
+                    <p>Đơn tối thiểu 400k</p>
+                    <p class="text-gray-400">HSD: 30.04.2022</p>
+                </div>
+            </div>
+            <div class="flex h-20 md:h-[123px] w-[260px] md:w-[350px] space-x-2 md:space-x-3 border border-emerald-800 rounded-r mx-auto hover:scale-105">
+                <div class="relative w-20 md:w-[123px]">
+                    <div class=" absolute top-[5px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class=" absolute top-[20px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class=" absolute top-[35px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class=" absolute top-[50px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class=" absolute top-[65px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class="hidden md:block absolute top-[80px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class="hidden md:block absolute top-[95px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class="hidden md:block absolute top-[110px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <img class="h-full" src="./image/Sonder2.png" alt="logo">    
+                </div>
+                <div class="grow pr-2 text-xs md:text-sm space-y-1 md:space-y-3 flex flex-col justify-center">
+                    <div class="flex justify-between items-center space-x-1">
+                        <p class="text-base md:text-lg font-semibold text-red-500">Giảm 8%</p>
+                        <p class="text-emerald-800 cursor-pointer hover:underline whitespace-nowrap">Dùng ngay<i class="fa-solid fa-chevron-right text-xs"></i></p>
+                    </div>
+                    <p>Đơn tối thiểu 200k</p>
+                    <p class="text-gray-400">HSD: 30.04.2022</p>
+                </div>
+            </div>
+            <div class="flex h-20 md:h-[123px] w-[260px] md:w-[350px] space-x-2 md:space-x-3 border border-emerald-800 rounded-r mx-auto hover:scale-105">
+                <div class="relative w-20 md:w-[123px]">
+                    <div class=" absolute top-[5px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class=" absolute top-[20px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class=" absolute top-[35px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class=" absolute top-[50px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class=" absolute top-[65px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class="hidden md:block absolute top-[80px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class="hidden md:block absolute top-[95px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class="hidden md:block absolute top-[110px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <img class="h-full" src="./image/Sonder2.png" alt="logo">    
+                </div>
+                <div class="grow pr-2 text-xs md:text-sm space-y-1 md:space-y-3 flex flex-col justify-center">
+                    <div class="flex justify-between items-center space-x-1">
+                        <p class="text-base md:text-lg font-semibold text-red-500 leading-4">Giảm đ15.000</p>
+                        <p class="text-emerald-800 cursor-pointer hover:underline whitespace-nowrap">Dùng ngay<i class="fa-solid fa-chevron-right text-xs"></i></p>
+                    </div>
+                    <p>Đơn tối thiểu 150k</p>
+                    <p class="text-gray-400">HSD: 30.04.2022</p>
+                </div>
+            </div>
+            <div class="flex h-20 md:h-[123px] w-[260px] md:w-[350px] space-x-2 md:space-x-3 border border-emerald-800 rounded-r mx-auto hover:scale-105">
+                <div class="relative w-20 md:w-[123px]">
+                    <div class=" absolute top-[5px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class=" absolute top-[20px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class=" absolute top-[35px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class=" absolute top-[50px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class=" absolute top-[65px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class="hidden md:block absolute top-[80px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class="hidden md:block absolute top-[95px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class="hidden md:block absolute top-[110px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <img class="h-full" src="./image/Sonder2.png" alt="logo">    
+                </div>
+                <div class="grow pr-2 text-xs md:text-sm space-y-1 md:space-y-3 flex flex-col justify-center">
+                    <div class="flex justify-between items-center space-x-1">
+                        <p class="text-base md:text-lg font-semibold text-red-500 leading-4">Giảm đ20.000</p>
+                        <p class="text-emerald-800 cursor-pointer hover:underline whitespace-nowrap">Dùng ngay<i class="fa-solid fa-chevron-right text-xs"></i></p>
                     </div>
                     <p>Đơn tối thiểu 250k</p>
                     <p class="text-gray-400">HSD: 30.04.2022</p>
                 </div>
             </div>
-            <div class="flex h-20 md:h-[123px] md:w-[350px] space-x-2 md:space-x-5 border border-emerald-800 rounded-r mx-auto">
+            <div class="flex h-20 md:h-[123px] w-[260px] md:w-[350px] space-x-2 md:space-x-3 border border-emerald-800 rounded-r mx-auto">
                 <div class="relative w-20 md:w-[123px]">
-                    <div class=" absolute top-[5px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <div class=" absolute top-[20px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <div class=" absolute top-[35px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <div class=" absolute top-[50px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <div class=" absolute top-[65px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <div class=" absolute top-[80px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <div class=" absolute top-[95px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <div class=" absolute top-[110px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class=" absolute top-[5px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class=" absolute top-[20px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class=" absolute top-[35px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class=" absolute top-[50px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class=" absolute top-[65px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class="hidden md:block absolute top-[80px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class="hidden md:block absolute top-[95px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class="hidden md:block absolute top-[110px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
                     <img class="h-full" src="./image/Sonder2.png" alt="logo">    
                 </div>
-                <div class="grow pr-2 text-xs md:text-sm md:space-y-3 flex flex-col justify-center">
-                    <div class="flex justify-between items-center space-x-2">
-                        <p class="text-base md:text-lg font-semibold text-red-500">Giảm 10%</p>
-                        <p class="text-emerald-800 cursor-pointer">Dùng ngay<i class="fa-solid fa-chevron-right text-xs"></i></p>
+                <div class="grow pr-2 text-xs md:text-sm space-y-1 md:space-y-3 flex flex-col justify-center text-gray-400">
+                    <div class="flex justify-between items-center space-x-1">
+                        <p class="text-base md:text-lg font-semibold">Giảm 15%</p>
+                        <p>Dùng ngay<i class="fa-solid fa-chevron-right text-xs"></i></p>
                     </div>
-                    <p>Đơn tối thiểu 250k</p>
-                    <p class="text-gray-400">HSD: 30.04.2022</p>
-                </div>
-            </div>
-            <div class="flex h-20 md:h-[123px] md:w-[350px] space-x-2 md:space-x-5 border border-emerald-800 rounded-r mx-auto">
-                <div class="relative w-20 md:w-[123px]">
-                    <div class=" absolute top-[5px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <div class=" absolute top-[20px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <div class=" absolute top-[35px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <div class=" absolute top-[50px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <div class=" absolute top-[65px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <div class=" absolute top-[80px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <div class=" absolute top-[95px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <div class=" absolute top-[110px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <img class="h-full" src="./image/Sonder2.png" alt="logo">    
-                </div>
-                <div class="grow pr-2 text-xs md:text-sm md:space-y-3 flex flex-col justify-center">
-                    <div class="flex justify-between items-center space-x-2">
-                        <p class="text-base md:text-lg font-semibold text-red-500">Giảm 10%</p>
-                        <p class="text-emerald-800 cursor-pointer">Dùng ngay<i class="fa-solid fa-chevron-right text-xs"></i></p>
-                    </div>
-                    <p>Đơn tối thiểu 250k</p>
-                    <p class="text-gray-400">HSD: 30.04.2022</p>
-                </div>
-            </div>
-            <div class="flex h-20 md:h-[123px] md:w-[350px] space-x-2 md:space-x-5 border border-emerald-800 rounded-r mx-auto">
-                <div class="relative w-20 md:w-[123px]">
-                    <div class=" absolute top-[5px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <div class=" absolute top-[20px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <div class=" absolute top-[35px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <div class=" absolute top-[50px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <div class=" absolute top-[65px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <div class=" absolute top-[80px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <div class=" absolute top-[95px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <div class=" absolute top-[110px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <img class="h-full" src="./image/Sonder2.png" alt="logo">    
-                </div>
-                <div class="grow pr-2 text-xs md:text-sm md:space-y-3 flex flex-col justify-center">
-                    <div class="flex justify-between items-center space-x-2">
-                        <p class="text-base md:text-lg font-semibold text-red-500">Giảm 10%</p>
-                        <p class="text-emerald-800 cursor-pointer">Dùng ngay<i class="fa-solid fa-chevron-right text-xs"></i></p>
-                    </div>
-                    <p>Đơn tối thiểu 250k</p>
-                    <p class="text-gray-400">HSD: 30.04.2022</p>
-                </div>
-            </div>
-            <div class="flex h-20 md:h-[123px] md:w-[350px] space-x-2 md:space-x-5 border border-emerald-800 rounded-r mx-auto">
-                <div class="relative w-20 md:w-[123px]">
-                    <div class=" absolute top-[5px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <div class=" absolute top-[20px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <div class=" absolute top-[35px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <div class=" absolute top-[50px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <div class=" absolute top-[65px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <div class=" absolute top-[80px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <div class=" absolute top-[95px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <div class=" absolute top-[110px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                    <img class="h-full" src="./image/Sonder2.png" alt="logo">    
-                </div>
-                <div class="grow pr-2 text-xs md:text-sm md:space-y-3 flex flex-col justify-center">
-                    <div class="flex justify-between items-center space-x-2">
-                        <p class="text-base md:text-lg font-semibold text-red-500">Giảm 10%</p>
-                        <p class="text-emerald-800 cursor-pointer">Dùng ngay<i class="fa-solid fa-chevron-right text-xs"></i></p>
-                    </div>
-                    <p>Đơn tối thiểu 250k</p>
+                    <p>Đơn tối thiểu 600k</p>
                     <p class="text-gray-400">HSD: 30.04.2022</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <div>
-        <div id="info" class="hidden w-[90%] md:w-[550px] bg-white z-50 left-[50%] translate-x-[-50%] space-y-5 fixed">
-            <div class="w-full uppercase bg-emerald-800 text-center text-white font-semibold p-3 relative">
-                <p class="m-auto inline">Thông tin nhận hàng</p>
-            </div>
-            <div class="space-y-5 p-5">
-                <div class="flex justify-between">
-                    <p class="whitespace-nowrap mr-2">Họ và tên người nhận</p> <input class="h-8 w-[60%] text-sm" type="text" placeholder="Nhập họ và tên người nhận">
-                </div>
-                <div class="flex justify-between">
-                    <p class="whitespace-nowrap mr-2">Tỉnh/Thành phố</p><select id="province" class="h-8 w-[60%] text-sm py-0"></select>
-                </div>
-                <div class="flex justify-between">
-                    <p class="whitespace-nowrap mr-2">Quận/Huyện</p><select id="district" class="h-8 w-[60%] text-sm py-0"></select>
-                </div>
-                <div class="flex justify-between">
-                    <p class="whitespace-nowrap mr-2">Phường/Xã</p><select id="commune" class="h-8 w-[60%] text-sm py-0"></select>
-                </div>
-                <div class="flex justify-between">
-                    <p class="whitespace-nowrap mr-2">Địa chỉ nhận hàng</p> <input class="h-8 w-[60%] text-sm" type="text" placeholder="Nhập địa chỉ nhận hàng">
-                </div>
-                <div class="flex justify-between">
-                    <p class="whitespace-nowrap mr-2">Số điện thoại</p> <input class="h-8 w-[60%] text-sm" type="text" placeholder="Nhập số điện thoại">
-                </div>
-                <div class="flex justify-center space-x-5">
-                    <button class="py-2 px-3 bg-emerald-800 text-white rounded">Hủy</button>
-                    <button class="py-2 px-3 bg-emerald-800 text-white rounded">Xác nhận</button>
-                </div>
-            </div>
+    <div class="flex">
+        <div id="sidebar"
+            class="z-30 hidden w-[80%] sm:w-[50%] md:w-[250px] h-[calc(100vh-90px)] md:h-screen bg-emerald-800 text-white leading-4 sticky top-[90px] md:top-0 overflow-hidden">
+            <ul class="text-left h-full space-y-6 overflow-y-auto ml-3 lg:ml-6 py-6">
+                <li>
+                    <h3 class="text-2xl font-bold underline underline-offset-4">Danh mục</h3>
+                </li>
+                <li>
+                    <h5 class="mb-3 text-lg font-semibold underline underline-offset-4">Cấp học</h5>
+                    <ul class="space-y-1 text-sm">
+                        <li><a class="hover:underline" href="#">Cấp Tiểu học</a></li>
+                        <li><a class="hover:underline" href="#">Cấp Trung học cơ sở</a></li>
+                        <li><a class="hover:underline" href="#">Cấp Trung học phổ thông</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h5 class="mb-3 text-lg font-semibold underline underline-offset-4">Cấp độ/Lớp</h5>
+                    <ul class="space-y-1 text-sm">
+                        <li><a class="hover:underline" href="#">Lớp 1</a></li>
+                        <li><a class="hover:underline" href="#">Lớp 2</a></li>
+                        <li><a class="hover:underline" href="#">Lớp 3</a></li>
+                        <li><a class="hover:underline" href="#">Lớp 4</a></li>
+                        <li><a class="hover:underline" href="#">Lớp 5</a></li>
+                        <li><a class="hover:underline" href="#">Lớp 6</a></li>
+                        <li><a class="hover:underline" href="#">Lớp 7</a></li>
+                        <li><a class="hover:underline" href="#">Lớp 8</a></li>
+                        <li><a class="hover:underline" href="#">Lớp 9</a></li>
+                        <li><a class="hover:underline" href="#">Lớp 10</a></li>
+                        <li><a class="hover:underline" href="#">Lớp 11</a></li>
+                        <li><a class="hover:underline" href="#">Lớp 12</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h5 class="mb-3 text-lg font-semibold underline underline-offset-4">Giá</h5>
+                    <ul class="space-y-1 text-sm">
+                        <li><a class="hover:underline" href="#">0đ-150.000đ</a></li>
+                        <li><a class="hover:underline" href="#">150.000đ - 300.000đ</a></li>
+                        <li><a class="hover:underline" href="#">300.000đ - 500.000đ</a></li>
+                        <li><a class="hover:underline" href="#">Trên 500.000đ</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h5 class="mb-3 text-lg font-semibold underline underline-offset-4">Nhà Cung Cấp</h5>
+                    <ul class="space-y-1 text-sm">
+                        <li><a class="hover:underline" href="#">Nhà Xuất Bản Giáo Dục</a></li>
+                        <li><a class="hover:underline" href="#">Công ty Phương Nam</a></li>
+                        <li><a class="hover:underline" href="#">Công ty Anpha VN</a></li>
+                        <li><a class="hover:underline" href="#">Megabook</a></li>
+                        <li><a class="hover:underline" href="#">Công ty CP sách QBOOKS</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <h5 class="mb-3 text-lg font-semibold underline underline-offset-4">Phân loại</h5>
+                    <ul class="space-y-1 text-sm">
+                        <li><a class="hover:underline" href="#">Sách Bài Học</a></li>
+                        <li><a class="hover:underline" href="#">Sách Bài Tập</a></li>
+                        <li><a class="hover:underline" href="#">Sách Tham Khảo</a></li>
+                    </ul>
+                </li>
+            </ul>
         </div>
-        <div id="pay" class="hidden w-[90%] md:w-[550px] bg-white z-50 left-[50%] translate-x-[-50%] space-y-5 fixed">
-            <div class="w-full uppercase bg-emerald-800 text-center text-white font-semibold p-3 relative">
-                <p class="m-auto inline">Quý Khách vui lòng chọn một trong các hình thức thanh toán dưới đây</p>
-            </div>
-            <div class="space-y-5 p-5">
-                <div class="container">
-                    <input type="radio" name="radio" id="1" checked>
-                    <span class="checkmark">Thanh toán bằng thẻ Tín dụng / Ghi nợ</span>
+        <div id="backdrop" class="bg-gray-900 opacity-50 fixed inset-0 z-20 h-full hidden"></div>
+        <div id="content">
+        <div>
+            <div id="info" class="hidden w-[90%] md:w-[550px] bg-white z-50 left-[50%] translate-x-[-50%] space-y-5 fixed rounded overflow-hidden">
+                <div class="w-full uppercase bg-emerald-800 text-center text-white font-semibold p-3 relative">
+                    <p class="m-auto inline">Thông tin nhận hàng</p>
                 </div>
-                  <div class="container">
-                    <input type="radio" name="radio" id="2">
-                    <span class="checkmark">Thanh toán khi nhận hàng</span>
-                  </div>
-                  <div class="container">
-                    <input type="radio" name="radio" id="3">
-                    <span class="checkmark">Thanh toán khi nhận hàng</span>
-                  </div>
-                  <div class="text-center">
-                    <button class="px-3 py-2 bg-emerald-800 text-white rounded">Xác nhận</button>
-                  </div>
-            </div>
-            
-        </div>
-        <div class="h-9 md:h-[74px] w-full pl-[9px] md:pl-10 bg-[#f9f8f4] flex items-center overflow-x-auto">
-            <a class="text-[10px] md:text-sm font-semibold whitespace-nowrap text-emerald-800 hover:underline-offset-4 hover:underline"
-                href="./index.html">Trang chủ
-                <i class="fa-solid fa-angle-right text-[10px] md:text-sm"></i>
-            </a>
-            <p class="ml-2 text-[10px] md:text-sm font-semibold text-gray-500 whitespace-nowrap">
-                Thanh toán
-            </p>
-        </div>
-        <div id="success" class="hidden w-[80%] md:w-auto left-[50%] translate-x-[-50%] fixed z-50 text-center py-10 px-10 text-xl font-semibold bg-emerald-800 text-white">
-            <p>Cảm ơn bạn đã đặt hàng tại Sonder Textbook Shop!</p>
-        </div>
-        
-        <div class="mx-4 md:mx-10 xl:mx-[75px]">
-            <div class="space-y-4 border-b py-4 md:py-7">
-                <div>
-                    <i class="fa-solid fa-location-dot text-xs md:text-base"></i>
-                    <p class="inline font-semibold text-xs md:text-lg">Địa chỉ nhận hàng</p>
+                <div class="space-y-5 p-5">
+                    <div class="flex justify-between">
+                        <p class="whitespace-nowrap mr-2">Họ và tên người nhận</p> <input class="h-8 w-[60%] text-sm rounded" type="text" placeholder="Nhập họ và tên người nhận">
+                    </div>
+                    <div class="flex justify-between">
+                        <p class="whitespace-nowrap mr-2">Tỉnh/Thành phố</p><select id="province" class="h-8 w-[60%] text-sm py-0 rounded"></select>
+                    </div>
+                    <div class="flex justify-between">
+                        <p class="whitespace-nowrap mr-2">Quận/Huyện</p><select id="district" class="h-8 w-[60%] text-sm py-0 rounded"></select>
+                    </div>
+                    <div class="flex justify-between">
+                        <p class="whitespace-nowrap mr-2">Phường/Xã</p><select id="commune" class="h-8 w-[60%] text-sm py-0 rounded"></select>
+                    </div>
+                    <div class="flex justify-between">
+                        <p class="whitespace-nowrap mr-2">Địa chỉ nhận hàng</p> <input class="h-8 w-[60%] text-sm rounded" type="text" placeholder="Nhập địa chỉ nhận hàng">
+                    </div>
+                    <div class="flex justify-between">
+                        <p class="whitespace-nowrap mr-2">Số điện thoại</p> <input class="h-8 w-[60%] text-sm rounded" type="text" placeholder="Nhập số điện thoại">
+                    </div>
+                    <div class="flex justify-center space-x-5">
+                        <button class="py-2 px-3 bg-emerald-800 text-white rounded">Hủy</button>
+                        <button class="py-2 px-3 bg-emerald-800 text-white rounded">Xác nhận</button>
+                    </div>
                 </div>
-                <div class="flex items-center justify-between text-[10px] md:text-base">
-                    <div class="flex flex-col md:flex-row mr-4">
-                        <div class="flex">
-                            <span class="whitespace-nowrap">Lan Nguyen</span>
-                            <span class="ml-2 mr-10">(+84)984123456</span>
+            </div>
+            <div id="pay" class="hidden w-[90%] md:w-[550px] bg-white z-50 left-[50%] translate-x-[-50%] space-y-5 fixed rounded overflow-hidden">
+                <div class="w-full uppercase bg-emerald-800 text-center text-white font-semibold p-3 relative">
+                    <p class="m-auto inline">Quý Khách vui lòng chọn một trong các hình thức thanh toán dưới đây</p>
+                </div>
+                <div class="space-y-5 p-5">
+                    <div>
+                        <input type="radio" name="radio" id="1" class="cursor-pointer">
+                        <label for="1" class="cursor-pointer">Thanh toán bằng thẻ Tín dụng / Ghi nợ</label>
+                        
+                    </div>
+                      <div>
+                        <input type="radio" name="radio" id="2" class="cursor-pointer">
+                        <label for="2" class="cursor-pointer">Thanh toán qua VNPAY</label>
+                      </div>
+                      <div>
+                        <input type="radio" name="radio" id="3" class="cursor-pointer">
+                        <label for="3" class="cursor-pointer">Thanh toán khi nhận hàng</label>
+                      </div>
+                      <div class="text-center">
+                        <button class="px-3 py-2 bg-emerald-800 text-white rounded">Xác nhận</button>
+                      </div>
+                </div>
+                
+            </div>
+            <div class="h-9 md:h-[74px] w-full pl-[9px] md:pl-10 bg-[#f9f8f4] flex items-center overflow-x-auto">
+                <a class="text-[10px] md:text-sm font-semibold whitespace-nowrap text-emerald-800 hover:underline-offset-4 hover:underline"
+                    href="./index.html">Trang chủ
+                    <i class="fa-solid fa-angle-right text-[10px] md:text-sm"></i>
+                </a>
+                <p class="ml-2 text-[10px] md:text-sm font-semibold text-gray-500 whitespace-nowrap">
+                    Thanh toán
+                </p>
+            </div>
+            <div id="success" class="hidden w-[80%] md:w-auto left-[50%] translate-x-[-50%] fixed z-50 text-center py-10 px-10 text-xl font-semibold bg-emerald-800 text-white rounded">
+                <p>Cảm ơn bạn đã đặt hàng tại Sonder Textbook Shop!</p>
+            </div> 
+            <div class="mx-4 md:mx-10 xl:mx-[75px]">
+                <div class="space-y-4 border-b py-4 md:py-7">
+                    <div>
+                        <i class="fa-solid fa-location-dot text-xs md:text-base"></i>
+                        <p class="inline font-semibold text-xs md:text-lg">Địa chỉ nhận hàng</p>
+                    </div>
+                    <div class="flex items-center justify-between text-[10px] md:text-base">
+                        <div class="flex flex-col md:flex-row mr-4">
+                            <div class="flex">
+                                <span class="whitespace-nowrap">Lan Nguyen</span>
+                                <span class="ml-2 mr-10">(+84)984123456</span>
+                            </div>
+                            <p>Số nhà 30, ngõ 30, đường Nguyễn Hoàng, phường Mỹ Đình, quận Nam Từ Liêm, TP Hà Nội</p>
                         </div>
-                        <p>Số nhà 30, ngõ 30, đường Nguyễn Hoàng, phường Mỹ Đình, quận Nam Từ Liêm, TP Hà Nội</p>
+                        <p id="change-info" class="text-emerald-800 font-medium whitespace-nowrap cursor-pointer hover:underline">Thay đổi <i class="fa-solid fa-angle-right text-[10px] md:text-sm"></i></p>
                     </div>
-                    <p id="change-info" class="text-emerald-800 font-medium whitespace-nowrap cursor-pointer hover:underline">Thay đổi <i class="fa-solid fa-angle-right text-[10px] md:text-sm"></i></p>
                 </div>
-            </div>
-            <div class="hidden md:grid grid-cols-2 font-semibold py-7 border-b">
-                <div class="text-center">
-                    <p>Sản phẩm</p>
+                <div class="hidden md:grid grid-cols-2 font-semibold py-7 border-b">
+                    <div class="text-center">
+                        <p>Sản phẩm</p>
+                    </div>
+                    <div class="grid grid-cols-3">
+                        <p class="text-center">Đơn giá</p>
+                        <p class="text-center">Số lượng</p>
+                        <p class="text-center">Số tiền</p>
+                    </div>
                 </div>
-                <div class="grid grid-cols-3">
-                    <p class="text-center">Đơn giá</p>
-                    <p class="text-center">Số lượng</p>
-                    <p class="text-center">Số tiền</p>
-                </div>
-            </div>
-            <div class="flex justify-between mx-4 md:mx-0 md:grid grid-cols-2 py-7 items-center border-b">
-                <div class="text-center flex flex-row items-center">
-                    <i class="md:hidden text-center text-xl md:text-[25px] font-thin fa-solid fa-trash-can"></i>
-                    <img class="max-w-[175px] max-h-[175px] md:max-w-[232px] md:max-h-[232px]"
-                        src="./image/SGK lớp 1.jpeg" alt="image">
-                    <h5 class="hidden md:block font-semibold text-base"> Sách Giáo Khoa Bộ Lớp
-                        1 - Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)</h5>
-                </div>
-                <div class="flex flex-col md:grid grid-cols-3 items-center space-y-4">
-                    <h5 class="md:hidden font-semibold text-xs sm:text-base text-center"> Sách Giáo Khoa Bộ Lớp 1 -
-                        Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)</h5>
-                    <p class="text-center text-red-500 md:text-black text-sm sm:text-base lg:text-lg font-medium">
-                        đ199.000</p>
-                    <input class="mx-auto w-8 md:w-[50px] h-8 li text-center text-sm sm:text-base md:text-lg rounded"
-                        type="text" role="spinbutton" aria-valuenow="1" value="1">
-                    <p class="text-center text-base xl:text-lg font-medium hidden md:block">đ199.000</p>
 
-                </div>
-            </div>
-            <div class="flex justify-between mx-4 md:mx-0 md:grid grid-cols-2 py-7 items-center border-b">
-                <div class="text-center flex flex-row items-center">
-                    <i class="md:hidden text-center text-xl md:text-[25px] font-thin fa-solid fa-trash-can"></i>
-                    <img class="max-w-[175px] max-h-[175px] md:max-w-[232px] md:max-h-[232px]"
-                        src="./image/SGK lớp 1.jpeg" alt="image">
-                    <h5 class="hidden md:block font-semibold text-base"> Sách Giáo Khoa Bộ Lớp
-                        1 - Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)</h5>
-                </div>
-                <div class="flex flex-col md:grid grid-cols-3 items-center space-y-4">
-                    <h5 class="md:hidden font-semibold text-xs sm:text-base text-center"> Sách Giáo Khoa Bộ Lớp 1 -
-                        Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)</h5>
-                    <p class="text-center text-red-500 md:text-black text-sm sm:text-base lg:text-lg font-medium">
-                        đ199.000</p>
-                    <input class="mx-auto w-8 md:w-[50px] h-8 li text-center text-sm sm:text-base md:text-lg rounded"
-                        type="text" role="spinbutton" aria-valuenow="1" value="1">
-                    <p class="text-center text-base xl:text-lg font-medium hidden md:block">đ199.000</p>
-
-                </div>
-            </div>
-            <div class="flex justify-between mx-4 md:mx-0 md:grid grid-cols-2 py-7 items-center border-b">
-                <div class="text-center flex flex-row items-center">
-                    <i class="md:hidden text-center text-xl md:text-[25px] font-thin fa-solid fa-trash-can"></i>
-                    <img class="max-w-[175px] max-h-[175px] md:max-w-[232px] md:max-h-[232px]"
-                        src="./image/SGK lớp 1.jpeg" alt="image">
-                    <h5 class="hidden md:block font-semibold text-base"> Sách Giáo Khoa Bộ Lớp
-                        1 - Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)</h5>
-                </div>
-                <div class="flex flex-col md:grid grid-cols-3 items-center space-y-4">
-                    <h5 class="md:hidden font-semibold text-xs sm:text-base text-center"> Sách Giáo Khoa Bộ Lớp 1 -
-                        Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)</h5>
-                    <p class="text-center text-red-500 md:text-black text-sm sm:text-base lg:text-lg font-medium">
-                        đ199.000</p>
-                    <input class="mx-auto w-8 md:w-[50px] h-8 li text-center text-sm sm:text-base md:text-lg rounded"
-                        type="text" role="spinbutton" aria-valuenow="1" value="1">
-                    <p class="text-center text-base xl:text-lg font-medium hidden md:block">đ199.000</p>
-
-                </div>
-            </div>
-
-            <div class="flex flex-col sm:mx-8 md:mx-0 md:grid grid-cols-2 gap-4 md:gap-16 xl:gap-60 mt-5 md:mt-8 md:border-b">
-                <div class="font-semibold space-y-5 text-sm lg:text-lg">
-                    <div class="flex items-center justify-between">
-                        <p class="mr-2">Lưu ý cho người bán</p>
-                        <input class="grow rounded border-slate-400 text-sm" type="text" placeholder="Lời nhắn...">
+                <div class="flex justify-between mx-4 md:mx-0 md:grid grid-cols-2 py-7 items-center border-b">
+                    <div class="text-center flex flex-row items-center">
+                        <img class="max-w-[175px] max-h-[175px] md:max-w-[232px] md:max-h-[232px]"
+                            src="./image/SGK lớp 1.jpeg" alt="image">
+                        <h5 class="hidden md:block font-semibold text-base"> Sách Giáo Khoa Bộ Lớp
+                            1 - Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)</h5>
                     </div>
-                    <div class="flex items-center justify-between">
-                        <span>Phương thức thanh toán </span>
-                        <p id="pay-choice" class="inline text-emerald-800 cursor-pointer hover:underline">Thanh toán khi nhận hàng <i
-                                class="fa-solid fa-angle-right text-sm"></i></p>
+                    <div class="flex flex-col md:grid grid-cols-3 items-center space-y-4">
+                        <h5 class="md:hidden font-semibold text-xs sm:text-base text-center"> Sách Giáo Khoa Bộ Lớp 1 -
+                            Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)</h5>
+                        <p class="text-center text-red-500 md:text-black text-sm sm:text-base lg:text-lg font-medium">
+                            đ199.000</p>
+                        <span class="mx-auto w-8 md:w-12 text-center text-sm sm:text-base md:text-lg border border-gray-900 rounded">1</span>
+                        <p class="text-center text-base xl:text-lg font-medium hidden md:block">đ199.000</p>
+    
                     </div>
                 </div>
-                <div class="font-semibold space-y-5 pb-5 border-b md:border-0">
-                    <div class="flex justify-between text-sm lg:text-lg">
-                        <p>Tổng tiền hàng</p>
-                        <p>đ597.000</p>
+                <div class="flex justify-between mx-4 md:mx-0 md:grid grid-cols-2 py-7 items-center border-b">
+                    <div class="text-center flex flex-row items-center">
+                        <img class="max-w-[175px] max-h-[175px] md:max-w-[232px] md:max-h-[232px]"
+                            src="./image/SGK lớp 1.jpeg" alt="image">
+                        <h5 class="hidden md:block font-semibold text-base"> Sách Giáo Khoa Bộ Lớp
+                            1 - Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)</h5>
                     </div>
-                    <div class="flex justify-between text-sm lg:text-lg">
-                        <p>Phí vận chuyển</p>
-                        <p>đ15.000</p>
+                    <div class="flex flex-col md:grid grid-cols-3 items-center space-y-4">
+                        <h5 class="md:hidden font-semibold text-xs sm:text-base text-center"> Sách Giáo Khoa Bộ Lớp 1 -
+                            Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)</h5>
+                        <p class="text-center text-red-500 md:text-black text-sm sm:text-base lg:text-lg font-medium">
+                            đ199.000</p>
+                        <span class="mx-auto w-8 md:w-12 text-center text-sm sm:text-base md:text-lg border border-gray-900 rounded">1</span>
+                        <p class="text-center text-base xl:text-lg font-medium hidden md:block">đ199.000</p>
+    
                     </div>
-                    <div class="flex justify-between text-sm lg:text-lg">
-                        <p id="apply-voucher" class="text-emerald-800 cursor-pointer hover:underline">Khuyến mại của tôi <i class="fa-solid fa-angle-right text-sm"></i>
-                        </p>
+                </div>
+                <div class="flex justify-between mx-4 md:mx-0 md:grid grid-cols-2 py-7 items-center border-b">
+                    <div class="text-center flex flex-row items-center">
+                        <img class="max-w-[175px] max-h-[175px] md:max-w-[232px] md:max-h-[232px]"
+                            src="./image/SGK lớp 1.jpeg" alt="image">
+                        <h5 class="hidden md:block font-semibold text-base"> Sách Giáo Khoa Bộ Lớp
+                            1 - Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)</h5>
+                    </div>
+                    <div class="flex flex-col md:grid grid-cols-3 items-center space-y-4">
+                        <h5 class="md:hidden font-semibold text-xs sm:text-base text-center"> Sách Giáo Khoa Bộ Lớp 1 -
+                            Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)</h5>
+                        <p class="text-center text-red-500 md:text-black text-sm sm:text-base lg:text-lg font-medium">
+                            đ199.000</p>
+                        <span class="mx-auto w-8 md:w-12 text-center text-sm sm:text-base md:text-lg border border-gray-900 rounded">1</span>
+                        <p class="text-center text-base xl:text-lg font-medium hidden md:block">đ199.000</p>
+    
+                    </div>
+                </div>
+    
+                <div class="flex flex-col sm:mx-8 md:mx-0 md:grid grid-cols-2 gap-4 md:gap-16 xl:gap-60 mt-5 md:mt-8 md:border-b">
+                    <div class="font-semibold space-y-5 text-sm lg:text-lg">
+                        <div class="flex items-center justify-between">
+                            <p class="mr-2">Lưu ý cho người bán</p>
+                            <input class="grow rounded border-slate-400 text-sm" type="text" placeholder="Lời nhắn...">
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>Phương thức thanh toán </span>
+                            <p id="pay-choice" class="inline text-emerald-800 cursor-pointer hover:underline">Thanh toán khi nhận hàng <i
+                                    class="fa-solid fa-angle-right text-sm"></i></p>
+                        </div>
+                    </div>
+                    <div class="font-semibold space-y-5 pb-5 border-b md:border-0">
+                        <div class="flex justify-between text-sm lg:text-lg">
+                            <p>Tổng tiền hàng</p>
+                            <p>đ597.000</p>
+                        </div>
+                        <div class="flex justify-between text-sm lg:text-lg">
+                            <p>Phí vận chuyển</p>
+                            <p>đ15.000</p>
+                        </div>
+                        <div class="flex justify-between text-sm lg:text-lg">
+                            <p id="apply-voucher" class="text-emerald-800 cursor-pointer hover:underline">Khuyến mại của tôi <i class="fa-solid fa-angle-right text-sm"></i>
+                            </p>
+                            <p>-đ15.000</p>
+                        </div>
                         <div id="my-voucher" class="hidden">
-                            <div class="flex h-20 md:h-[80px] md:w-[250px] space-x-2 border border-emerald-800 rounded-r mx-auto">
+                            <div class="flex h-20 md:h-[80px] w-[250px] space-x-2 border border-emerald-800 rounded-r">
                                 <div class="relative w-20 md:w-[80px]">
-                                    <div class=" absolute top-[5px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                                    <div class=" absolute top-[20px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                                    <div class=" absolute top-[35px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                                    <div class=" absolute top-[50px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                                    <div class=" absolute top-[65px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                                    <div class=" absolute top-[80px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                                    <div class=" absolute top-[95px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                                    <div class=" absolute top-[110px] translate-x-[-50%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                                    <div class=" absolute top-[5px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                                    <div class=" absolute top-[20px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                                    <div class=" absolute top-[35px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                                    <div class=" absolute top-[50px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                                    <div class=" absolute top-[65px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
                                     <img class="h-full" src="./image/Sonder2.png" alt="logo">    
                                 </div>
                                 <div class="grow pr-1 text-xs flex flex-col justify-center space-y-1">
                                     <div class="flex justify-between items-center">
                                         <p class="text-sm font-semibold text-red-500">Giảm 10%</p>
-                                        <p id="change-voucher" class="text-emerald-800 cursor-pointer">Đổi mã khác<i class="fa-solid fa-chevron-right text-[9px]"></i></p>
+                                        <p id="change-voucher" class="text-emerald-800 cursor-pointer hover:underline">Đổi mã khác<i class="fa-solid fa-chevron-right text-[9px]"></i></p>
                                     </div>
                                     <p>Đơn tối thiểu 250k</p>
                                     <p class="text-gray-400">HSD: 30.04.2022</p>
                                 </div>
                             </div>
                         </div>
-                        <p>-đ15.000</p>
+                        <div class="flex justify-between">
+                            <p class="text-red-500 text-sm xl:text-xl">Tổng thanh toán</p>
+                            <p class="text-red-500 md:text-lg xl:text-3xl">đ522.300</p>
+                        </div>
                     </div>
-                    <div class="flex justify-between">
-                        <p class="text-red-500 text-sm xl:text-xl">Tổng thanh toán</p>
-                        <p class="text-red-500 md:text-lg xl:text-3xl">đ522.300</p>
-                    </div>
+    
                 </div>
-
-            </div>
-            <div class="flex flex-col md:flex-row mt-5 mb-7 items-center">
-                <p class="font-medium text-sm md:text-base lg:text-lg pb-5 md:pb-0 border-b md:border-0 grow">Nhấn <span class="text-emerald-800">"Đặt hàng"</span> đồng nghĩa với việc bạn đồng ý tuân theo <a href="#" class="text-emerald-800 hover:underline">Điều khoản Sonder Textbook Shop</a></p>
-                <div class="w-full md:w-fit mt-5 md:mt-0 flex justify-between md:justify-end items-center font-semibold">
-                    <div class="flex md:hidden items-center justify-between">
-                        <p class="text-red-500 text-sm xl:text-xl mr-2 sm:mr-14">Tổng thanh toán</p>
-                        <p class="text-red-500 xl:text-3xl">đ522.300</p>
+                <div class="flex flex-col md:flex-row mt-5 mb-7 items-center">
+                    <p class="font-medium text-sm md:text-base lg:text-lg pb-5 md:pb-0 border-b md:border-0 grow">Nhấn <span class="text-emerald-800">"Đặt hàng"</span> đồng nghĩa với việc bạn đồng ý tuân theo <a href="#" class="text-emerald-800 hover:underline">Điều khoản Sonder Textbook Shop</a></p>
+                    <div class="w-full md:w-fit mt-5 md:mt-0 flex justify-between md:justify-end items-center font-semibold">
+                        <div class="flex md:hidden items-center justify-between">
+                            <p class="text-red-500 text-sm xl:text-xl mr-2 sm:mr-14">Tổng thanh toán</p>
+                            <p class="text-red-500 xl:text-3xl">đ522.300</p>
+                        </div>
+                        <button id="confirm"
+                            class="bg-emerald-800 hover:bg-white text-white hover:text-emerald-800 hover:border-2 hover:border-emerald-800 h-12 px-4 rounded md:ml-10 font-semibold whitespace-nowrap lg:text-lg">Đặt hàng</button>
                     </div>
-                    <button id="confirm"
-                        class="bg-emerald-800 hover:bg-white text-white hover:text-emerald-800 hover:border-2 hover:border-emerald-800 h-12 px-4 rounded md:ml-10 font-semibold whitespace-nowrap lg:text-lg">Đặt hàng</button>
+                
                 </div>
-            
             </div>
         </div>
+        <footer class="flex mt-5 md:mt-8">
+            <div
+                class="w-full h-25 h-[100px] sm:h-[130px] lg:h-[195px] flex flex-row justify-between items-center bg-[#f9f8f4]">
+                <ul
+                    class="ml-3 lg:ml-20 text-[9px] sm:text-sm font-semibold space-y-2 sm:space-y-5 lg:space-y-6 max-w-[150px] sm:max-w-[250px] cursor-pointer">
+                    <li>
+                        <a href="#">
+                            <span><i class="fa-solid fa-angles-right text-[9px] md:text-xs"></i></span>
+                            <span class="hover:underline">Giới thiệu Sonder</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span><i class="fa-solid fa-angles-right text-[9px] md:text-xs"></i></span>
+                            <span class="hover:underline">Chính sách bảo mật</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span><i class="fa-solid fa-angles-right text-[9px] md:text-xs"></i></span>
+                            <span class="hover:underline">Chương trình khuyến mãi</span>
+                        </a>
+                    </li>
+                </ul>
+                <a href="./index.html">
+                    <img class="w-[90px] sm:w-[120px] lg:w-[182px] h-[90px] sm:h-[120px] lg:h-[182px] rounded-full"
+                    src="./image/Sonder2.png" alt="logo">
+                </a>
+                <ul
+                    class="mr-3 lg:mr-20 text-[9px] sm:text-sm font-semibold space-y-2 sm:space-y-5 lg:space-y-6 max-w-[150px] sm:max-w-[250px]">
+                    <li>
+                        <a href="#">
+                            <span><i class="fa-solid fa-angles-right text-[9px] md:text-xs"></i></span>
+                            <span class="hover:underline">Phương thức thanh toán</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span><i class="fa-solid fa-angles-right text-[9px] md:text-xs"></i></span>
+                            <span class="hover:underline">Phương thức vận chuyển</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span><i class="fa-solid fa-angles-right text-[9px] md:text-xs"></i></span>
+                            <span class="hover:underline">Xuất hóa đơn</span>
+                        </a>
+                    </li>
+                </ul>
 
+            </div>
+        </footer>
+        </div>
     </div>
-    <footer class="flex mt-5 md:mt-8">
-        <div
-            class="w-full h-25 h-[100px] sm:h-[130px] lg:h-[195px] flex flex-row justify-between items-center bg-[#f9f8f4]">
-            <ul
-                class="ml-3 lg:ml-20 text-[9px] sm:text-sm font-semibold space-y-2 sm:space-y-5 lg:space-y-6 max-w-[150px] sm:max-w-[250px] cursor-pointer">
-                <li>
-                    <a href="#" class="hover:underline">
-                        <span><i class="fa-solid fa-angles-right text-[9px] md:text-xs"></i></span>
-                        <span>Giới thiệu Sonder </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="hover:underline">
-                        <span><i class="fa-solid fa-angles-right text-[9px] md:text-xs"></i></span>
-                        <span>Chính sách bảo mật</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="hover:underline">
-                        <span><i class="fa-solid fa-angles-right text-[9px] md:text-xs"></i></span>
-                        <span>Chương trình khuyến mãi</span>
-                    </a>
-                </li>
-            </ul>
-            <a href="./index.html">
-                <img class="w-[90px] sm:w-[120px] lg:w-[182px] h-[90px] sm:h-[120px] lg:h-[182px] rounded-full"
-                src="./image/Sonder2.png" alt="logo">
-            </a>
-            <ul
-                class="mr-3 lg:mr-20 text-[9px] sm:text-sm font-semibold space-y-2 sm:space-y-5 lg:space-y-6 max-w-[150px] sm:max-w-[250px]">
-                <li>
-                    <a href="#" class="hover:underline">
-                        <span><i class="fa-solid fa-angles-right text-[9px] md:text-xs"></i></span>
-                    <span>Phương thức thanh toán</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="hover:underline">
-                        <span><i class="fa-solid fa-angles-right text-[9px] md:text-xs"></i></span>
-                        <span>Phương thức vận chuyển</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="hover:underline">
-                        <span><i class="fa-solid fa-angles-right text-[9px] md:text-xs"></i></span>
-                        <span>Xuất hóa đơn</span>
-                    </a>
-                </li>
-            </ul>
-
-        </div>
-    </footer>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./js/payment.js"></script>
+    <script src="./js/sidebar.js"></script>
 </body>
 
 </html>
