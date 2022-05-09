@@ -11,6 +11,9 @@
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./image/favicon.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="./css/output.css">
 
 </head>
@@ -120,12 +123,12 @@
         </div>
 
     </div>
-    <div id="voucher" class="hidden w-[90%] sm:w-[70%] h-[500px] left-[50%] translate-x-[-50%] fixed bg-white z-50 overflow-hidden rounded">
-        <div class="w-full uppercase bg-emerald-800 text-center text-white font-semibold p-3 relative">
-            <p class="m-auto inline text-sm md:text-base">Mã khuyến mại của tôi</p>
-            <i id="voucher-close" class="fa-solid fa-xmark absolute right-3 text-sm md:text-base cursor-pointer"></i>
+    <div id="voucher" class="hidden w-[90%] sm:w-[70%] h-[calc(100vh-180px)] md:h-[calc(100vh-300px)] left-[50%] translate-x-[-50%] fixed bg-white z-50 overflow-hidden rounded">
+        <div class="w-full uppercase bg-emerald-800 text-center text-white font-semibold p-3">
+            <p class="m-auto inline">Mã khuyến mại của tôi</p>
+            <i id="voucher-close" class="fa-solid fa-xmark fixed right-3 text-base cursor-pointer"></i>
         </div>
-        <div class="grid lg:grid-cols-2 gap-4 overflow-y-auto pt-5">
+        <div class="grid lg:grid-cols-2 gap-4 h-[calc(100vh-228px)] md:h-[calc(100vh-348px)] overflow-y-auto pt-5">
             <div class="flex h-20 md:h-[123px] w-[260px] md:w-[350px] space-x-2 md:space-x-5 border border-emerald-800 rounded-r mx-auto hover:scale-105">
                 <div class="relative w-20 md:w-[123px]">
                     <div class=" absolute top-[5px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
@@ -298,12 +301,12 @@
         <div id="backdrop" class="bg-gray-900 opacity-50 fixed inset-0 z-20 h-full hidden"></div>
         <div id="content">
             <div>
-                <div class="h-9 md:h-[74px] w-full pl-[9px] md:pl-10 bg-[#f9f8f4] flex items-center overflow-x-auto">
-                    <a class="text-[10px] md:text-sm font-semibold whitespace-nowrap text-emerald-800 hover:underline-offset-4 hover:underline"
+                <div class="h-[74px] w-full pl-[9px] md:pl-10 bg-[#f9f8f4] flex items-center overflow-x-auto text-xs md:text-base">
+                    <a class= "font-semibold whitespace-nowrap text-emerald-800 hover:underline-offset-4 hover:underline"
                         href="./index.html">Trang chủ
-                        <i class="fa-solid fa-angle-right text-[10px] md:text-sm"></i>
+                        <i class="fa-solid fa-angle-right"></i>
                     </a>
-                    <p class="ml-2 text-[10px] md:text-sm font-semibold text-gray-600 whitespace-nowrap">
+                    <p class="ml-2 font-semibold text-gray-600 whitespace-nowrap">
                         Giỏ hàng
                     </p>
                 </div>
@@ -338,7 +341,7 @@
                             </h5>
                         </div>
                         <div class="flex flex-col md:grid grid-cols-4 items-center space-y-4">
-                            <h5 class="md:hidden font-semibold text-[10px] sm:text-base text-center"> 
+                            <h5 class="md:hidden font-semibold text-xs sm:text-base text-center"> 
                                 <a href="./product.html" class="hover:underline hover:text-emerald-800">Sách Giáo Khoa Bộ Lớp 1 - Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)</a>
                             </h5>
                             <p class="text-center text-red-500 md:text-black text-sm sm:text-base font-medium">đ199.000
@@ -371,7 +374,7 @@
                             </h5>
                         </div>
                         <div class="flex flex-col md:grid grid-cols-4 items-center space-y-4">
-                            <h5 class="md:hidden font-semibold text-[10px] sm:text-base text-center"> 
+                            <h5 class="md:hidden font-semibold text-xs sm:text-base text-center"> 
                                 <a href="./product.html" class="hover:underline hover:text-emerald-800">Sách Giáo Khoa Bộ Lớp 1 - Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)</a>
                             </h5>
                             <p class="text-center text-red-500 md:text-black text-sm sm:text-base font-medium">đ199.000
@@ -404,7 +407,7 @@
                             </h5>
                         </div>
                         <div class="flex flex-col md:grid grid-cols-4 items-center space-y-4">
-                            <h5 class="md:hidden font-semibold text-[10px] sm:text-base text-center"> 
+                            <h5 class="md:hidden font-semibold text-xs sm:text-base text-center"> 
                                 <a href="./product.html" class="hover:underline hover:text-emerald-800">Sách Giáo Khoa Bộ Lớp 1 - Cánh Diều - Sách Bài Học (Bộ 9 Cuốn) (2021)</a>
                             </h5>
                             <p class="text-center text-red-500 md:text-black text-sm sm:text-base font-medium">đ199.000
@@ -449,52 +452,52 @@
                 <div
                     class="w-full h-25 h-[100px] sm:h-[130px] lg:h-[195px] flex flex-row justify-between items-center bg-[#f9f8f4]">
                     <ul
-                        class="ml-3 lg:ml-20 text-[9px] sm:text-sm font-semibold space-y-2 sm:space-y-5 lg:space-y-6 max-w-[150px] sm:max-w-[250px] cursor-pointer">
+                        class="ml-2 sm:ml-3 lg:ml-20 text-[11px] sm:text-sm lg:text-base font-semibold space-y-2 sm:space-y-5 lg:space-y-6 max-w-[150px] sm:max-w-[250px] cursor-pointer">
                         <li>
                             <a href="#">
-                                <span><i class="fa-solid fa-angles-right text-[9px] md:text-xs"></i></span>
+                                <span><i class="fa-solid fa-angles-right"></i></span>
                                 <span class="hover:underline">Giới thiệu Sonder</span>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <span><i class="fa-solid fa-angles-right text-[9px] md:text-xs"></i></span>
+                                <span><i class="fa-solid fa-angles-right"></i></span>
                                 <span class="hover:underline">Chính sách bảo mật</span>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <span><i class="fa-solid fa-angles-right text-[9px] md:text-xs"></i></span>
+                                <span><i class="fa-solid fa-angles-right"></i></span>
                                 <span class="hover:underline">Chương trình khuyến mãi</span>
                             </a>
                         </li>
                     </ul>
                     <a href="./index.html">
-                        <img class="w-[90px] sm:w-[120px] lg:w-[182px] h-[90px] sm:h-[120px] lg:h-[182px] rounded-full"
+                        <img class="w-[60px] sm:w-[120px] lg:w-[182px] h-[60px] sm:h-[120px] lg:h-[182px] rounded-full"
                         src="./image/Sonder2.png" alt="logo">
                     </a>
                     <ul
-                        class="mr-3 lg:mr-20 text-[9px] sm:text-sm font-semibold space-y-2 sm:space-y-5 lg:space-y-6 max-w-[150px] sm:max-w-[250px]">
+                        class="mr-2 sm:mr-3 lg:mr-20 text-[11px] sm:text-sm lg:text-base font-semibold space-y-2 sm:space-y-5 lg:space-y-6 max-w-[150px] sm:max-w-[250px]">
                         <li>
                             <a href="#">
-                                <span><i class="fa-solid fa-angles-right text-[9px] md:text-xs"></i></span>
+                                <span><i class="fa-solid fa-angles-right"></i></span>
                                 <span class="hover:underline">Phương thức thanh toán</span>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <span><i class="fa-solid fa-angles-right text-[9px] md:text-xs"></i></span>
+                                <span><i class="fa-solid fa-angles-right"></i></span>
                                 <span class="hover:underline">Phương thức vận chuyển</span>
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                <span><i class="fa-solid fa-angles-right text-[9px] md:text-xs"></i></span>
+                                <span><i class="fa-solid fa-angles-right"></i></span>
                                 <span class="hover:underline">Xuất hóa đơn</span>
                             </a>
                         </li>
                     </ul>
-
+    
                 </div>
             </footer>
         </div>
