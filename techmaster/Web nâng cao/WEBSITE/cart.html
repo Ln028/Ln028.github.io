@@ -124,13 +124,13 @@
 
     </div>
     <div id="voucher"
-        class="hidden w-[90%] sm:w-[70%] h-[calc(100vh-180px)] md:h-[calc(100vh-300px)] left-[50%] translate-x-[-50%] fixed bg-white z-50 overflow-hidden rounded">
+        class="hidden w-fit h-[calc(100vh-180px)] md:h-[calc(100vh-300px)] left-[50%] translate-x-[-50%] fixed bg-white z-50 overflow-hidden rounded">
         <div class="w-full uppercase bg-emerald-800 text-center text-white font-semibold p-3">
             <p class="m-auto inline">Mã khuyến mại của tôi</p>
             <i id="voucher-close" class="fa-solid fa-xmark fixed right-3 text-base cursor-pointer"></i>
         </div>
-        <div class="grid lg:grid-cols-2 gap-4 h-[calc(100vh-228px)] md:h-[calc(100vh-348px)] overflow-y-auto pt-5">
-            <div
+        <div id="voucher-id" class="grid lg:grid-cols-2 gap-5 lg:gap-10 h-[calc(100vh-228px)] md:h-[calc(100vh-348px)] overflow-y-auto py-5 px-10">
+            <!-- <div
                 class="flex h-20 md:h-[123px] w-[260px] md:w-[350px] space-x-2 md:space-x-5 border border-emerald-800 rounded-r mx-auto hover:scale-105">
                 <div class="relative w-20 md:w-[123px]">
                     <div class=" absolute top-[5px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
@@ -274,7 +274,7 @@
                     <p>Đơn tối thiểu 600k</p>
                     <p class="text-gray-400">HSD: 30.04.2022</p>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 
@@ -344,11 +344,11 @@
             <div>
                 <div
                     class="h-[74px] w-full pl-[9px] md:pl-10 bg-[#f9f8f4] flex items-center overflow-x-auto text-xs md:text-base">
-                    <a class="font-semibold whitespace-nowrap text-emerald-800 hover:underline-offset-4 hover:underline"
+                    <a class="font-semibold text-emerald-800 hover:underline-offset-4 hover:underline"
                         href="./index.html">Trang chủ
-                        <i class="fa-solid fa-angle-right"></i>
                     </a>
-                    <p class="ml-2 font-semibold text-gray-600 whitespace-nowrap">
+                    <i class="fa-solid fa-angle-right text-emerald-800"></i>
+                    <p class="ml-2 font-semibold text-gray-600">
                         Giỏ hàng
                     </p>
                 </div>
@@ -491,10 +491,16 @@
                     </div>
 
                     <div>
-                        <div id="code" class="text-right py-3 md:py-7 cursor-pointer rounded">
-                            <i class="fa-solid fa-ticket text-emerald-800"></i>
-                            <p class="text-emerald-800 inline text-sm md:text-base hover:underline">Mã khuyến mại của
-                                tôi </p>
+                        <div class="py-3 md:py-7 rounded flex flex-col justify-start sm:flex-row sm:justify-end">
+                            <div class="mr-5">
+                                <i class="fa-solid fa-ticket text-emerald-800 cursor-pointer"></i>
+                                <p id="code" class="text-emerald-800 inline text-sm md:text-base hover:underline cursor-pointer">Mã khuyến mại của tôi </p>
+                            </div>
+                            <input id="myvoucher" value="1" type="hidden">
+                            <div id="code-id" class="w-fit">
+                                
+                            </div>
+                            
                         </div>
                         <div class="flex justify-between md:justify-end items-center font-semibold">
                             <p class="text-red-500 text-sm md:text-xl">Tổng tiền hàng</p>

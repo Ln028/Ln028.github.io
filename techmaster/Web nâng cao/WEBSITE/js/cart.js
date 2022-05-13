@@ -223,7 +223,6 @@ function addCount(id) {
     }
     renderProduct(products)
     updateTotalMoney(products)
-    
 }
 console.log(products);
 
@@ -234,12 +233,8 @@ function updateTotalMoney(arr) {
     let totalMoney = 0
     for (let i = 0; i < arr.length; i++) {
         totalMoney += arr[i].count * arr[i].price
-        console.log(totalMoney);
     }
-    
     subtotal.innerText = convertMoney(totalMoney)
-    console.log(subtotal);
-
 }
 renderProduct(products)
 updateTotalMoney(products)
@@ -247,3 +242,121 @@ updateTotalMoney(products)
 
 
 renderProduct(products)
+
+
+
+
+var voucherId = document.getElementById("voucher-id")
+let vouchers = [
+    {
+        id: 4,
+        title: "10%",
+        condition: "Đơn tối thiểu 400k",
+        hsd: "30.04.2022"
+    },
+    {
+        id: 5,
+        title: "8%",
+        condition: "Đơn tối thiểu 200k",
+        hsd: "30.04.2022"
+    },
+    {
+        id: 6,
+        title: "15k",
+        condition: "Đơn tối thiểu 150k",
+        hsd: "30.04.2022"
+    },
+    {
+        id: 7,
+        title: "20k",
+        condition: "Đơn tối thiểu 250k",
+        hsd: "30.04.2022"
+    },
+    {
+        id: 8,
+        title: "20%",
+        condition: "Đơn tối thiểu 600k",
+        hsd: "30.04.2022"
+    }
+]
+function renderVoucher(arr) {
+    voucherId.innerHTML = "";
+    let html = ""
+    for (let i = 0; i < arr.length; i++) {
+        const v = arr[i];
+        html += `
+        <div
+        class="flex h-20 md:h-[123px] w-[260px] md:w-[350px] space-x-2 md:space-x-5 border border-emerald-800 rounded-r mx-auto hover:scale-105">
+            <div class="relative w-20 md:w-[123px]">
+                <div class=" absolute top-[5px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                <div class=" absolute top-[20px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                <div class=" absolute top-[35px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                <div class=" absolute top-[50px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                <div class=" absolute top-[65px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                <div class="hidden md:block absolute top-[80px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full ">
+                </div>
+                <div class="hidden md:block absolute top-[95px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full ">
+                </div>
+                <div class="hidden md:block absolute top-[110px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full ">
+                </div>
+                <img class="h-full" src="./image/Sonder2.png" alt="logo">
+            </div>
+            <div class="grow pr-2 text-xs md:text-sm space-y-1 md:space-y-3 flex flex-col justify-center">
+                <div class="flex justify-between items-center space-x-2">
+                    <p class="text-base md:text-lg font-semibold text-red-500">Giảm ${v.title}</p>
+                    <p onclick="addVoucher(${v.id})" class="text-emerald-800 cursor-pointer hover:underline whitespace-nowrap">Dùng ngay
+                        <i class="fa-solid fa-chevron-right text-xs"></i>
+                    </p>
+                </div>
+                <p>${v.condition}</p>
+                <p class="text-gray-400">HSD: ${v.hsd}</p>
+            </div>
+        </div>
+        `
+    }
+    voucherId.innerHTML = html
+}
+
+renderVoucher(vouchers)
+
+var voucherClick = document.getElementById("voucher-click")
+var codeId = document.getElementById("code-id")
+var myVoucher = document.getElementById("myvoucher")
+
+function addVoucher(id) {
+    myVoucher.value = id
+    console.log(myVoucher);
+    for (let i = 0; i < vouchers.length; i++) {
+        if(vouchers[i].id == myVoucher.value) {
+            codeId.innerHTML = `
+            <div
+            class="flex h-20 md:h-[123px] w-[260px] md:w-[350px] space-x-2 md:space-x-5 border border-emerald-800 rounded-r mx-auto">
+                <div class="relative w-20 md:w-[123px]">
+                    <div class=" absolute top-[5px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class=" absolute top-[20px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class=" absolute top-[35px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class=" absolute top-[50px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class=" absolute top-[65px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
+                    <div class="hidden md:block absolute top-[80px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full ">
+                    </div>
+                    <div class="hidden md:block absolute top-[95px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full ">
+                    </div>
+                    <div class="hidden md:block absolute top-[110px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full ">
+                    </div>
+                    <img class="h-full" src="./image/Sonder2.png" alt="logo">
+                </div>
+                <div class="grow pr-2 text-xs md:text-sm space-y-1 md:space-y-3 flex flex-col justify-center">
+                    <div class="flex justify-between items-center space-x-2">
+                        <p class="text-base md:text-lg font-semibold text-red-500">Giảm ${vouchers[i].title}</p>
+                    </div>
+                    <p>${vouchers[i].condition}</p>
+                    <p class="text-gray-400">HSD: ${vouchers[i].hsd}</p>
+                </div>
+            </div>
+            `
+            voucher.classList.toggle("hidden")
+            backdropFull.classList.toggle("hidden")
+        } 
+    }
+
+}
