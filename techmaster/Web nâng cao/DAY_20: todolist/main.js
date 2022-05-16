@@ -1,17 +1,17 @@
 //1. Các chức năng:
-//Thêm công việc
-//Xoá công việc
-//Chỉnh sửa công cv
-//Lọc công việc theo trạng thái
-//Thay đổi trạng thái cv
+    //Thêm công việc
+    //Xoá công việc
+    //Chỉnh sửa công cv
+    //Lọc công việc theo trạng thái
+    //Thay đổi trạng thái cv
 
 
 //2.Đối tượng trong ứng dụng:
-//Các công việc
+    //Các công việc
 //3. Thuộc tính của đối tượng:
-//Trạng thái -> status
-//Tiêu đề -> title
-//Id -> id
+    //Trạng thái -> status
+    //Tiêu đề -> title
+    //Id -> id
 
 function randomId() {
     return Math.floor(Math.random() * 1000000)
@@ -45,41 +45,41 @@ const optionUnactive = document.getElementById("unactive")
 const inputEl = document.getElementById("todo-input")
 const btnAdd = document.getElementById("btn-add")
 
-// function renderTodo(arr) {
-//     //Xoa het du lieu truoc khi render
-//     todoList.innerText = "";
-//     if (arr.length == 0) {
-//         todoList.innerHTML = "Khong co cong viec trong danh sach"
-//         return
-//     }
+function renderTodo(arr) {
+    //Xoa het du lieu truoc khi render
+    todoList.innerText = "";
+    if (arr.length == 0) {
+        todoList.innerHTML = "Khong co cong viec trong danh sach"
+        return
+    }
 
-//     let html = "";
-//     for (let i = 0; i < arr.length; i++) {
-//         const t = arr[i];
-//         html += `
-//             <div class="todo-item ${t.status ? "active-todo" : ""}">
-//                 <div class="todo-item-title" id="${t.id}">
-//                     <input 
-//                         type="checkbox" 
-//                         ${t.status ? "checked" : ""}
-//                         onclick="toggleStatus(${t.id})"
-//                     />
-//                     <p>${t.title}</p>
-//                     <input class="hidden" type="text"/>
-//                 </div>
-//                 <div class="option">
-//                     <button class="btn btn-update" onclick="editTodo(${t.id})">
-//                         <img src="./img/pencil.svg" alt="icon" />
-//                     </button>
-//                     <button class="btn btn-delete" onclick="deleteTodo(${t.id})">
-//                         <img src="./img/remove.svg" alt="icon" />
-//                     </button>
-//                 </div>
-//             </div>
-//         `
-//     }
-//     todoList.innerHTML = html
-// }
+    let html = "";
+    for (let i = 0; i < arr.length; i++) {
+        const t = arr[i];
+        html += `
+            <div class="todo-item ${t.status ? "active-todo" : ""}">
+                <div class="todo-item-title" id="${t.id}">
+                    <input 
+                        type="checkbox" 
+                        ${t.status ? "checked" : ""}
+                        onclick="toggleStatus(${t.id})"
+                    />
+                    <p>${t.title}</p>
+                    <input class="hidden" type="text"/>
+                </div>
+                <div class="option">
+                    <button class="btn btn-update" onclick="editTodo(${t.id})">
+                        <img src="./img/pencil.svg" alt="icon" />
+                    </button>
+                    <button class="btn btn-delete" onclick="deleteTodo(${t.id})">
+                        <img src="./img/remove.svg" alt="icon" />
+                    </button>
+                </div>
+            </div>
+        `
+    }
+    todoList.innerHTML = html
+}
 
 //1.Xoa cv
 function deleteTodo(id) {
@@ -94,7 +94,6 @@ function deleteTodo(id) {
 
 todos = todos.filter(todo => todo.id != id)
 setDataToLocalStorage(todos)
-
 }
 
 //2.Thay đổi trạng thái cv
@@ -112,7 +111,6 @@ function toggleStatus(id) {
         
     }
     setDataToLocalStorage(todos)
-
 }
 
 //3.Loc cv theo trang thai:
@@ -134,24 +132,27 @@ optionUnactive.addEventListener("click", function() {
 
 
 //4.Them cong viec:
-inputEl.value = inputEl.innerText
+
 btnAdd.addEventListener("click", function() {
-    
-    if(!inputEl.value) {
+    let title = inputEl.value
+    if(!title) {
         alert("Noi dung khong duoc de trong")
         return
     }
-    newTodo = {
+    let newTodo = {
         id: randomId(),
         title: inputEl.value,
         status: false
 
     }
+    
     todos.push(newTodo);
-    //luu du lieu vao localStorage
+    // //luu du lieu vao localStorage
     setDataToLocalStorage(todos)
+   
+    inputEl.value = ""
 })
-renderTodo(todos)
+
 
 //5.Chinh sua cong viec:
 function editTodo(id) {
@@ -174,11 +175,10 @@ function editTodo(id) {
         }
     })
 }
-setDataToLocalStorage(todos)
 
-//Lay du lieu tu localStorage
+// Lay du lieu tu localStorage
 function getDataFromLocalStorage() {
-    let localStorageValue = localStorage.getItem("todos")
+    let localStorageValue = localStorage.getItem("todos");
     if(localStorageValue) {
        todos = JSON.parse(localStorageValue)
     } else {
@@ -194,4 +194,4 @@ function setDataToLocalStorage(arr) {
 }
 
 window.onload = getDataFromLocalStorage
-
+// renderTodo(todos)
