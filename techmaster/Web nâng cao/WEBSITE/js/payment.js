@@ -1,3 +1,20 @@
+
+// let a = [
+//     {
+//         id: 1
+//     },
+//     {
+//         id: 2
+//     }
+// ]
+
+// let values = localStorage.getItem("product_ids")
+
+// let arr = values.split(",")
+
+
+
+
 var btnSignin = document.getElementById("btn-signin")
 var btnSignup = document.getElementById("btn-signup")
 var signin = document.getElementById("signin")
@@ -64,25 +81,7 @@ payChoice.addEventListener("click", function() {
     backdropFull.classList.toggle("hidden")
 })
 
-// var changeVoucher = document.getElementById("change-voucher")
-// // var myVoucher = document.getElementById("my-voucher")
-// // var applyVoucher = document.getElementById("apply-voucher")
 var allVoucher = document.getElementById("voucher")
-// var voucherClose = document.getElementById("voucher-close")
-
-// // applyVoucher.addEventListener("click", function() {
-// //     myVoucher.classList.toggle("hidden")
-// // })
-// changeVoucher.addEventListener("click", function() {
-//     myVoucher.classList.toggle("hidden")
-//     allVoucher.classList.toggle("hidden")
-//     backdropFull.classList.toggle("hidden")
-// })
-// voucherClose.addEventListener("click", function() {
-//     allVoucher.classList.toggle("hidden")
-//     backdropFull.classList.toggle("hidden")
-// })
-
 
 var order = document.getElementById("confirm")
 var success = document.getElementById("success")

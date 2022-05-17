@@ -60,3 +60,23 @@ policyClose.addEventListener("click", function() {
     policy.classList.toggle("hidden")
     backdropFull.classList.toggle("hidden")
 })
+
+
+//Thay doi so luong sp:
+    //Giam sl:
+    const giamSl = document.querySelector(".down")
+    const tangSl = document.querySelector(".up")
+    const input = document.querySelector(".input")
+    giamSl.addEventListener("click", function() {
+        if(input.value == 1) {
+            return
+        }
+        input.value -= 1
+        console.log(input.value);
+    })
+    tangSl.addEventListener("click", function() {
+        input.value = parseInt(input.value) + 1
+        console.log(input.value);
+    })
+
+    

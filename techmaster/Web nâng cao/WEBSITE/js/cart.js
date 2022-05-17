@@ -68,7 +68,16 @@ btnNo.addEventListener("click", function(){
 // })
 
 
+// let a = [
+//     {
+//         id: 1
+//     },
+//     {
+//         id: 2
+//     }
+// ]
 
+// localStorage.setItem("product_ids", "1,2,3,5,8")
 
 
 let products = [
@@ -240,7 +249,7 @@ function addCount(id) {
     setProductsToLocalStorage(products)
     updateTotalMoney(products)
 }
-console.log(products);
+ 
 
 //Tính tong tien:
 const subtotal = document.querySelector(".subtotal")
