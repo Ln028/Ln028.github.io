@@ -135,12 +135,12 @@ function renderProduct(arr) {
         const p = arr[i];
 
         html += `
-            <div class="flex justify-between mx-4 md:mx-0 md:grid grid-cols-2 py-7 items-center border-b ">
+            <div class="flex justify-between mx-4 md:mx-0 md:grid grid-cols-2 py-7 items-center border-b space-x-3">
                 <div class="text-center flex flex-row items-center">
                     <span class="md:hidden" >
                         <i onclick="product(${p.id})" class="text-center text-xl md:text-[25px] font-thin fa-solid fa-trash-can cursor-pointer"></i>
                     </span>
-                    <img class="max-w-[175px] max-h-[175px] md:max-w-[232px] md:max-h-[232px]"
+                    <img class="max-w-[175px] max-h-[175px] lg:max-w-[232px] lg:max-h-[232px]"
                     src="${p.image}" alt="${p.title}">
                     <h5 class="hidden md:block font-semibold text-base">
                         <a href="./product.html" class="hover:underline hover:text-emerald-800">${p.title}</a>
@@ -152,14 +152,14 @@ function renderProduct(arr) {
                     </h5>
                     <p class="price text-center text-red-500 md:text-black text-sm sm:text-base font-medium">${convertMoney(p.price)}
                     </p>
-                    <div class="text-center h-5 lg:h-8 w-fit flex justify-center outline outline-1 mx-auto bg-white rounded">
-                        <button class="h-5 w-5 lg:h-8 lg:w-8 text-center leading-5 lg:leading-8" onclick="subtractCount(${p.id})">
+                    <div class="text-center h-8 md:h-5 lg:h-8 w-fit flex justify-center outline outline-1 mx-auto bg-white rounded">
+                        <button class="h-8 w-8 md:h-5 md:w-5 lg:h-8 lg:w-8 text-center leading-5 lg:leading-8" onclick="subtractCount(${p.id})">
                             <i class="fa-solid fa-minus text-sm"></i>
                         </button>
                         <input
-                        class="w-8 lg:w-[50px] h-5 lg:h-8 li text-center border-y-0 border-x-black text-sm sm:text-base px-0"
+                        class="w-8 h-8 md:w-5 md:h-5 lg:h-8 lg:w-[50px] li text-center border-y-0 border-x-black text-sm sm:text-base px-0"
                         type="text" role="spinbutton" aria-valuenow="1" value="${p.count}">
-                        <button class="h-5 w-5 lg:h-8 lg:w-8 text-center leading-5 lg:leading-8" onclick="addCount(${p.id})">
+                        <button class="h-8 w-8 md:h-5 md:w-5 lg:h-8 lg:w-8 text-center leading-5 lg:leading-8" onclick="addCount(${p.id})">
                             <i class="fa-solid fa-plus text-sm"></i>
                         </button>
                     </div>
