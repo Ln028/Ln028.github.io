@@ -68,15 +68,15 @@ policyClose.addEventListener("click", function() {
     const tangSl = document.querySelector(".up")
     const input = document.querySelector(".input")
     giamSl.addEventListener("click", function() {
-        if(input.value == 1) {
+        if(input.innerText == 1) {
             return
         }
-        input.value -= 1
-        console.log(input.value);
+        input.innerText = Number(input.innerText) - 1
+        console.log(input.innerText);
     })
     tangSl.addEventListener("click", function() {
-        input.value = parseInt(input.value) + 1
-        console.log(input.value);
+        input.innerText = Number(input.innerText) + 1
+        console.log(input.innerText);
     })
 
     

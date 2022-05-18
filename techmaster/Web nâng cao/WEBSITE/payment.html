@@ -203,26 +203,41 @@
                 </div>
                 <div class="space-y-5 p-5">
                     <div class="flex justify-between">
-                        <p class="whitespace-nowrap mr-2">Họ và tên người nhận</p> <input class="h-8 w-[60%] text-sm rounded" type="text" placeholder="Nhập họ và tên người nhận">
+                        <p class="whitespace-nowrap mr-2">Họ và tên người nhận</p> <input class="name-info h-8 w-[60%] text-sm rounded" type="text" placeholder="Nhập họ và tên người nhận">
                     </div>
                     <div class="flex justify-between">
-                        <p class="whitespace-nowrap mr-2">Tỉnh/Thành phố</p><select id="province" class="h-8 w-[60%] text-sm py-0 rounded"></select>
+                        <p class="whitespace-nowrap mr-2">Tỉnh/Thành phố</p>
+                        <select id="province" class="h-8 w-[60%] text-sm py-0 rounded">
+                            <option value="none">Chọn Tỉnh/Thành phố</option> 
+                        </select>
                     </div>
                     <div class="flex justify-between">
-                        <p class="whitespace-nowrap mr-2">Quận/Huyện</p><select id="district" class="h-8 w-[60%] text-sm py-0 rounded"></select>
+                        <p class="whitespace-nowrap mr-2">Quận/Huyện</p>
+                        <select id="district" class="h-8 w-[60%] text-sm py-0 rounded">
+                            <option value="none">Chọn Quận/Huyện</option> 
+                        </select>
                     </div>
                     <div class="flex justify-between">
-                        <p class="whitespace-nowrap mr-2">Phường/Xã</p><select id="commune" class="h-8 w-[60%] text-sm py-0 rounded"></select>
+                        <p class="whitespace-nowrap mr-2">Phường/Xã</p>
+                        <select id="commune" class="h-8 w-[60%] text-sm py-0 rounded">
+                            <option value="none">Chọn Phường/Xã</option> 
+                        </select>
                     </div>
                     <div class="flex justify-between">
-                        <p class="whitespace-nowrap mr-2">Địa chỉ nhận hàng</p> <input class="h-8 w-[60%] text-sm rounded" type="text" placeholder="Nhập địa chỉ nhận hàng">
+                        <p class="whitespace-nowrap mr-2">Địa chỉ nhận hàng</p> 
+                        <input class="diachi h-8 w-[60%] text-sm rounded" type="text" placeholder="Nhập địa chỉ nhận hàng">
                     </div>
                     <div class="flex justify-between">
-                        <p class="whitespace-nowrap mr-2">Số điện thoại</p> <input class="h-8 w-[60%] text-sm rounded" type="text" placeholder="Nhập số điện thoại">
+                        <p class="whitespace-nowrap mr-2">Số điện thoại</p> 
+                        <div class="w-[60%]">
+                            <input class="phone-number h-8 w-full text-sm rounded" type="text" placeholder="Nhập số điện thoại">
+                            <br>
+                            <label id="phone-error" class="text-red-500"></label>
+                        </div>
                     </div>
                     <div class="flex justify-center space-x-5">
-                        <button class="py-2 px-3 bg-emerald-800 text-white rounded">Hủy</button>
-                        <button class="py-2 px-3 bg-emerald-800 text-white rounded">Xác nhận</button>
+                        <button class="cancel py-2 px-3 bg-emerald-800 text-white rounded">Hủy</button>
+                        <button class="confirm py-2 px-3 bg-emerald-800 text-white rounded">Xác nhận</button>
                     </div>
                 </div>
             </div>
@@ -241,7 +256,7 @@
                         <label for="2" class="cursor-pointer">Thanh toán qua VNPAY</label>
                       </div>
                       <div>
-                        <input type="radio" name="radio" id="3" class="cursor-pointer">
+                        <input checked="checked" type="radio" name="radio" id="3" class="cursor-pointer">
                         <label for="3" class="cursor-pointer">Thanh toán khi nhận hàng</label>
                       </div>
                       <div class="text-center">
@@ -271,10 +286,10 @@
                     <div class="flex items-center justify-between text-sm md:text-base">
                         <div class="flex flex-col md:flex-row mr-4">
                             <div class="flex">
-                                <span class="whitespace-nowrap">Lan Nguyen</span>
-                                <span class="ml-2 mr-10">(+84)984123456</span>
+                                <span class="name whitespace-nowrap">Lan Nguyen</span>
+                                <span class="telephone ml-2 mr-10">(+84)984123456</span>
                             </div>
-                            <p>Số nhà 30, ngõ 30, đường Nguyễn Hoàng, phường Mỹ Đình, quận Nam Từ Liêm, TP Hà Nội</p>
+                            <p class="address">Số nhà 30, ngõ 30, đường Nguyễn Hoàng, phường Mỹ Đình, quận Nam Từ Liêm, TP. Hà Nội</p>
                         </div>
                         <p id="change-info" class="text-emerald-800 font-medium whitespace-nowrap cursor-pointer hover:underline">Thay đổi <i class="fa-solid fa-angle-right text-[10px] md:text-sm"></i></p>
                     </div>
@@ -351,11 +366,8 @@
                             <input class="grow rounded border-slate-400 text-sm" type="text" placeholder="Lời nhắn...">
                         </div>
                         <div class="flex items-center justify-between">
-                            <span class="mr-2">Phương thức thanh toán </span>
-                            <div class="whitespace-nowrap items-center">
-                                <p id="pay-choice" class="inline text-emerald-800 cursor-pointer hover:underline">Thanh toán khi nhận hàng</p>
-                                <i class="fa-solid fa-angle-right fa-sm text-emerald-800"></i>
-                            </div>
+                            <span>Phương thức thanh toán </span>
+                            <p id="pay-choice" class="inline text-emerald-800 cursor-pointer hover:underline whitespace-nowrap">Thanh toán khi nhận hàng <i class="fa-solid fa-angle-right text-sm"></i></p>
                         </div>
                     </div>
                     <div class="font-semibold space-y-5 pb-5 border-b md:border-0">
@@ -368,33 +380,12 @@
                             <p id="ship">đ15.000</p>
                         </div>
                         <div class="flex justify-between text-sm lg:text-lg">
-                            <div class="text-emerald-800 items-center">
-                                <p id="code" class="inline cursor-pointer hover:underline">Khuyến mại của tôi</p>
-                                <i class="fa-solid fa-angle-right fa-sm"></i>
-                            </div>
+                            <p id="code" class="text-emerald-800 cursor-pointer hover:underline">Khuyến mại của tôi <i class="fa-solid fa-angle-right text-sm"></i>
+                            </p>
                             <input id="myvoucher" value="1" type="hidden">
                             <p id="discount">-đ15.000</p>
                         </div>
-                        <!-- <div id="my-voucher" class="hidden">
-                            <div class="flex h-20 md:h-[80px] w-[250px] space-x-2 border border-emerald-800 rounded-r">
-                                <div class="relative w-20 md:w-[80px]">
-                                    <div class=" absolute top-[5px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                                    <div class=" absolute top-[20px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                                    <div class=" absolute top-[35px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                                    <div class=" absolute top-[50px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                                    <div class=" absolute top-[65px] translate-x-[-60%] w-[10px] h-[10px] bg-white rounded-full "></div>
-                                    <img class="h-full" src="./image/Sonder2.png" alt="logo">    
-                                </div>
-                                <div class="grow pr-1 text-xs flex flex-col justify-center space-y-1">
-                                    <div class="flex justify-between items-center">
-                                        <p id="promo-code" class="text-sm font-semibold text-red-500">Giảm <span>10</span><span>%</span></p>
-                                        <p id="change-voucher" class="text-emerald-800 cursor-pointer hover:underline">Đổi mã khác<i class="fa-solid fa-chevron-right text-[9px]"></i></p>
-                                    </div>
-                                    <p>Đơn tối thiểu 250k</p>
-                                    <p class="text-gray-400">HSD: 30.04.2022</p>
-                                </div>
-                            </div>
-                        </div> -->
+                
                         <div id="code-id" class="w-fit">
                                 
                         </div>

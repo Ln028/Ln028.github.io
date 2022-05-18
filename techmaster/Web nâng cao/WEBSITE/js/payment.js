@@ -118,10 +118,11 @@ provinceEl.addEventListener("change", async function(){
     try {
         let provinceCode = provinceEl.value
         let res = await axios.get(`https://provinces.open-api.vn/api/p/${provinceCode}?depth=2`)
-        console.log(res.data.districts);
-        districtEl.innerHTML = ""
-        wardEl.innerHTML = ""
+        console.log(res.data);
+        districtEl.innerHTML = `<option value="none">Chọn Quận/Huyện</option>`
+        wardEl.innerHTML = `<option value="none">Chọn Phường/Xã</option>`
         renderDistrict(res.data.districts)
+        console.log(provinceEl.options[provinceEl.selectedIndex].text);
 
     } catch(err) {
 
@@ -138,7 +139,7 @@ districtEl.addEventListener("change", async function(){
         let districtCode = districtEl.value
         let res = await axios.get(`https://provinces.open-api.vn/api/d/${districtCode}?depth=2`)
         console.log(res.data.wards);
-        wardEl.innerHTML = ""
+        wardEl.innerHTML = `<option value="none">Chọn Phường/Xã</option>`
         renderWards(res.data.wards)
 
     } catch(err) {
@@ -152,10 +153,55 @@ function renderWards(arr) {
     })
 }
 
-
-
 getProvince()
 
+
+
+const cancel = document.querySelector(".cancel")
+const confirm = document.querySelector(".confirm")
+const name = document.querySelector(".name")
+const telephone = document.querySelector(".telephone")
+const address = document.querySelector(".address")
+const nameInfo = document.querySelector(".name-info")
+const diachinhanhang = document.querySelector(".diachi")
+const phoneEl = document.querySelector(".phone-number")
+const phoneErr = document.getElementById("phone-error")
+const tinh = document.querySelector("#province option")
+const huyen = document.querySelector("#district option")
+const xa = document.querySelector("#commune option")
+console.log(tinh.innerText);
+
+function validatePhone(phoneEl) {
+    var phoneNumb = /^\d{10}$/;
+    return (phoneEl.value.match(phoneNumb))
+}
+cancel.addEventListener("click", function() {
+    info.classList.toggle("hidden")
+    backdropFull.classList.toggle("hidden")
+})
+confirm.addEventListener("click", async function () {
+    const isValidPhone = validatePhone(phoneEl) 
+    try {
+        if(nameInfo.value == "" || diachinhanhang.value == "" || phoneEl.value == "" || provinceEl.options[provinceEl.selectedIndex].text == "Chọn Tỉnh/Thành phố" || districtEl.options[districtEl.selectedIndex].text == "Chọn Quận/Huyện" || wardEl.options[wardEl.selectedIndex].text == "Chọn Phường/Xã") {
+            alert("Không được để trống thông tin")
+            return
+        }
+        phoneErr.innerText = ""
+        if(!isValidPhone) {
+            phoneErr.innerText = "Số điện thoại phải có 10 chữ số"
+            return
+        }
+        else {
+            name.innerText = nameInfo.value
+            telephone.innerText = phoneEl.value
+            address.innerText = `${diachinhanhang.value}, ${wardEl.options[wardEl.selectedIndex].text}, ${districtEl.options[districtEl.selectedIndex].text}, ${provinceEl.options[provinceEl.selectedIndex].text}`
+            info.classList.toggle("hidden")
+            backdropFull.classList.toggle("hidden")
+        }
+    } catch (err) {
+        console.log(err);
+    }
+})
 
 
 var voucher = document.getElementById("voucher")
