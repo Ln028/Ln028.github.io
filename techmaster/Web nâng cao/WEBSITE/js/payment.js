@@ -376,7 +376,7 @@ function renderProduct(arr) {
                     <h5 class="md:hidden font-semibold text-xs sm:text-base text-center"> ${p.title}</h5>
                     <p class="text-center text-red-500 md:text-black text-sm sm:text-base lg:text-lg font-medium">${convertMoney(p.price)}</p>
                     <span class="mx-auto w-8 md:w-12 text-center text-sm sm:text-base md:text-lg border border-gray-900 rounded">${p.count}</span>
-                    <p class="text-center text-base xl:text-lg font-medium hidden md:block">${convertMoney(p.price*p.count)}</p>
+                    <p class="text-center text-base lg:text-lg font-medium hidden md:block">${convertMoney(p.price*p.count)}</p>
                 </div>
             </div>
         `
@@ -405,8 +405,6 @@ function updateTotalMoney(arr) {
     
     const code = document.querySelector("#code-id .promo-code")
     const codeNumber = document.querySelector("#code-id .promo-code span")
-    // const min = document.querySelector("#code-id .min-price")
-    // const priceCondition = (min.innerText).split("").filter(a => a!== "." && a!== "V" && a!== "N" && a!== "D").join("")
     
     
     if(!code) {
@@ -440,3 +438,26 @@ function updateTotalMoney(arr) {
 updateTotalMoney(products)
 
 renderProduct(products)
+
+const xacnhan = document.querySelector(".xacnhan")
+const choice = document.querySelectorAll(".choice div")
+const pp = document.querySelector(".pp")
+console.log(pp);
+    for (let i = 0; i < choice.length; i++) {
+        let element = choice[i];
+        element.addEventListener("click", function() {
+            pp.innerHTML = `
+            <p id="pay-choice" class="inline ml-2 text-emerald-800 cursor-pointer hover:underline">${element.innerText} <i class="fa-solid fa-angle-right text-sm"></i></p>
+        `
+        })
+    }
+    
+xacnhan.addEventListener("click", function() {
+    
+    if(pp.innerHTML != "") {
+        payChoice.innerHTML = pp.innerHTML
+    }
+    console.log(payChoice.innerText);
+    pay.classList.toggle("hidden")
+    backdropFull.classList.toggle("hidden")
+})
