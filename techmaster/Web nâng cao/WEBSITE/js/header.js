@@ -8,40 +8,40 @@ var dangKy = document.getElementById("dang-ky")
 var dangNhap = document.getElementById("dang-nhap")
 var backdropFull = document.getElementById("backdrop-full")
 var account = document.getElementById("account")
+var body = document.querySelector("body")
 
 btnSignin.addEventListener("click", function() {
     signin.classList.toggle("hidden")
     backdropFull.classList.toggle("hidden")
+    body.classList.toggle("overflow-hidden")
 })
 btnSignup.addEventListener("click", function() {
     signup.classList.toggle("hidden")
     backdropFull.classList.toggle("hidden")
+    body.classList.toggle("overflow-hidden")
 })
 signinClose.addEventListener("click", function() {
     signin.classList.toggle("hidden")
     backdropFull.classList.toggle("hidden")
+    body.classList.toggle("overflow-hidden")
 })
 signupClose.addEventListener("click", function() {
     signup.classList.toggle("hidden")
     backdropFull.classList.toggle("hidden")
+    body.classList.toggle("overflow-hidden")
 })
 dangKy.addEventListener("click", function() {
     signin.classList.toggle("hidden")
     signup.classList.toggle("hidden")
+    body.classList.toggle("overflow-hidden")
 })
 dangNhap.addEventListener("click", function() {
     signin.classList.toggle("hidden")
     signup.classList.toggle("hidden")
+    body.classList.toggle("overflow-hidden")
 })
 account.addEventListener("click", function() {
     signin.classList.toggle("hidden")
     backdropFull.classList.toggle("hidden")
+    body.classList.toggle("overflow-hidden")
 })
-backdropFull.addEventListener("click", function() {
-    backdropFull.classList.toggle("hidden")
-    signin.classList.add("hidden")
-    signup.classList.add("hidden")
-    
-})
-
-

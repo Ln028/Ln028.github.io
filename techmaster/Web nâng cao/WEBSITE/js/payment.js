@@ -10,50 +10,8 @@
 
 // let values = localStorage.getItem("product_ids")
 
-// let arr = values.split(",")
-
-
-
-
-var btnSignin = document.getElementById("btn-signin")
-var btnSignup = document.getElementById("btn-signup")
-var signin = document.getElementById("signin")
-var signup = document.getElementById("signup")
-var signinClose = document.getElementById("signin-close")
-var signupClose = document.getElementById("signup-close")
-var dangKy = document.getElementById("dang-ky")
-var dangNhap = document.getElementById("dang-nhap")
 var backdropFull = document.getElementById("backdrop-full")
-var account = document.getElementById("account")
 
-btnSignin.addEventListener("click", function() {
-    signin.classList.toggle("hidden")
-    backdropFull.classList.toggle("hidden")
-})
-btnSignup.addEventListener("click", function() {
-    signup.classList.toggle("hidden")
-    backdropFull.classList.toggle("hidden")
-})
-signinClose.addEventListener("click", function() {
-    signin.classList.toggle("hidden")
-    backdropFull.classList.toggle("hidden")
-})
-signupClose.addEventListener("click", function() {
-    signup.classList.toggle("hidden")
-    backdropFull.classList.toggle("hidden")
-})
-dangKy.addEventListener("click", function() {
-    signin.classList.toggle("hidden")
-    signup.classList.toggle("hidden")
-})
-dangNhap.addEventListener("click", function() {
-    signin.classList.toggle("hidden")
-    signup.classList.toggle("hidden")
-})
-account.addEventListener("click", function() {
-    signin.classList.toggle("hidden")
-    backdropFull.classList.toggle("hidden")
-})
 backdropFull.addEventListener("click", function() {
     backdropFull.classList.toggle("hidden")
     signin.classList.add("hidden")
@@ -62,6 +20,7 @@ backdropFull.addEventListener("click", function() {
     pay.classList.add("hidden")
     allVoucher.classList.add("hidden")
     success.classList.add("hidden")
+    body.classList.toggle("overflow-hidden")
    
 })
 
@@ -71,6 +30,7 @@ var changeInfo = document.getElementById("change-info")
 changeInfo.addEventListener("click", function() {
     info.classList.toggle("hidden")
     backdropFull.classList.toggle("hidden")
+    body.classList.toggle("overflow-hidden")
 })
 
 var pay = document.getElementById("pay")
@@ -79,6 +39,7 @@ var payChoice = document.getElementById("pay-choice")
 payChoice.addEventListener("click", function() {
     pay.classList.toggle("hidden")
     backdropFull.classList.toggle("hidden")
+    body.classList.toggle("overflow-hidden")
 })
 
 var allVoucher = document.getElementById("voucher")
@@ -89,6 +50,7 @@ var success = document.getElementById("success")
 order.addEventListener("click", function() {
     success.classList.toggle("hidden")
     backdropFull.classList.toggle("hidden")
+    body.classList.toggle("overflow-hidden")
 })
 
 
@@ -163,12 +125,17 @@ const name = document.querySelector(".name")
 const telephone = document.querySelector(".telephone")
 const address = document.querySelector(".address")
 const nameInfo = document.querySelector(".name-info")
+const nameErr = document.getElementById("name-error")
 const diachinhanhang = document.querySelector(".diachi")
+const diachiErr = document.getElementById("diachi-error")
 const phoneEl = document.querySelector(".phone-number")
 const phoneErr = document.getElementById("phone-error")
 const tinh = document.querySelector("#province option")
+const tinhErr = document.getElementById("province-error")
 const huyen = document.querySelector("#district option")
+const huyenErr = document.getElementById("district-error")
 const xa = document.querySelector("#commune option")
+const xaErr = document.getElementById("commune-error")
 console.log(tinh.innerText);
 
 function validatePhone(phoneEl) {
@@ -178,17 +145,36 @@ function validatePhone(phoneEl) {
 cancel.addEventListener("click", function() {
     info.classList.toggle("hidden")
     backdropFull.classList.toggle("hidden")
+    body.classList.toggle("overflow-hidden")
 })
 confirm.addEventListener("click", async function () {
     const isValidPhone = validatePhone(phoneEl) 
     try {
-        if(nameInfo.value == "" || diachinhanhang.value == "" || phoneEl.value == "" || provinceEl.options[provinceEl.selectedIndex].text == "Chọn Tỉnh/Thành phố" || districtEl.options[districtEl.selectedIndex].text == "Chọn Quận/Huyện" || wardEl.options[wardEl.selectedIndex].text == "Chọn Phường/Xã") {
-            alert("Không được để trống thông tin")
-            return
-        }
+        nameErr.innerText = ""
+        diachiErr.innerText = ""
         phoneErr.innerText = ""
-        if(!isValidPhone) {
-            phoneErr.innerText = "Số điện thoại phải có 10 chữ số"
+        tinhErr.innerText = ""
+        huyenErr.innerText = ""
+        xaErr.innerText = ""
+        if(nameInfo.value == "" || diachinhanhang.value == "" || !isValidPhone || provinceEl.options[provinceEl.selectedIndex].text == "Chọn Tỉnh/Thành phố" || districtEl.options[districtEl.selectedIndex].text == "Chọn Quận/Huyện" || wardEl.options[wardEl.selectedIndex].text == "Chọn Phường/Xã") {
+            if(nameInfo.value == "") {
+                nameErr.innerText = "Không được để trống thông tin"
+            }
+            if(diachinhanhang.value == "") {
+                diachiErr.innerText = "Không được để trống thông tin"
+            }
+            if(!isValidPhone) {
+                phoneErr.innerText = "Số điện thoại phải có 10 chữ số"
+            }
+            if(provinceEl.options[provinceEl.selectedIndex].text == "Chọn Tỉnh/Thành phố") {
+                tinhErr.innerText = "Không được để trống thông tin"
+            }
+            if(districtEl.options[districtEl.selectedIndex].text == "Chọn Quận/Huyện") {
+               huyenErr.innerText = "Không được để trống thông tin"
+            }
+             if(wardEl.options[wardEl.selectedIndex].text == "Chọn Phường/Xã") {
+                xaErr.innerText = "Không được để trống thông tin"
+            }
             return
         }
         else {
@@ -197,6 +183,8 @@ confirm.addEventListener("click", async function () {
             address.innerText = `${diachinhanhang.value}, ${wardEl.options[wardEl.selectedIndex].text}, ${districtEl.options[districtEl.selectedIndex].text}, ${provinceEl.options[provinceEl.selectedIndex].text}`
             info.classList.toggle("hidden")
             backdropFull.classList.toggle("hidden")
+            body.classList.toggle("overflow-hidden")
+            return
         }
     } catch (err) {
         console.log(err);
@@ -212,10 +200,12 @@ var voucherClose = document.getElementById("voucher-close")
 code.addEventListener("click", function() {
     voucher.classList.toggle("hidden")
     backdropFull.classList.toggle("hidden")
+    body.classList.toggle("overflow-hidden")
 })
 voucherClose.addEventListener("click", function() {
     voucher.classList.toggle("hidden")
     backdropFull.classList.toggle("hidden")
+    body.classList.toggle("overflow-hidden")
 })
 var voucherId = document.getElementById("voucher-id")
 let vouchers = [
@@ -306,6 +296,7 @@ renderVoucher(vouchers)
 
 var codeId = document.getElementById("code-id")
 var myVoucher = document.getElementById("myvoucher")
+    
 
 function addVoucher(id) {
     // myVoucher.value = id
@@ -342,6 +333,7 @@ function addVoucher(id) {
         codeId.innerHTML = html2
         voucher.classList.toggle("hidden")
         backdropFull.classList.toggle("hidden")
+        body.classList.toggle("overflow-hidden")
     }
     updateTotalMoney(products)
 }
@@ -406,15 +398,12 @@ function updateTotalMoney(arr) {
     const code = document.querySelector("#code-id .promo-code")
     const codeNumber = document.querySelector("#code-id .promo-code span")
     
-    
     if(!code) {
         discountMoney = 0
     } else {
         const min = document.querySelector("#code-id .min-price")
         if(Number(min.innerText)*1000 > Number(totalMoney)){
-            
-            alert("Chưa đủ điều kiện để áp dụng mã khuyến mại này")
-            codeId.innerHTML = ""
+            codeId.innerHTML = `<p class="text-red-500 italic">Đơn hàng chưa đủ điều kiện áp dụng mã KM này</p>`
             discountMoney = 0
         } else {
             if (code.innerText.includes("%")) {
@@ -460,4 +449,5 @@ xacnhan.addEventListener("click", function() {
     console.log(payChoice.innerText);
     pay.classList.toggle("hidden")
     backdropFull.classList.toggle("hidden")
+    body.classList.toggle("overflow-hidden")
 })
