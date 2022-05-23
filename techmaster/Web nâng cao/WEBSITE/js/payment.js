@@ -53,6 +53,14 @@ order.addEventListener("click", function() {
     body.classList.toggle("overflow-hidden")
 })
 
+var successClose = document.getElementById("success-close")
+console.log(successClose);
+successClose.addEventListener("click", function() {
+    success.classList.toggle("hidden")
+    backdropFull.classList.toggle("hidden")
+    body.classList.toggle("overflow-hidden")
+})
+
 
 
 const provinceEl = document.getElementById("province")
@@ -436,7 +444,7 @@ console.log(pp);
         let element = choice[i];
         element.addEventListener("click", function() {
             pp.innerHTML = `
-            <p id="pay-choice" class="inline ml-2 text-emerald-800 cursor-pointer hover:underline">${element.innerText} <i class="fa-solid fa-angle-right text-sm"></i></p>
+            ${element.innerText} <i class="fa-solid fa-angle-right text-sm"></i></p>
         `
         })
     }

@@ -45,15 +45,21 @@
                     </div>
                 </div>
                 <div class="lg:flex flex-row mt-[23px] justify-center hidden">
-                    <button
-                        class="outline-0 outline-emerald-800 h-[30px] px-[18px] bg-emerald-800 hover:bg-white text-white hover:text-emerald-800 text-sm hidden md:block whitespace-nowrap">Giới
-                        thiệu</button>
-                    <button
-                        class="outline-0 outline-emerald-800 h-[30px] px-3 bg-emerald-800 hover:bg-white text-white hover:text-emerald-800 text-sm hidden md:block mx-4 xl:mx-8 whitespace-nowrap">Chương
-                        trình khuyến mại</button>
-                    <button
-                        class="outline-0 outline-emerald-800 h-[30px] px-[18px] bg-emerald-800 hover:bg-white text-white hover:text-emerald-800 text-sm hidden md:block whitespace-nowrap">Chính
-                        sách bảo mật</button>
+                    <a href="./introduction.html">
+                        <button
+                            class="outline-0 outline-emerald-800 h-[30px] px-[18px] bg-emerald-800 hover:bg-white text-white hover:text-emerald-800 text-sm hidden md:block whitespace-nowrap">Giới
+                            thiệu</button>
+                    </a>
+                    <a href="./promotion.html">
+                        <button
+                            class="outline-0 outline-emerald-800 h-[30px] px-3 bg-emerald-800 hover:bg-white text-white hover:text-emerald-800 text-sm hidden md:block mx-4 xl:mx-8 whitespace-nowrap">Chương
+                            trình khuyến mại</button>
+                    </a>
+                    <a href="./security.html">
+                        <button
+                            class="outline-0 outline-emerald-800 h-[30px] px-[18px] bg-emerald-800 hover:bg-white text-white hover:text-emerald-800 text-sm hidden md:block whitespace-nowrap">Chính
+                            sách bảo mật</button>
+                    </a>
                 </div>
             </div>
             <div class="flex flex-row xl:mr-[30px] items-center justify-center">
@@ -274,7 +280,7 @@
                     <div class="choice space-y-5 p-5">
                         <div>
                             <input type="radio" name="radio" id="1" class="cursor-pointer">
-                            <label for="1" class="cursor-pointer">Thanh toán bằng thẻ Tín dụng / Ghi nợ</label>
+                            <label for="1" class="cursor-pointer">Thanh toán qua thẻ Tín dụng / Ghi nợ</label>
 
                         </div>
                         <div>
@@ -302,7 +308,8 @@
                     </p>
                 </div>
                 <div id="success"
-                    class="hidden w-[80%] md:w-auto left-[50%] translate-x-[-50%] fixed z-50 text-center py-10 px-10 text-xl font-semibold bg-emerald-800 text-white rounded">
+                    class="hidden w-[80%] md:w-auto left-[50%] translate-x-[-50%] fixed z-50 text-center pt-5 pb-10 px-10 text-xl font-semibold bg-emerald-800 text-white rounded space-y-5">
+                    <i id="success-close" class="fa-solid fa-xmark fixed right-3 text-base cursor-pointer"></i>
                     <p>Cảm ơn bạn đã đặt hàng tại Sonder Textbook Shop!</p>
                 </div>
                 <div class="mx-4 md:mx-10 xl:mx-[75px]">
@@ -407,10 +414,10 @@
                                 <input class="grow rounded border-slate-400 text-sm" type="text"
                                     placeholder="Lời nhắn...">
                             </div>
-                            <div class="grid grid-cols-2">
+                            <div class="flex justify-between">
                                 <span>Phương thức thanh toán </span>
                                 <p id="pay-choice"
-                                    class="inline text-emerald-800 text-right cursor-pointer hover:underline">
+                                    class="inline text-emerald-800 text-right cursor-pointer hover:underline  ml-2">
                                     Thanh toán khi nhận hàng <i class="fa-solid fa-angle-right text-sm"></i></p>
                             </div>
                         </div>
@@ -445,7 +452,7 @@
                         <p class="font-medium text-sm md:text-base lg:text-lg pb-5 md:pb-0 border-b md:border-0 grow">
                             Nhấn <span class="text-emerald-800">"Đặt hàng"</span> đồng nghĩa với việc bạn đồng ý tuân
                             theo <a href="#" class="text-emerald-800 hover:underline">Điều khoản Sonder Textbook
-                                Shop</a></p>
+                                Store</a></p>
                         <div
                             class="w-full md:w-fit mt-5 md:mt-0 flex justify-between md:justify-end items-center font-semibold">
                             <div class="flex md:hidden items-center justify-between">
