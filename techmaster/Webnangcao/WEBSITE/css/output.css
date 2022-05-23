@@ -4290,6 +4290,16 @@ select {
   margin-bottom: 1rem;
 }
 
+.prose-li\:marker\:text-emerald-800 * :is(:where(li):not(:where([class~="not-prose"] *)))::marker {
+  --tw-text-opacity: 1;
+  color: rgb(6 95 70 / var(--tw-text-opacity));
+}
+
+.prose-li\:marker\:text-emerald-800 :is(:where(li):not(:where([class~="not-prose"] *)))::marker {
+  --tw-text-opacity: 1;
+  color: rgb(6 95 70 / var(--tw-text-opacity));
+}
+
 .prose-table\:my-8 :is(:where(table):not(:where([class~="not-prose"] *))) {
   margin-top: 2rem;
   margin-bottom: 2rem;
