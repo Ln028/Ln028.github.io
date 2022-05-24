@@ -1667,6 +1667,11 @@ select {
   margin-bottom: 0.25rem;
 }
 
+.my-0 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
 .mr-\[30px\] {
   margin-right: 30px;
 }
@@ -3132,10 +3137,6 @@ select {
   background-image: url('./image/bg-header.jpg');
 }
 
-.bg-\[url\(\'\.\/image\/thucamon\.jpg\'\)\] {
-  background-image: url('./image/thucamon.jpg');
-}
-
 .bg-\[url\(\'\.\.\.\'\)\] {
   background-image: url('...');
 }
@@ -3524,6 +3525,10 @@ select {
   font-weight: 500;
 }
 
+.font-normal {
+  font-weight: 400;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -3653,6 +3658,11 @@ select {
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.text-\[\#374151\] {
+  --tw-text-opacity: 1;
+  color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
 .underline {
