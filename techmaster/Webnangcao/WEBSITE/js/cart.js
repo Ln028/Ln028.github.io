@@ -120,9 +120,8 @@ function renderProduct(arr) {
                         <button class="h-8 w-8 md:h-5 md:w-5 lg:h-8 lg:w-8 text-center leading-5 lg:leading-8" onclick="subtractCount(${p.id})">
                             <i class="fa-solid fa-minus text-sm"></i>
                         </button>
-                        <input
-                        class="w-8 h-8 md:w-5 md:h-5 lg:h-8 lg:w-[50px] li text-center border-y-0 border-x-black text-sm sm:text-base px-0"
-                        type="text" role="spinbutton" aria-valuenow="1" value="${p.count}">
+                        <div class="input flex items-center justify-center w-8 h-8 md:w-5 md:h-5 lg:h-8 lg:w-[50px] text-center border border-y-0 border-x-black text-sm sm:text-base px-0">${p.count}</div>
+                        
                         <button class="h-8 w-8 md:h-5 md:w-5 lg:h-8 lg:w-8 text-center leading-5 lg:leading-8" onclick="addCount(${p.id})">
                             <i class="fa-solid fa-plus text-sm"></i>
                         </button>
