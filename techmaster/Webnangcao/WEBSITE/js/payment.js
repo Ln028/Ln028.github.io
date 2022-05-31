@@ -44,13 +44,14 @@ payChoice.addEventListener("click", function() {
 
 var allVoucher = document.getElementById("voucher")
 
-var order = document.getElementById("confirm")
+var order = document.getElementById("order")
 var success = document.getElementById("success")
 
 order.addEventListener("click", function() {
     success.classList.toggle("hidden")
     backdropFull.classList.toggle("hidden")
     body.classList.toggle("overflow-hidden")
+
 })
 
 var successClose = document.getElementById("success-close")
@@ -255,7 +256,7 @@ let vouchers = [
 ]
 
 function convertMoney(number) {
-    return number.toLocaleString('it-IT', {style : 'currency', currency : 'VND'});
+    return number.toLocaleString('vi-VN', {style : 'currency', currency : 'VND'});
 }
 
 function renderVoucher(arr) {
@@ -307,7 +308,6 @@ var myVoucher = document.getElementById("myvoucher")
     
 
 function addVoucher(id) {
-    // myVoucher.value = id
     codeId.innerHTML = ""
     
     let html2 = ""
@@ -416,7 +416,6 @@ function updateTotalMoney(arr) {
         } else {
             if (code.innerText.includes("%")) {
                 discountMoney = Number(codeNumber.innerText) / 100 * totalMoney
-            //     discount.parentNode.classList.remove("hide")
                 
             } if(code.innerText.includes("k")) {
                 discountMoney = Number(codeNumber.innerText)*1000

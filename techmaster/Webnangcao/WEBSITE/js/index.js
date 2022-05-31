@@ -18,4 +18,9 @@ backdropFull.addEventListener("click", function() {
     
 })
 
-
+var cartPlus = document.querySelectorAll(".cart-plus")
+for (let i = 0; i < cartPlus.length; i++) {
+    cartPlus[i].addEventListener("click", function() {
+        alert("Thêm vào giỏ hàng thành công")
+    })   
+}

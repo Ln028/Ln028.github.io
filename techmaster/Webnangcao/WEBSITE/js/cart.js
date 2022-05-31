@@ -77,7 +77,7 @@ window.onload = getProductsFromLocalStorage
 
 //convert tiefn:
 function convertMoney(number) {
-    return number.toLocaleString('it-IT', {style : 'currency', currency : 'VND'});
+    return number.toLocaleString('vi-VN', {style : 'currency', currency : 'VND'});
 }
 
 //Truy cap vao cac thanh phan:
@@ -120,7 +120,7 @@ function renderProduct(arr) {
                         <button class="h-8 w-8 md:h-5 md:w-5 lg:h-8 lg:w-8 text-center leading-5 lg:leading-8" onclick="subtractCount(${p.id})">
                             <i class="fa-solid fa-minus text-sm"></i>
                         </button>
-                        <div class="input flex items-center justify-center w-8 h-8 md:w-5 md:h-5 lg:h-8 lg:w-[50px] text-center border border-y-0 border-x-black text-sm sm:text-base px-0">${p.count}</div>
+                        <input class="w-8 h-8 md:h-5 md:w-5 lg:w-[50px] lg:h-8 text-center border-y-0 border-x-black text-sm sm:text-base px-0" type="text" role="spinbutton" min="1" aria-valuenow="1" value="${p.count}">
                         
                         <button class="h-8 w-8 md:h-5 md:w-5 lg:h-8 lg:w-8 text-center leading-5 lg:leading-8" onclick="addCount(${p.id})">
                             <i class="fa-solid fa-plus text-sm"></i>

@@ -35,15 +35,18 @@ policyClose.addEventListener("click", function() {
     const tangSl = document.querySelector(".up")
     const input = document.querySelector(".input")
     giamSl.addEventListener("click", function() {
-        if(input.innerText == 1) {
+        if(input.value == 1) {
             return
         }
-        input.innerText = Number(input.innerText) - 1
+        input.value = Number(input.value) - 1
         console.log(input.innerText);
     })
     tangSl.addEventListener("click", function() {
-        input.innerText = Number(input.innerText) + 1
-        console.log(input.innerText);
+        input.value = Number(input.value) + 1
+        console.log(input.value);
     })
 
-    
+    var cartPlus = document.querySelector(".cart-plus")
+    cartPlus.addEventListener("click", function() {
+        alert("Thêm vào giỏ hàng thành công")
+    })   
