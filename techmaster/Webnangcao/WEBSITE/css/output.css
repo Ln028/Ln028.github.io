@@ -1898,10 +1898,6 @@ select {
   height: 2.25rem;
 }
 
-.h-\[100px\] {
-  height: 100px;
-}
-
 .h-\[calc\(100vh-180px\)\] {
   height: calc(100vh - 180px);
 }
@@ -4907,10 +4903,6 @@ select {
     height: 2.5rem;
   }
 
-  .lg\:h-\[122px\] {
-    height: 122px;
-  }
-
   .lg\:max-h-\[450px\] {
     max-height: 450px;
   }
@@ -4937,10 +4929,6 @@ select {
 
   .lg\:w-10 {
     width: 2.5rem;
-  }
-
-  .lg\:w-\[122px\] {
-    width: 122px;
   }
 
   .lg\:w-\[calc\(100vw-250px\)\] {
