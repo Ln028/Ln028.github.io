@@ -116,13 +116,13 @@ function renderProduct(arr) {
                     <p class="price text-center text-red-500 md:text-black text-sm sm:text-base font-medium">${convertMoney(p.price)}
                     </p>
                     <div class="text-center h-8 md:h-5 lg:h-8 w-fit flex justify-center outline outline-1 mx-auto bg-white rounded">
-                        <button class="h-8 w-8 md:h-5 md:w-5 lg:h-8 lg:w-8 text-center leading-5 lg:leading-8" onclick="subtractCount(${p.id})">
+                        <button class="h-8 w-8 md:h-5 md:w-5 lg:h-8 lg:w-8 text-center leading-5 lg:leading-8 rounded-l" onclick="subtractCount(${p.id})">
                             <i class="fa-solid fa-minus text-sm"></i>
                         </button>
                         <input id="${p.id}" class="input w-8 h-8 md:h-5 md:w-5 lg:w-[50px] lg:h-8 text-center border-y-0 border-x-black text-sm sm:text-base px-0" type="text" role="spinbutton" min="1" aria-valuenow="1" value="${p.count}" oninput="{this.value = 
                         !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : 1}" onchange="changeInput(${p.id})">
                         
-                        <button class="h-8 w-8 md:h-5 md:w-5 lg:h-8 lg:w-8 text-center leading-5 lg:leading-8" onclick="addCount(${p.id})">
+                        <button class="h-8 w-8 md:h-5 md:w-5 lg:h-8 lg:w-8 text-center leading-5 lg:leading-8 rounded-r" onclick="addCount(${p.id})">
                             <i class="fa-solid fa-plus text-sm"></i>
                         </button>
                     </div>
