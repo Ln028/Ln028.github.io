@@ -119,8 +119,8 @@ function renderProduct(arr) {
                         <button class="h-8 w-8 md:h-5 md:w-5 lg:h-8 lg:w-8 text-center leading-5 lg:leading-8" onclick="subtractCount(${p.id})">
                             <i class="fa-solid fa-minus text-sm"></i>
                         </button>
-                        <input id="${p.id}" class="input w-8 h-8 md:h-5 md:w-5 lg:w-[50px] lg:h-8 text-center border-y-0 border-x-black text-sm sm:text-base px-0" type="text" role="spinbutton" min="1" aria-valuenow="1" value="${p.count}" oninput="this.value = 
-                        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : 1">
+                        <input id="${p.id}" class="input w-8 h-8 md:h-5 md:w-5 lg:w-[50px] lg:h-8 text-center border-y-0 border-x-black text-sm sm:text-base px-0" type="text" role="spinbutton" min="1" aria-valuenow="1" value="${p.count}" oninput="{this.value = 
+                        !!this.value && Math.abs(this.value) >= 1 ? Math.abs(this.value) : 1}" onchange="changeInput(${p.id})">
                         
                         <button class="h-8 w-8 md:h-5 md:w-5 lg:h-8 lg:w-8 text-center leading-5 lg:leading-8" onclick="addCount(${p.id})">
                             <i class="fa-solid fa-plus text-sm"></i>
@@ -173,51 +173,41 @@ function product(id) {
     })
 }
 
-//Thay doi so luong sp:
-function updateValue(id) {
-    let input = document.querySelectorAll(".input")
-    for (let i = 0; i < input.length; i++) {
-        let total = document.querySelectorAll(".total")
-        for (let j = 0; j < total.length; j++) {
-            if(input[i].id == id && i == j) {
-                products[i].count = Number(total[j].value)
-                console.log(Number(total[j].value));
-                // console.log(total[i].value);
-                //     console.log(products[i].count);
-                // if(products[i].count == 1) {
-                //     return
-                // }
-                // products[i].count -= 1
-            }         
+
+function changeInput(id) {
+    for (let i = 0; i < products.length; i++) {
+        let input = document.querySelectorAll(".input")
+        for (let j = 0; j < input.length; j++) {
+           if(products[i].id == id && products[i].id == input[j].id) {
+            products[i].count = Number(input[j].value)
+            console.log(input);
+           }
         }
-        
     }
+    setProductsToLocalStorage(products)
+    updateTotalMoney(products)
 }
-updateValue(products.id)
 
-    //Giam sl:
-
+//Giam sl:
 function subtractCount(id) {
     for (let i = 0; i < products.length; i++) {
         let input = document.querySelectorAll(".input")
         for (let j = 0; j < input.length; j++) {
             if(products[i].id == id && products[i].id == input[j].id) {
                 products[i].count = Number(input[j].value)
-                
                 if(products[i].count == 1) {
                     return
                 }
                 products[i].count -= 1
             }         
-        }
-        
+        }   
     }
 
     setProductsToLocalStorage(products)
     updateTotalMoney(products)
 }
 
- //Tang sl:
+//Tang sl:
 function addCount(id) {
     for (let i = 0; i < products.length; i++) {
         let input = document.querySelectorAll(".input")
