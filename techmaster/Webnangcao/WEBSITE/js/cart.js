@@ -61,7 +61,14 @@ let products = [
 function getProductsFromLocalStorage() {
     let localStorageValue = localStorage.getItem("products");
     if(localStorageValue) {
-       todos = JSON.parse(localStorageValue)
+        try {
+            products = JSON.parse(localStorageValue)
+            console.log(products);
+    
+        } catch(err) {
+            products = []
+        }
+       
     } else {
         products = [];
     }
@@ -162,7 +169,6 @@ function product(id) {
         for (let i = 0; i < products.length; i++) {
             if(products[i].id == inputValue.value) {
                 products.splice(i, 1)
-                console.log(inputValue.value);
                 deleteCart.classList.toggle("hidden")
                 backdropFull.classList.toggle("hidden")
                 body.classList.toggle("overflow-hidden")
