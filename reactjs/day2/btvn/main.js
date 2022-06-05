@@ -107,7 +107,6 @@ function value(character) {
     if (character == "M" || character == "m") {
         return 1000
     }
-    return -1
 }
 function romanToInteger(str) {
     var sum = 0
@@ -130,7 +129,7 @@ function romanToInteger(str) {
     return sum
 
 }
-console.log(romanToInteger("MCMXCIV"));
+console.log(romanToInteger("MCMXC"));
 
 
 
@@ -198,58 +197,37 @@ function sum(array, n, sum) {
 
 console.log(sum([-1, 0, 1, 2, -1, -4, 4, 0], 8, 0));
 
-function threeSum(arr) {
-    var result = []
-    var newResult = []
-    var found = false
-    for (let i = 0; i < arr.length - 2; i++) {
-        for (let j = i + 1; j < arr.length - 1; j++) {
-            for (let k = j + 1; k < arr.length; k++) {
-                if (arr[i] + arr[j] + arr[k] == 0) {
-                    result.push([arr[i], arr[j], arr[k]])
-                    newResult = []
-                    for (let h = 0; h < result.length; h++) {
-                        result[h].sort((a, b) => a - b)
-                        if (JSON.stringify(result[0]) == JSON.stringify(result[h])) {
-                            newResult[0] = result[0]
-                        } else{
-                            newResult.push(result[h])
+// function threeSum(arr) {
+//     var result = []
+//     var newResult = []
+//     var found = false
+//     for (let i = 0; i < arr.length - 2; i++) {
+//         for (let j = i + 1; j < arr.length - 1; j++) {
+//             if (i > 0 && arr[i] === arr[i - 1]) 
+//             continue
 
-                        }
-                    }
-                    found = true
-                }
-            }
-        }
-        if (found == false) {
-            newResult = []
-        }
-    }
-    // for (let h = 0; h < result.length; h++) {
-    //         result[h].sort((a, b) => a - b)
-    //         console.log(result);
-    //         // newResult = []
-    //         if (JSON.stringify(result[0]) == JSON.stringify(result[h])) {
-    //             newResult.push[result[0]]
-    //         } else{
-    //             newResult.push(result[h])
+//             for (let k = j + 1; k < arr.length; k++) {
+//                 if (arr[i] + arr[j] + arr[k] == 0) {
+//                     result.push([arr[i], arr[j], arr[k]])
+//                     newResult = []
+//                     for (let h = 0; h < result.length; h++) {
+//                         result[h].sort((a, b) => a - b)
+//                         if (JSON.stringify(result[0]) == JSON.stringify(result[h])) {
+//                             newResult[0] = result[0]
+//                         } else{
+//                             newResult.push(result[h])
 
-    //         }
-    //     }
-    return newResult
-}
-
-console.log(threeSum([-1, 0, 1, 2, -1, -4, 4, 0]));
-
-// function aloblo(result) {
-//     let newalo = []
-//     for (let i = 0; i < result.length; i++) {
-//         // console.log(newalo);
-//         if(!newalo.includes(result[i])) {
-//             newalo.push(result[i])
-//             console.log(newalo);
-//         } 
+//                         }
+//                     }
+//                     found = true
+//                 }
+//             }
+//         }
+//         if (found == false) {
+//             newResult = []
+//         }
 //     }
-//     // return newalo
+//     return newResult
 // }
-// console.log(aloblo([1,2,1,3,4,6,8,1,2]));
+
+// console.log(threeSum([-1, 0, 1, 2, -1, -4, 4, 0]));
