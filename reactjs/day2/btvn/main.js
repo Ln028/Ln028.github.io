@@ -197,37 +197,47 @@ function sum(array, n, sum) {
 
 console.log(sum([-1, 0, 1, 2, -1, -4, 4, 0], 8, 0));
 
-// function threeSum(arr) {
-//     var result = []
-//     var newResult = []
-//     var found = false
-//     for (let i = 0; i < arr.length - 2; i++) {
-//         for (let j = i + 1; j < arr.length - 1; j++) {
-//             if (i > 0 && arr[i] === arr[i - 1]) 
-//             continue
+function threeSum(arr) {
+    var result = []
+    var newResult = []
+    var abc=[] 
+    var newArr = []
+    var found = false
+    for (let i = 0; i < arr.length - 2; i++) {
+        for (let j = i + 1; j < arr.length - 1; j++) {
+            if (i > 0 && arr[i] === arr[i - 1]) 
+            continue
 
-//             for (let k = j + 1; k < arr.length; k++) {
-//                 if (arr[i] + arr[j] + arr[k] == 0) {
-//                     result.push([arr[i], arr[j], arr[k]])
-//                     newResult = []
-//                     for (let h = 0; h < result.length; h++) {
-//                         result[h].sort((a, b) => a - b)
-//                         if (JSON.stringify(result[0]) == JSON.stringify(result[h])) {
-//                             newResult[0] = result[0]
-//                         } else{
-//                             newResult.push(result[h])
+            for (let k = j + 1; k < arr.length; k++) {
+                if (arr[i] + arr[j] + arr[k] == 0) {
+                    result.push([arr[i], arr[j], arr[k]])
+                    newResult = []
+                    result.map(item => {
+                        item.sort((a,b) => a-b) 
+                        return newResult.push(JSON.stringify(item))
+                    })
+                    abc = unique(newResult)
+                    newArr = abc.map(item => (JSON.parse(item)))
+                    found = true
+                }
+            }
+        }
+        if (found == false) {
+            newArr = []
+        }
+    }
+    return newArr
+}
 
-//                         }
-//                     }
-//                     found = true
-//                 }
-//             }
-//         }
-//         if (found == false) {
-//             newResult = []
-//         }
-//     }
-//     return newResult
-// }
+console.log(threeSum([-1, 0, 1, 2, -1, -4, 4, 0]));
 
-// console.log(threeSum([-1, 0, 1, 2, -1, -4, 4, 0]));
+
+function unique(arr) {
+    let newArr = []
+    for (let i = 0; i < arr.length; i++) {
+        if(!newArr.includes(arr[i])) {
+            newArr.push(arr[i])
+        }       
+    }
+    return newArr
+}
