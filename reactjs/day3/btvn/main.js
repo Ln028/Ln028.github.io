@@ -33,17 +33,19 @@ var multiply = function(num1, num2) {
 
 // You can assume that you can always reach the last index.
 
-function multiply(a, b) {
-    const product = Array(a.length+b.length).fill(0);
-    for (let i = a.length; i--; null) {
-        let carry = 0;
-        for (let j = b.length; j--; null) {
-            product[1+i+j] += carry + a[i]*b[j];
-            carry = Math.floor(product[1+i+j] / 10);
-            product[1+i+j] = product[1+i+j] % 10;
-        }
-        product[i] += carry;
+var jump = function(nums) {
+    var len = nums.length;
+    var step = 0;
+    var now = 0;
+    var max = 0;
+  
+    for (var i = 0; i < len - 1; i++) {
+      max = Math.max(max, i + nums[i]);
+      if (i === now) {
+        step++;
+        now = max;
+      }
     }
-    return product.join("").replace(/^0*(\d)/, "$1");
-}
-
+  
+    return step;
+  };
