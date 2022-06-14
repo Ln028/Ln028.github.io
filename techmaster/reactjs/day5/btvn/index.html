@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+</head>
+
+<body style="margin:0">
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const courses = [
+            {
+                name: 'Tất cả'
+            },
+            {
+                name: 'Âm nhạc'
+            },
+            {
+                name: 'Danh sách kết hợp'
+            },
+            {
+                name: 'Trực tiếp'
+            },
+            {
+                name: 'Trò chơi'
+            },
+            {
+                name: 'Bóng đá'
+            },
+            {
+                name: 'Đọc rap'
+            }
+            ,
+            {
+                name: 'Mới tải lên gần đây'
+            },
+            {
+                name: 'Phim hoạt hình'
+            },
+            {
+                name: 'Đã xem'
+            },
+            {
+                name: 'Đề xuất mới'
+            }
+        ]
+
+        const items = [
+            {
+                avatar: "https://yt3.ggpht.com/JN0MgWA2r2a-21EF3fKho5sx94429RDTYA7dON2a90Ciyo5s92fzhMBjf-NFCERnmtLYiII6Yg=s176-c-k-c0x00ffffff-no-rj",
+                image: "https://i.ytimg.com/vi/7JjVQFbRZa8/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD7DejP4pOu2OcS80-WP-rNZLSJGA",
+                times: "4:21",
+                title: "CHỜ IU CHILL - DẾ CHOẮT x TIÊN TIÊN (Official MV)",
+                channel: "Dế Choắt",
+                views: "19 N lượt xem",
+                publish: "20 giờ trước"
+            },
+            {
+                avatar: "https://yt3.ggpht.com/JN0MgWA2r2a-21EF3fKho5sx94429RDTYA7dON2a90Ciyo5s92fzhMBjf-NFCERnmtLYiII6Yg=s176-c-k-c0x00ffffff-no-rj",
+                image: "https://i.ytimg.com/vi/7JjVQFbRZa8/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD7DejP4pOu2OcS80-WP-rNZLSJGA",
+                times: "4:21",
+                title: "CHỜ IU CHILL - DẾ CHOẮT x TIÊN TIÊN (Official MV)",
+                channel: "Dế Choắt",
+                views: "19 N lượt xem",
+                publish: "20 giờ trước"
+            },
+            {
+                avatar: "https://yt3.ggpht.com/JN0MgWA2r2a-21EF3fKho5sx94429RDTYA7dON2a90Ciyo5s92fzhMBjf-NFCERnmtLYiII6Yg=s176-c-k-c0x00ffffff-no-rj",
+                image: "https://i.ytimg.com/vi/7JjVQFbRZa8/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD7DejP4pOu2OcS80-WP-rNZLSJGA",
+                times: "4:21",
+                title: "CHỜ IU CHILL - DẾ CHOẮT x TIÊN TIÊN (Official MV)",
+                channel: "Dế Choắt",
+                views: "19 N lượt xem",
+                publish: "20 giờ trước"
+            },
+            {
+                avatar: "https://yt3.ggpht.com/JN0MgWA2r2a-21EF3fKho5sx94429RDTYA7dON2a90Ciyo5s92fzhMBjf-NFCERnmtLYiII6Yg=s176-c-k-c0x00ffffff-no-rj",
+                image: "https://i.ytimg.com/vi/7JjVQFbRZa8/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD7DejP4pOu2OcS80-WP-rNZLSJGA",
+                times: "4:21",
+                title: "CHỜ IU CHILL - DẾ CHOẮT x TIÊN TIÊN (Official MV)",
+                channel: "Dế Choắt",
+                views: "19 N lượt xem",
+                publish: "20 giờ trước"
+            },
+            {
+                avatar: "https://yt3.ggpht.com/JN0MgWA2r2a-21EF3fKho5sx94429RDTYA7dON2a90Ciyo5s92fzhMBjf-NFCERnmtLYiII6Yg=s176-c-k-c0x00ffffff-no-rj",
+                image: "https://i.ytimg.com/vi/7JjVQFbRZa8/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD7DejP4pOu2OcS80-WP-rNZLSJGA",
+                times: "4:21",
+                title: "CHỜ IU CHILL - DẾ CHOẮT x TIÊN TIÊN (Official MV)",
+                channel: "Dế Choắt",
+                views: "19 N lượt xem",
+                publish: "20 giờ trước"
+            },
+            {
+                avatar: "https://yt3.ggpht.com/JN0MgWA2r2a-21EF3fKho5sx94429RDTYA7dON2a90Ciyo5s92fzhMBjf-NFCERnmtLYiII6Yg=s176-c-k-c0x00ffffff-no-rj",
+                image: "https://i.ytimg.com/vi/7JjVQFbRZa8/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD7DejP4pOu2OcS80-WP-rNZLSJGA",
+                times: "4:21",
+                title: "CHỜ IU CHILL - DẾ CHOẮT x TIÊN TIÊN (Official MV)",
+                channel: "Dế Choắt",
+                views: "19 N lượt xem",
+                publish: "20 giờ trước"
+            },
+            {
+                avatar: "https://yt3.ggpht.com/JN0MgWA2r2a-21EF3fKho5sx94429RDTYA7dON2a90Ciyo5s92fzhMBjf-NFCERnmtLYiII6Yg=s176-c-k-c0x00ffffff-no-rj",
+                image: "https://i.ytimg.com/vi/7JjVQFbRZa8/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD7DejP4pOu2OcS80-WP-rNZLSJGA",
+                times: "4:21",
+                title: "CHỜ IU CHILL - DẾ CHOẮT x TIÊN TIÊN (Official MV)",
+                channel: "Dế Choắt",
+                views: "19 N lượt xem",
+                publish: "20 giờ trước"
+            },
+            {
+                avatar: "https://yt3.ggpht.com/JN0MgWA2r2a-21EF3fKho5sx94429RDTYA7dON2a90Ciyo5s92fzhMBjf-NFCERnmtLYiII6Yg=s176-c-k-c0x00ffffff-no-rj",
+                image: "https://i.ytimg.com/vi/7JjVQFbRZa8/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD7DejP4pOu2OcS80-WP-rNZLSJGA",
+                times: "4:21",
+                title: "CHỜ IU CHILL - DẾ CHOẮT x TIÊN TIÊN (Official MV)",
+                channel: "Dế Choắt",
+                views: "19 N lượt xem",
+                publish: "20 giờ trước"
+            }
+        ]
+
+        const styles = {
+            all: {
+                margin: '0',
+                padding: '0',
+                boxSizing: 'border-box',
+                fontFamily: '"Roboto","Arial",sans-serif',
+                backgroundColor: '#f9f9f9'
+            },
+            header: {
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                backgroundColor: 'white'
+            },
+            logo: {
+                width: '130px',
+                height: 'auto',
+            },
+            avatar: {
+                width: '36px',
+                height: '36px',
+                borderRadius: '100%',
+                marginTop: '12px',
+                marginRight: '12px'
+
+            },
+            flexBtn: {
+                display: 'flex',
+                padding: '15px 60px',
+                margin: '0 15px',
+                justifyContent: 'space-evenly',
+                borderTop: '1px solid',
+                borderBottom: '1px solid',
+                borderColor: '#0000001a',
+                backgroundColor: 'white'
+            },
+            button: {
+                height: '32px',
+                padding: '0 12px',
+                fontSize: '16px',
+                lineHeight: '16px',
+                borderRadius: '16px',
+                borderStyle: 'none',
+                outline: 'solid',
+                outlineColor: '#0000001a'
+            },
+            flex: {
+                display: 'flex',
+                flexWrap: 'wrap',
+                justifyContent: 'center'
+            },
+            basic: {
+                flex: '0 23%',
+                margin: '20px 10px 30px 10px'
+            },
+            img: {
+                maxWidth: '100%',
+                display: 'block',
+                margin: 'auto'
+            },
+            data: {
+                display: 'flex',
+                alignItems: 'start',
+            },
+            marginR: {
+                margin: '4px 10px 0 0',
+                fontSize: '13px'
+            },
+            h3: {
+                margin: '12px 0 10px 0',
+                fontSize: '16px'
+            },
+            p: {
+                margin: '4px 0 0',
+                fontSize: '13px'
+            },
+            relative: {
+                position: 'relative'
+            },
+            time: {
+                padding: '3px 4px',
+                fontSize: '12px',
+                lineHeight: '12px',
+                backgroundColor: '#000000cc',
+                color: 'white',
+                width: 'fit-content',
+                borderRadius: '2px',
+                position: 'absolute',
+                right: '4px',
+                bottom: '4px'
+            }, 
+            headerChild2: {
+                position: 'relative',
+                display: 'flex',
+                alignItems: 'center'
+            },
+            input: {
+                height: '34px',
+                width: '525px',
+                padding: '2px 6px',
+                fontSize: '16px',
+                border: '1px solid',
+                borderColor: '#0000001a',
+                borderRadius: '5px 0 0 5px'
+            },
+            keyboard: {
+                position: 'absolute',
+                right: '122px'
+            },
+            search: {
+                height: '40px',
+                width: '62px',
+                border: '1px solid',
+                borderLeft: 'none',
+                borderColor: '#0000001a',
+                borderRadius:'0 5px 5px 0',
+                fontSize: '20px'
+            },
+            headerChild3: {
+                display:'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                height: '40px',
+                width: '204px'
+            },
+            voice: {
+                height: '40px',
+                width: '40px',
+                marginLeft: '5px',
+                borderRadius: '100%',
+                border:'none',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                backgroundColor: '#f9f9f9',
+                fontSize: '18px'
+            },
+            account: {
+                width: '32px',
+                height: '32px',
+                borderRadius: '100%',
+                marginRight: '30px'
+            },
+            span: {
+                fontSize: '18px'
+            },
+            
+
+        }
+
+
+
+        function Header() {
+            return (
+                <div style={styles.header}>
+                    <div>
+                        <img src="https://static.wixstatic.com/media/9d8ed5_dafba1abf21146cc818be61248fe6905~mv2.png/v1/fill/w_800,h_400,al_c/9d8ed5_dafba1abf21146cc818be61248fe6905~mv2.png" alt="logo" style={styles.logo} />
+                    </div>
+                    <div style={styles.headerChild2}>
+                        <input type="text" placeholder="Tìm kiếm" style={styles.input} />
+                        <img src="https://www.gstatic.com/inputtools/images/tia.png" alt="" style={styles.keyboard} />
+                        <button style={styles.search}>
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                        <div style={styles.voice}><i class="fa-solid fa-microphone"></i></div>
+                    </div>
+
+                    <div style={styles.headerChild3}>
+                        <span>
+                            <i class="fa-solid fa-video" style={styles.span}></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-braille"></i>
+                        </span>
+                        <span>
+                            <i class="fa-solid fa-bell" style={styles.span}></i>
+                        </span>
+                        <img src="https://yt3.ggpht.com/ytc/AKedOLRkd2e1rI9voi2TXniPaZFWI1lbcKvWjtKqFYFnlA=s68-c-k-c0x00ffffff-no-rj" alt="account" style={styles.account} />
+                    </div>
+                </div>
+            )
+        }
+
+        function Menu(element) {
+            return (
+                <button style={styles.button}>{element.name}</button>
+            )
+        }
+        function Content({ props }) {
+            return (
+                <div className="card" style={styles.basic}>
+                    <div style={styles.relative}>
+                        <img src={props.image} alt={props.title} style={styles.img} />
+                        <div style={styles.time}>{props.times}</div>
+                    </div>
+                    <div style={styles.data}>
+                        <img src={props.avatar} alt="avatar" style={styles.avatar} />
+                        <div>
+                            <h3 style={styles.h3}>{props.title}</h3>
+                            <p style={styles.p}>{props.channel}</p>
+                            <div style={styles.data}>
+                                <p style={styles.marginR}>{props.views}</p>
+                                <p style={styles.p}>{props.publish}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )
+        }
+        console.log(<Menu />);
+        console.log(<Content />);
+
+        function App() {
+            return (
+                <div id="wrapper" style={styles.all}>
+                    <div id="header">
+                        <Header />
+                    </div>
+                    <div id="menu" style={styles.flexBtn}>
+                        {courses.map((course, index) =>
+                            <Menu
+                                key={index}
+                                name={course.name}
+                            />
+                        )}
+                    </div>
+                    <div id="content" style={styles.flex}>
+                        {items.map((item, index) =>
+                            <Content
+                                key={index}
+                                props={item}
+                            />
+                        )}
+                    </div>
+                </div>
+            )
+        }
+
+        const container = document.getElementById('root')
+        const root = ReactDOM.createRoot(container)
+        root.render(<App />)
+    </script>
+
+</body>
+
+</html>

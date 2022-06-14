@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    
+</head>
+<body>
+    <div id="root"></div>
+    <!-- <h1 id="heading">Heading</h1> -->
+
+
+
+    <!-- <script>
+        const h1 = document.querySelector("#heading")
+        console.log(h1);
+        console.dir(h1)
+        const h2 = document.createElement("h2")
+        h2.innerHTML = "Hello guys!"
+        document.body.appendChild(h2)
+        h2.className = "test class-2"
+        h2.style.color = "red"
+        h2.style = "color: green, font-size: 30px"
+        Object.assign(h2.style, {
+            color: "white",
+            backgroundColor: "black"
+        })
+    </script> -->
+
+<script>
+// Tao the <h1 title="Hello" class="heading">Hello guys!</h1>
+// DOM
+const h1DOM = document.createElement("h1")
+h1DOM.title = "Hello"
+h1DOM.className = "heading"
+h1DOM.innerText = "Hello guys!"
+document.body.appendChild(h1DOM)
+
+// React
+const h1React = React.createElement(
+    "h1",
+    {
+        title: "Hello",
+        className: "Heading"
+    },
+    'Hello guys!', 'hehehe'
+);
+console.dir(h1DOM);
+console.log(h1React);
+
+
+
+// Tao the ul voi 2 li
+//DOM
+const ulDOM = document.createElement('ul')
+const liDOM1 = document.createElement('li')
+liDOM1.innerHTML = 'Javascrip'
+const liDOM2 = document.createElement('li')
+liDOM2.innerHTML = 'ReactJs'
+
+ulDOM.appendChild(liDOM1)
+ulDOM.appendChild(liDOM2)
+
+document.body.appendChild(ulDOM)
+
+//React
+
+const ulReact = React.createElement(
+    'ul',
+    {id: "test"},
+    React.createElement('li', null, 'Javascrip'),
+    React.createElement('li', null, 'ReactJs')
+)
+console.log(ulReact);
+
+
+//Tao the.....
+//DOM
+const divDOM = document.createElement('div')
+const h2DOM = document.createElement('h2')
+h2DOM.title = 'Techmaster'
+h2DOM.innerHTML = 'Hoc ReactJs'
+const pDOM = document.createElement('p')
+pDOM.innerHTML = 'Hoc ReactJS la de'
+divDOM.appendChild(h2DOM)
+divDOM.appendChild(pDOM)
+document.body.appendChild(divDOM)
+
+//React
+const postItem = React.createElement(
+    'div',
+    null,
+    React.createElement(
+        'h2', 
+        {title: 'Techmaster'}, 
+        React.createElement(
+            'span', 
+            null, 
+            'Khong thich hoc')),
+    React.createElement(
+        'p', 
+        null, 
+        'Hoc ReactJS la de')
+)
+console.log(postItem);
+
+
+//Get root element
+
+const container = document.getElementById('root')
+const root = ReactDOM.createRoot(container)
+root.render(postItem)
+
+</script>
+
+
+
+</body>
+</html>
