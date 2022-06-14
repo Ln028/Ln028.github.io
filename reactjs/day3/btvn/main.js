@@ -21,7 +21,7 @@ var multiply = function(num1, num2) {
     }
     while (result[0] === 0) result.shift();
   
-    return result.length === 0 ? 0 : result.join('');
+    return result.length === 0 ? 0 : result.join('')
   };
 
 
@@ -34,18 +34,18 @@ var multiply = function(num1, num2) {
 // You can assume that you can always reach the last index.
 
 var jump = function(nums) {
-    var len = nums.length;
-    var step = 0;
-    var now = 0;
-    var max = 0;
-  
-    for (var i = 0; i < len - 1; i++) {
-      max = Math.max(max, i + nums[i]);
-      if (i === now) {
-        step++;
-        now = max;
-      }
+  var len = nums.length;
+  var step = 0;
+  var now = 0;
+  var max = 0;
+
+  for (var i = 0; i < len - 1; i++) {
+    max = Math.max(max, i + nums[i]);
+    if (i === now) {
+      step++;
+      now = max;
     }
-  
-    return step;
-  };
+  }
+
+  return step;
+};
