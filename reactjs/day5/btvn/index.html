@@ -223,7 +223,7 @@
                 position: 'absolute',
                 right: '4px',
                 bottom: '4px'
-            }, 
+            },
             headerChild2: {
                 position: 'relative',
                 display: 'flex',
@@ -248,11 +248,11 @@
                 border: '1px solid',
                 borderLeft: 'none',
                 borderColor: '#0000001a',
-                borderRadius:'0 5px 5px 0',
+                borderRadius: '0 5px 5px 0',
                 fontSize: '20px'
             },
             headerChild3: {
-                display:'flex',
+                display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'space-between',
                 height: '40px',
@@ -263,7 +263,7 @@
                 width: '40px',
                 marginLeft: '5px',
                 borderRadius: '100%',
-                border:'none',
+                border: 'none',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -279,7 +279,7 @@
             span: {
                 fontSize: '18px'
             },
-            
+
 
         }
 
@@ -326,16 +326,26 @@
                 <div className="card" style={styles.basic}>
                     <div style={styles.relative}>
                         <img src={props.image} alt={props.title} style={styles.img} />
-                        <div style={styles.time}>{props.times}</div>
+                        <div style={styles.time}>
+                            {props.times}
+                        </div>
                     </div>
                     <div style={styles.data}>
                         <img src={props.avatar} alt="avatar" style={styles.avatar} />
                         <div>
-                            <h3 style={styles.h3}>{props.title}</h3>
-                            <p style={styles.p}>{props.channel}</p>
+                            <h3 style={styles.h3}>
+                                {props.title}
+                            </h3>
+                            <p style={styles.p}>
+                                {props.channel}
+                            </p>
                             <div style={styles.data}>
-                                <p style={styles.marginR}>{props.views}</p>
-                                <p style={styles.p}>{props.publish}</p>
+                                <p style={styles.marginR}>
+                                    {props.views}
+                                </p>
+                                <p style={styles.p}>
+                                    {props.publish}
+                                </p>
                             </div>
                         </div>
                     </div>
